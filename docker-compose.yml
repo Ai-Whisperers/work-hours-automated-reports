@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clockify-ado-report:latest
+    container_name: clockify-ado-report
+    env_file:
+      - .env
+    volumes:
+      # Mount reports directory for output
+      - ./reports:/app/reports
+      # Mount cache directory for persistence
+      - cache_data:/app/.cache
+      # Mount logs directory
+      - ./logs:/app/logs
+      # Mount templates if customizing
+      - ./templates:/app/templates:ro
+    environment:
+      - ENVIRONMENT=production
+      - CACHE_BACKEND=local
+      - CACHE_DIRECTORY=/app/.cache
+      - REPORT_OUTPUT_DIR=/app/reports
+      - LOG_FILE=/app/logs/app.log
+    networks:
+      - app_network
+    restart: unless-stopped
+    command: ["run", "--start", "2024-01-01", "--end", "2024-01-31"]
+
+  # Optional: Redis for distributed caching
+  redis:
+    image: redis:7-alpine
+    container_name: clockify-ado-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - app_network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    profiles:
+      - with-redis
+
+  # Optional: Scheduler for automated reports
+  scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clockify-ado-report:latest
+    container_name: clockify-ado-scheduler
+    env_file:
+      - .env
+    volumes:
+      - ./reports:/app/reports
+      - cache_data:/app/.cache
+      - ./logs:/app/logs
+    environment:
+      - ENVIRONMENT=production
+      - CACHE_BACKEND=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    networks:
+      - app_network
+    depends_on:
+      - redis
+    restart: unless-stopped
+    profiles:
+      - scheduled
+    entrypoint: ["/bin/sh", "-c"]
+    command: |
+      "while true; do
+        echo 'Running scheduled report at' $$(date);
+        python main.py run --start $$(date -d '7 days ago' +%Y-%m-%d) --end $$(date +%Y-%m-%d);
+        sleep 86400;
+      done"
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  cache_data:
+    driver: local
+  redis_data:
+    driver: local
