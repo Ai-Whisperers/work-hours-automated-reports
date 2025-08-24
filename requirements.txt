@@ -1,0 +1,64 @@
+# Core dependencies
+httpx==0.25.2
+pydantic==1.10.13
+pydantic[dotenv]==1.10.13
+polars==0.19.19
+typer[all]==0.9.0
+python-dotenv==1.0.0
+
+# Async support
+anyio==4.2.0
+asyncio==3.4.3
+
+# Report generation
+openpyxl==3.1.2
+jinja2==3.1.2
+markdown==3.5.1
+weasyprint==60.2  # For PDF generation
+plotly==5.18.0  # For charts
+
+# API interaction
+tenacity==8.2.3  # Retry logic
+backoff==2.2.1  # Exponential backoff
+
+# Caching
+diskcache==5.6.3  # Local disk cache
+redis==5.0.1  # Redis support (optional)
+
+# CLI enhancements
+rich==13.7.0  # Rich terminal output
+click==8.1.7  # Used by Typer
+
+# Date/time handling
+python-dateutil==2.8.2
+pytz==2023.3.post1
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+faker==20.1.0  # Generate test data
+
+# Code quality
+black==23.12.0
+ruff==0.1.8
+mypy==1.7.1
+pre-commit==3.6.0
+
+# Type stubs
+types-python-dateutil==2.8.19.14
+types-pytz==2023.3.1.1
+
+# Development tools
+ipython==8.18.1
+ipdb==0.13.13
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.5.2
+mkdocstrings[python]==0.24.0
+
+# Monitoring (optional)
+prometheus-client==0.19.0  # Metrics export
+structlog==23.2.0  # Structured logging
