@@ -1,0 +1,11 @@
+id,title,state,type,assigned_to,area_path,iteration_path,story_points,tags
+12345,User authentication feature,Active,User Story,John Doe,Project\Security,Project\Sprint 1,8,security;authentication
+67890,Payment processing bug,Resolved,Bug,Jane Smith,Project\Payments,Project\Sprint 1,3,bugfix;critical
+11111,Code review standards,New,Task,Bob Johnson,Project\Quality,Project\Sprint 1,2,process;quality
+23456,Sprint planning and estimation,Active,Task,Alice Brown,Project\Management,Project\Sprint 2,1,planning;agile
+34567,REST API endpoint for users,In Progress,User Story,Charlie Wilson,Project\API,Project\Sprint 2,5,api;backend
+45678,User profile management,Active,User Story,Emma Davis,Project\Features,Project\Sprint 2,13,feature;user-management
+78901,Database query optimization,New,Task,Frank Miller,Project\Infrastructure,Project\Sprint 3,5,performance;database
+56789,Dashboard UI redesign,In Progress,User Story,Grace Taylor,Project\UI,Project\Sprint 3,8,ui;design
+89012,Production deployment pipeline,Active,Task,Henry Anderson,Project\DevOps,Project\Sprint 3,3,deployment;ci-cd
+99999,Unmatched work item example,Closed,Bug,Unknown User,Project\Archive,Project\Past Sprints,1,archived

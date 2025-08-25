@@ -3,63 +3,90 @@
 **Goal:** Automate the process of fetching, matching, and reporting work hours from **Clockify** (time entries) and **Azure DevOps** (Work Items).
 The output is a clean, elegant report showing **who worked how many hours on which task** — with no manual downloads.
 
-## Project Phases
+## Project Status
 
-1. **Core Script (current focus)**
-   - Extract data from both sources (Clockify + ADO).
-   - Match time entries to Work Items (via Work Item IDs in descriptions).
-   - Generate consolidated reports (Excel + HTML).
-   - No UI at first, just automation.
+✅ **Phase 1 Complete** - Core automation with clean architecture implementation
+🚧 **Phase 2 Planned** - Web UI with FastAPI backend
 
-2. **User Interface (future phase)**
-   - Web app with minimal and elegant UI/UX.
-   - Possible stacks:
-     - **FastAPI** backend + **Next.js/Tailwind** frontend, or
-     - Lightweight alternatives like **Streamlit** / **Reflex**.
-   - The UI will consume the same reporting logic, keeping things modular.
+## Tech Stack (Implemented)
 
-## Tech Stack (Phase 1)
+- **Python 3.11+** — Core language
+- **httpx** — Async API calls with retry logic
+- **pydantic v2** — Data validation and settings management
+- **polars** — Fast DataFrame operations
+- **typer** — Rich CLI interface
+- **openpyxl** — Excel report generation
+- **jinja2** — HTML report templates
+- **rich** — Enhanced terminal output
+- **tenacity** — Retry logic with exponential backoff
 
-- **Python 3.10+** — scripting and ETL core.
-- **httpx** — API calls (async, robust).
-- **pydantic-settings** — config via `.env`.
-- **polars** — fast and clean DataFrame operations.
-- **typer** — command-line interface.
-- **openpyxl** — Excel export.
-- **jinja2** — HTML report templates.
+## Architecture (Hexagonal/Clean Architecture)
 
-Future (Phase 2+):
-- **FastAPI** for API/web backend.
-- **Next.js/Tailwind** or **Streamlit/Reflex** for UI.
+The project follows **Hexagonal Architecture** with clear separation of concerns:
 
-## Architecture
+```
+src/
+├── domain/                 # Core business logic
+│   ├── entities/          # TimeEntry, WorkItem, User
+│   ├── value_objects/     # WorkItemId, Duration, DateRange
+│   ├── repositories/      # Repository interfaces (ports)
+│   └── services/          # MatchingService, AggregationService
+├── application/           # Use cases and application services
+│   ├── use_cases/        # GenerateReportUseCase
+│   ├── ports/            # External service interfaces
+│   └── dto/              # Data transfer objects
+├── infrastructure/        # External adapters
+│   ├── api_clients/      # ClockifyClient, AzureDevOpsClient
+│   ├── repositories/     # Repository implementations
+│   ├── adapters/         # Cache, Report generators
+│   └── config/           # Settings and configuration
+└── presentation/          # User interfaces
+    ├── cli/              # Typer CLI application
+    └── api/              # FastAPI (future)
+```
 
-- `app/clients/clockify.py` → API client for Clockify.
-- `app/clients/azure.py` → API client for Azure DevOps Work Items.
-- `app/matcher.py` → Work Item ID extraction logic (`#12345`, `ADO-12345`, `(12345)`, `WI:12345`, plain numbers).
-- `app/report.py` → Aggregation and report generation (Excel + HTML).
-- `app/main.py` → CLI tool (Typer).
-- `sample/` → CSVs to run the prototype without API keys.
-
-## Quickstart (Prototype with CSVs)
+## Quickstart
 
 1. Install dependencies:
    ```bash
-   uv venv && uv pip install -r requirements.txt
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
    ```
 
-2. Run with sample data:
+2. Configure environment:
    ```bash
-   python -m app.main run --clockify-csv sample/clockify.csv --ado-csv sample/ado.csv --out report.xlsx
-   python -m app.main run --clockify-csv sample/clockify.csv --ado-csv sample/ado.csv --html report.html
+   cp .env.example .env
+   # Edit .env with your API credentials
    ```
 
-3. Outputs:
-   - `report.xlsx` with three tabs:
-     - **ByPerson** (hours grouped by user & Work Item)
-     - **ByWorkItem** (hours grouped by task)
-     - **RawMerged** (raw merged dataset)
-   - `report.html` — minimal dark-themed report.
+3. Validate configuration:
+   ```bash
+   python main.py validate
+   ```
+
+4. Generate report:
+   ```bash
+   # Last 7 days (default)
+   python main.py run
+   
+   # Custom date range
+   python main.py run --start 2024-01-01 --end 2024-01-31
+   
+   # HTML format
+   python main.py run --format html --output report.html
+   ```
+
+5. Output formats:
+   - **Excel** (`report.xlsx`):
+     - Summary sheet with statistics
+     - ByPerson sheet (hours by user and work item)
+     - ByWorkItem sheet (hours by work item)
+     - RawData sheet (all entries)
+   - **HTML** (`report.html`):
+     - Dark-themed responsive design
+     - Summary statistics
+     - Top contributors and work items
 
 ## Environment Variables (for API mode)
 
@@ -84,14 +111,34 @@ Copy `.env.example` to `.env` and fill in:
 - **HTML report** (`report.html`) as a quick, elegant, human-readable summary.
 - Future: JSON/CSV API endpoints for integration with other systems.
 
-## Roadmap
+## Implementation Status
 
-- [ ] Full API calls (Clockify pagination + ADO batch Work Item fetch).
-- [ ] Local caching (SQLite) for faster re-runs.
-- [ ] Validation (pydantic models) and automated tests.
-- [ ] Scheduling (cron / GitHub Actions) for daily/weekly reports.
-- [ ] Extended metrics (per sprint/iteration, per epic).
-- [ ] Full UI with FastAPI + frontend framework.
+### ✅ Completed Features
+- [x] Full API integration with pagination and batch fetching
+- [x] Local and Redis caching support
+- [x] Pydantic v2 models for validation
+- [x] Rich CLI with Typer
+- [x] Excel and HTML report generation
+- [x] Docker and docker-compose support
+- [x] Retry logic with exponential backoff
+- [x] Hexagonal architecture implementation
+- [x] Comprehensive error handling
+- [x] Multiple work item ID pattern matching
+- [x] Fuzzy matching for work items
+
+### 🚧 In Progress
+- [ ] Automated tests (unit, integration, e2e)
+- [ ] GitHub Actions CI/CD pipeline
+- [ ] Sample data for testing
+
+### 📋 Future Enhancements
+- [ ] FastAPI web backend
+- [ ] React/Next.js frontend
+- [ ] Scheduling with cron/GitHub Actions
+- [ ] Extended metrics (sprint/epic level)
+- [ ] PDF report generation
+- [ ] Email notifications
+- [ ] Multi-tenant support
 
 ## Why This Approach?
 

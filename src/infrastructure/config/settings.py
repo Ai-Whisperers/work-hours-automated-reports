@@ -5,7 +5,8 @@ from pathlib import Path
 from typing import Optional, List
 from enum import Enum
 
-from pydantic import BaseSettings, Field, validator
+from pydantic import Field, field_validator
+from pydantic_settings import BaseSettings
 
 
 class Environment(str, Enum):
@@ -155,7 +156,8 @@ class Settings(BaseSettings):
             "ado_pat": {"env": "ADO_PAT"},
         }
     
-    @validator("cache_directory", "report_template_directory", "report_output_directory", "log_file")
+    @field_validator("cache_directory", "report_template_directory", "report_output_directory", "log_file", mode="after")
+    @classmethod
     def create_directories(cls, v: Optional[Path]) -> Optional[Path]:
         """Ensure directories exist."""
         if v and not v.exists():
@@ -166,17 +168,19 @@ class Settings(BaseSettings):
                 v.mkdir(parents=True, exist_ok=True)
         return v
     
-    @validator("notification_recipients", pre=True)
+    @field_validator("notification_recipients", mode="before")
+    @classmethod
     def parse_recipients(cls, v):
         """Parse comma-separated recipients."""
         if isinstance(v, str):
             return [email.strip() for email in v.split(",") if email.strip()]
         return v
     
-    @validator("debug", pre=True)
-    def set_debug_from_env(cls, v, values):
+    @field_validator("debug", mode="after")
+    @classmethod
+    def set_debug_from_env(cls, v, info):
         """Set debug based on environment."""
-        if "environment" in values and values["environment"] == Environment.DEVELOPMENT:
+        if hasattr(info, 'data') and info.data.get("environment") == Environment.DEVELOPMENT:
             return True
         return v
     

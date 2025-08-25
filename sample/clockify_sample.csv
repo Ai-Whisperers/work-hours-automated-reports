@@ -1,0 +1,11 @@
+id,description,user_name,start_time,end_time,duration_hours,billable,project_name,tags
+entry1,"Working on #12345 - User authentication feature",John Doe,2024-01-15T09:00:00Z,2024-01-15T17:00:00Z,8.0,true,Backend Development,development;backend
+entry2,"Fixed bug ADO-67890 in payment processing",Jane Smith,2024-01-15T10:00:00Z,2024-01-15T14:00:00Z,4.0,true,Bug Fixes,bugfix;urgent
+entry3,"Code review for WI:11111",Bob Johnson,2024-01-15T14:00:00Z,2024-01-15T16:00:00Z,2.0,false,Code Review,review
+entry4,"Sprint planning meeting (23456)",Alice Brown,2024-01-16T09:00:00Z,2024-01-16T11:00:00Z,2.0,false,Meetings,planning;sprint
+entry5,"Implemented [34567] API endpoint",Charlie Wilson,2024-01-16T11:00:00Z,2024-01-16T18:00:00Z,7.0,true,API Development,api;backend
+entry6,"Documentation update",David Lee,2024-01-16T13:00:00Z,2024-01-16T15:00:00Z,2.0,false,Documentation,docs
+entry7,"Testing #45678 user story",Emma Davis,2024-01-17T09:00:00Z,2024-01-17T12:00:00Z,3.0,true,Testing,testing;qa
+entry8,"Database optimization ADO-78901",Frank Miller,2024-01-17T13:00:00Z,2024-01-17T17:00:00Z,4.0,true,Database,optimization;performance
+entry9,"UI improvements for (56789)",Grace Taylor,2024-01-17T10:00:00Z,2024-01-17T16:00:00Z,6.0,true,Frontend Development,ui;frontend
+entry10,"Deployment preparation WI:89012",Henry Anderson,2024-01-18T14:00:00Z,2024-01-18T18:00:00Z,4.0,true,DevOps,deployment;infrastructure
