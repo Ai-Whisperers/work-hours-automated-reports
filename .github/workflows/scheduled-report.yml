@@ -1,0 +1,88 @@
+name: Scheduled Report Generation
+
+on:
+  schedule:
+    # Run every Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'Number of days to look back'
+        required: false
+        default: '7'
+      output_format:
+        description: 'Report format (excel, html, json)'
+        required: false
+        default: 'excel'
+
+jobs:
+  generate-report:
+    name: Generate Weekly Report
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Cache pip packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-report-${{ hashFiles('requirements.txt') }}
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Set date range
+        id: dates
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            DAYS_BACK=${{ github.event.inputs.days_back }}
+          else
+            DAYS_BACK=7
+          fi
+          END_DATE=$(date +%Y-%m-%d)
+          START_DATE=$(date -d "$DAYS_BACK days ago" +%Y-%m-%d)
+          echo "start_date=$START_DATE" >> $GITHUB_OUTPUT
+          echo "end_date=$END_DATE" >> $GITHUB_OUTPUT
+      
+      - name: Generate report
+        env:
+          CLOCKIFY_API_KEY: ${{ secrets.CLOCKIFY_API_KEY }}
+          CLOCKIFY_WORKSPACE_ID: ${{ secrets.CLOCKIFY_WORKSPACE_ID }}
+          ADO_ORG: ${{ secrets.ADO_ORG }}
+          ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+        run: |
+          FORMAT="${{ github.event.inputs.output_format || 'excel' }}"
+          python main.py run \
+            --start ${{ steps.dates.outputs.start_date }} \
+            --end ${{ steps.dates.outputs.end_date }} \
+            --format $FORMAT \
+            --output report.$FORMAT
+      
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: weekly-report-${{ steps.dates.outputs.end_date }}
+          path: report.*
+          retention-days: 30
+      
+      - name: Send notification
+        if: success() && secrets.SMTP_HOST
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFICATION_RECIPIENTS: ${{ secrets.NOTIFICATION_RECIPIENTS }}
+        run: |
+          echo "Report generated successfully for ${{ steps.dates.outputs.start_date }} to ${{ steps.dates.outputs.end_date }}"
+          # Add email notification logic here if needed
+        continue-on-error: true
