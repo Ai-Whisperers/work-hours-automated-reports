@@ -1,10 +1,19 @@
-# Clockify-ADO Automated Report Generator
+# Work Hours Automated Reports
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
 [![Architecture](https://img.shields.io/badge/Architecture-Hexagonal-green)](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software))
 [![Code Style](https://img.shields.io/badge/Code%20Style-Black-black)](https://github.com/psf/black)
 
 A modern, clean-architecture implementation for automated time tracking and work item reporting between Clockify and Azure DevOps.
+
+## 🔄 About Our Tooling
+
+At **AI Whisperers**, we use:
+
+- **[Clockify](https://clockify.me/)** - Time tracking platform for better traceability of work hours across team members and projects
+- **[Azure DevOps (ADO)](https://azure.microsoft.com/en-us/products/devops/)** - Project management platform that mirrors our GitHub organization structure, providing additional work item tracking, boards, and enterprise features
+
+This tool bridges the gap between these systems, automatically matching time entries from Clockify with work items in Azure DevOps to generate comprehensive reports.
 
 ## 🌟 Features
 
@@ -40,8 +49,8 @@ src/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Ai-Whisperers/clockify-ADO-automated-report.git
-cd clockify-ADO-automated-report
+git clone https://github.com/Ai-Whisperers/work-hours-automated-reports.git
+cd work-hours-automated-reports
 ```
 
 2. **Set up environment**
@@ -264,7 +273,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For issues or questions:
 1. Check the [documentation](docs/index.md)
 2. Review [troubleshooting guide](docs/operations/troubleshooting.md)
-3. Create an [issue](https://github.com/Ai-Whisperers/clockify-ADO-automated-report/issues)
+3. Create an [issue](https://github.com/Ai-Whisperers/work-hours-automated-reports/issues)
 
 ---
 
