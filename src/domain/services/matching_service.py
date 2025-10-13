@@ -6,7 +6,6 @@ from dataclasses import dataclass
 from enum import Enum
 
 from ..entities import TimeEntry, WorkItem
-from ..value_objects import WorkItemId
 
 
 class MatchingStrategy(Enum):

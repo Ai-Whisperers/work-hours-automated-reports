@@ -13,7 +13,7 @@ from rich.table import Table
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.logging import RichHandler
 
-from ...infrastructure.config import get_settings, Settings
+from ...infrastructure.config import get_settings
 from ...infrastructure.api_clients import ClockifyClient, AzureDevOpsClient
 from ...domain.value_objects import DateRange
 from ...domain.services import MatchingService
@@ -418,7 +418,7 @@ def version():
     """Show version information."""
     from ... import __version__
     
-    console.print(f"[bold cyan]Clockify-ADO Report Generator[/bold cyan]")
+    console.print("[bold cyan]Clockify-ADO Report Generator[/bold cyan]")
     console.print(f"Version: [green]{__version__}[/green]")
     
     settings = get_settings()

@@ -1,7 +1,6 @@
 """Time entry repository interface."""
 
 from abc import ABC, abstractmethod
-from datetime import datetime
 from typing import List, Optional
 
 from ..entities import TimeEntry

@@ -3,7 +3,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional, List
-from uuid import UUID, uuid4
 
 from ..value_objects import Duration
 

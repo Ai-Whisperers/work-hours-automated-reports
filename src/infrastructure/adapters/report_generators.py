@@ -7,7 +7,7 @@ from datetime import datetime
 
 import polars as pl
 from openpyxl import Workbook
-from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.styles import Font, PatternFill
 from jinja2 import Template
 
 from ...application.ports import ReportGenerator
@@ -65,11 +65,7 @@ class ExcelReportGenerator(ReportGenerator):
     def _create_summary_sheet(self, wb: Workbook, data: Dict[str, Any], options: Optional[Dict[str, Any]]):
         """Create summary sheet."""
         ws = wb.create_sheet("Summary")
-        
-        # Header style
-        header_font = Font(bold=True, color="FFFFFF")
-        header_fill = PatternFill(start_color="366092", end_color="366092", fill_type="solid")
-        
+
         # Title
         ws["A1"] = "Clockify-ADO Time Tracking Report"
         ws["A1"].font = Font(bold=True, size=14)

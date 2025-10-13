@@ -7,7 +7,6 @@ import logging
 
 from .base_client import BaseAPIClient, NotFoundError
 from ...domain.entities import WorkItem
-from ...domain.entities.work_item import WorkItemType, WorkItemState
 from ...domain.value_objects import WorkItemId
 from ...infrastructure.config import get_settings
 

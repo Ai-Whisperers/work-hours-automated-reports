@@ -5,8 +5,8 @@ from datetime import datetime
 import logging
 
 from .base_client import BaseAPIClient
-from ...domain.entities import TimeEntry, User
-from ...domain.value_objects import Duration, DateRange
+from ...domain.entities import TimeEntry
+from ...domain.value_objects import DateRange
 from ...infrastructure.config import get_settings
 
 

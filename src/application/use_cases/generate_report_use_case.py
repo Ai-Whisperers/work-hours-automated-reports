@@ -11,7 +11,6 @@ from ...domain.value_objects import DateRange
 from ...domain.services import MatchingService
 from ...domain.repositories import TimeEntryRepository, WorkItemRepository
 from ..ports import ReportGenerator, CacheService, NotificationService
-from ..dto import ReportRequest, ReportResponse
 
 
 class ReportFormat(Enum):

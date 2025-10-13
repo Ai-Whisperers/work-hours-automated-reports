@@ -1,7 +1,6 @@
 """Clockify implementation of TimeEntryRepository."""
 
 from typing import List, Optional
-from datetime import datetime
 import logging
 
 from ...domain.repositories import TimeEntryRepository
