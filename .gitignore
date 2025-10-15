@@ -191,6 +191,13 @@ cache.db
 # Claude
 .claude/
 
+# Next.js / Node.js (frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env*.local
+
 # Backup files
 *.bak
 *.backup

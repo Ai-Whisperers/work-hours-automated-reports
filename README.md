@@ -24,6 +24,8 @@ This tool bridges the gap between these systems, automatically matching time ent
 - **Performance Optimized**: Async operations, connection pooling, and caching
 - **Docker Support**: Easy deployment with Docker and docker-compose
 - **CLI Interface**: Rich command-line interface with progress indicators
+- **Web Interface**: Modern FastAPI backend with Next.js frontend dashboard
+- **Real-time Updates**: Background task processing with status polling
 
 ## 🏗️ Architecture
 
@@ -34,7 +36,10 @@ src/
 ├── domain/           # Core business logic (entities, value objects, services)
 ├── application/      # Use cases and application services
 ├── infrastructure/   # External adapters (API clients, repositories)
-└── presentation/     # User interfaces (CLI, API)
+└── presentation/     # User interfaces
+    ├── cli/          # Command-line interface
+    └── api/          # FastAPI web interface
+frontend/             # Next.js web application
 ```
 
 ## 🚀 Quick Start
@@ -42,6 +47,7 @@ src/
 ### Prerequisites
 
 - Python 3.11+
+- Node.js 18+ (for web interface)
 - Clockify API key
 - Azure DevOps Personal Access Token (PAT)
 
@@ -133,6 +139,40 @@ docker-compose --profile with-redis up -d
 ```
 
 ## 📖 Usage
+
+### Web Interface
+
+#### Start the FastAPI Backend
+
+```bash
+# Start the API server
+python api_server.py
+
+# The API will be available at http://localhost:8000
+# API docs at http://localhost:8000/api/docs
+```
+
+#### Start the Next.js Frontend
+
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies (first time only)
+npm install
+
+# Start development server
+npm run dev
+
+# The web interface will be available at http://localhost:3000
+```
+
+#### Features
+
+- **Dashboard**: View service health and connection status
+- **Report Generator**: Create reports with custom date ranges and formats
+- **Real-time Status**: Monitor report generation progress
+- **Download**: Download completed reports directly from the browser
 
 ### CLI Commands
 
