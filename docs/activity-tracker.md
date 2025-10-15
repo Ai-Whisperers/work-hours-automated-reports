@@ -14,8 +14,32 @@ Automatically starts and stops Clockify timers based on mouse and keyboard activ
 Monitors GitHub commits and creates Clockify time entries:
 - **Automatic detection**: Polls GitHub API for new commits
 - **Duplicate prevention**: Tracks seen commits to avoid duplicate entries
-- **Configurable duration**: Assigns a configurable time duration to each commit
+- **Two tracking modes**: Individual commits or cluster-based worked hours
 - **Persistent state**: Saves tracking state to prevent re-processing commits
+- **Organization support**: Track all commits across an entire GitHub organization
+
+#### Worked Hours Calculation (Recommended)
+
+The tracker uses an advanced cluster detection algorithm to calculate actual worked hours from commit patterns:
+
+- **Exponential Decay Clustering**: Groups commits into work sessions using temporal proximity analysis
+- **Session Detection**: Automatically identifies work sessions with configurable time gaps (default: ~3 hours)
+- **Duration Estimation**: Calculates session duration from first to last commit, capped at maximum (default: 4 hours)
+- **Timezone Support**: Converts all timestamps to your local timezone for accurate reporting
+- **Cluster Merging**: Combines sessions that are very close together (within 30 minutes)
+
+**Algorithm Details:**
+```
+Weight = e^(-Δt / τ)
+where:
+  Δt = time gap between commits
+  τ = time constant (default: 2.5 hours)
+
+If Weight > 0.1, commits belong to same work session
+Session duration = min(last_commit - first_commit, max_session_hours)
+```
+
+This produces more accurate time tracking than arbitrary per-commit durations.
 
 ## Installation
 
@@ -58,10 +82,14 @@ ACTIVITY_TRACKER_CHECK_INTERVAL=5  # 5 seconds
 
 # GitHub Commit Tracker Configuration
 ENABLE_GITHUB_TRACKER=true
-COMMIT_TRACKER_USERNAME=your_github_username
-COMMIT_TRACKER_TOKEN=ghp_your_personal_access_token
+COMMIT_TRACKER_MODE=user  # Options: 'user' (individual) or 'org' (organization)
+COMMIT_TRACKER_USERNAME=your_github_username  # For user mode
+COMMIT_TRACKER_ORG=your_organization_name  # For org mode
+COMMIT_TRACKER_TOKEN=ghp_your_personal_access_token  # Required for org mode
 COMMIT_TRACKER_POLL_INTERVAL=60  # 60 seconds
-COMMIT_TRACKER_DURATION=10  # 10 minutes per commit
+COMMIT_TRACKER_DURATION=10  # 10 minutes per commit (legacy mode only)
+COMMIT_TRACKER_USE_WORKED_HOURS=true  # Use cluster-based worked hours (recommended)
+COMMIT_TRACKER_TIMEZONE=America/Asuncion  # Your local timezone
 
 # Clockify Configuration (required)
 CLOCKIFY_API_KEY=your_clockify_api_key
@@ -84,10 +112,14 @@ CLOCKIFY_DEFAULT_PROJECT_ID=  # Optional: default project for auto-tracked entri
 | Parameter | Description | Default | Unit |
 |-----------|-------------|---------|------|
 | `ENABLE_GITHUB_TRACKER` | Enable/disable GitHub tracking | `false` | boolean |
-| `COMMIT_TRACKER_USERNAME` | GitHub username to monitor | - | string |
+| `COMMIT_TRACKER_MODE` | Tracking mode: user or org | `user` | string |
+| `COMMIT_TRACKER_USERNAME` | GitHub username to monitor (user mode) | - | string |
+| `COMMIT_TRACKER_ORG` | GitHub organization to monitor (org mode) | - | string |
 | `COMMIT_TRACKER_TOKEN` | GitHub personal access token | - | string |
 | `COMMIT_TRACKER_POLL_INTERVAL` | Time between GitHub API polls | `60` | seconds |
-| `COMMIT_TRACKER_DURATION` | Duration assigned to each commit | `10` | minutes |
+| `COMMIT_TRACKER_DURATION` | Duration per commit (legacy mode) | `10` | minutes |
+| `COMMIT_TRACKER_USE_WORKED_HOURS` | Use cluster-based worked hours | `true` | boolean |
+| `COMMIT_TRACKER_TIMEZONE` | Timezone for worked hours | `America/Asuncion` | string |
 
 ## Usage
 
@@ -251,15 +283,26 @@ python tracker.py
 
 ### GitHub Commit Tracking Flow
 
-1. **API Polling**: Polls GitHub's `/users/:username/events` endpoint
+1. **API Polling**: Polls GitHub's endpoint based on mode:
+   - User mode: `/users/:username/events`
+   - Organization mode: `/orgs/:orgname/events`
 2. **Event Processing**: Filters for `PushEvent` types
 3. **Commit Detection**: Extracts commits from push events
 4. **Duplicate Check**: Checks commit SHA against seen commits
-5. **Entry Creation**: Creates Clockify time entry with:
-   - Start: Commit timestamp (or current time)
-   - Duration: Configurable (default 10 minutes)
-   - Description: Commit SHA, repo, and message
-6. **State Persistence**: Saves seen commits to `clockify_github_state.json`
+5. **Clustering (Worked Hours Mode)**:
+   - Collects commits in a buffer
+   - Periodically runs cluster detection algorithm
+   - Groups commits by author and repository
+   - Calculates work session times using exponential decay
+   - Merges nearby clusters
+6. **Entry Creation**: Creates Clockify time entries:
+   - **Worked Hours Mode** (recommended): One entry per work session cluster
+     - Description: `{repo}: {count} commits ({start_time}–{end_time})`
+     - Duration: Calculated from cluster timestamps
+   - **Legacy Mode**: One entry per individual commit
+     - Description: `Commit {sha} @ {repo}: {message}`
+     - Duration: Fixed (default 10 minutes)
+7. **State Persistence**: Saves seen commits to `clockify_github_state.json`
 
 ## State Files
 

@@ -136,6 +136,8 @@ jobs:
           COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
           COMMIT_TRACKER_POLL_INTERVAL: ${{ secrets.COMMIT_TRACKER_POLL_INTERVAL || '60' }}
           COMMIT_TRACKER_DURATION: ${{ secrets.COMMIT_TRACKER_DURATION || '10' }}
+          COMMIT_TRACKER_USE_WORKED_HOURS: ${{ secrets.COMMIT_TRACKER_USE_WORKED_HOURS || 'true' }}
+          COMMIT_TRACKER_TIMEZONE: ${{ secrets.COMMIT_TRACKER_TIMEZONE || 'America/Asuncion' }}
         run: |
           echo "Starting GitHub Commit Tracker..."
           echo "Mode: $COMMIT_TRACKER_MODE"

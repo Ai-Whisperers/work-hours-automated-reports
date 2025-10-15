@@ -148,6 +148,11 @@ def main():
         else:
             try:
                 print(f"\nInitializing GitHub Commit Tracker (mode: {tracker_mode})...")
+
+                # Get worked hours configuration
+                use_worked_hours = os.getenv("COMMIT_TRACKER_USE_WORKED_HOURS", "true").lower() == "true"
+                timezone = os.getenv("COMMIT_TRACKER_TIMEZONE", "America/Asuncion")
+
                 github_tracker = GitHubCommitTrackerService(
                     clockify_client=clockify_client,
                     settings=settings,
@@ -155,14 +160,16 @@ def main():
                     github_org=github_org if tracker_mode == "org" else None,
                     github_token=os.getenv("COMMIT_TRACKER_TOKEN"),
                     poll_interval=int(os.getenv("COMMIT_TRACKER_POLL_INTERVAL", "60")),
-                    commit_duration_minutes=int(os.getenv("COMMIT_TRACKER_DURATION", "10"))
+                    timezone=timezone,
+                    use_worked_hours=use_worked_hours
                 )
                 github_tracker.start_tracking()
                 trackers.append(("GitHub Tracker", github_tracker))
 
                 token_status = "with token" if os.getenv("COMMIT_TRACKER_TOKEN") else "without token"
                 target = github_org if tracker_mode == "org" else github_username
-                print(f"✓ GitHub Tracker started for {tracker_mode} '{target}' ({token_status})")
+                mode_desc = "cluster-based hours" if use_worked_hours else "individual commits"
+                print(f"✓ GitHub Tracker started for {tracker_mode} '{target}' ({token_status}, {mode_desc})")
             except Exception as e:
                 print(f"❌ Failed to start GitHub Tracker: {e}")
     else:

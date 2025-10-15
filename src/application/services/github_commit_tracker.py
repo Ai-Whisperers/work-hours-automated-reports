@@ -10,13 +10,14 @@ import json
 import os
 import threading
 from datetime import datetime, timedelta
-from typing import Optional, Set, Dict, Any
+from typing import Optional, Set, Dict, Any, List
 from pathlib import Path
 
 import requests
 
 from ...infrastructure.api_clients.clockify_sync_adapter import ClockifySyncAdapter
 from ...infrastructure.config.settings import Settings
+from .worked_hours_calculator import WorkedHoursCalculator, CommitCluster
 
 
 class GitHubCommitTrackerService:
@@ -40,7 +41,8 @@ class GitHubCommitTrackerService:
         github_org: Optional[str] = None,
         github_token: Optional[str] = None,
         poll_interval: int = 60,  # Poll every 60 seconds
-        commit_duration_minutes: int = 10,  # Assume 10 minutes per commit
+        timezone: str = "America/Asuncion",  # Timezone for worked hours calculation
+        use_worked_hours: bool = True,  # Use cluster-based worked hours
         state_file_path: Optional[str] = None,
     ):
         """
@@ -53,7 +55,8 @@ class GitHubCommitTrackerService:
             github_org: GitHub organization to monitor (for org mode)
             github_token: Optional GitHub personal access token (recommended for rate limits)
             poll_interval: Seconds between GitHub API polls
-            commit_duration_minutes: Duration to assign to each commit entry
+            timezone: Timezone for worked hours calculation
+            use_worked_hours: If True, use cluster-based hours; if False, individual commits
             state_file_path: Optional custom path for state file
         """
         self.clockify_client = clockify_client
@@ -62,7 +65,17 @@ class GitHubCommitTrackerService:
         self.github_org = github_org
         self.github_token = github_token
         self.poll_interval = poll_interval
-        self.commit_duration = timedelta(minutes=commit_duration_minutes)
+        self.use_worked_hours = use_worked_hours
+        self.timezone = timezone
+
+        # Initialize worked hours calculator
+        self.hours_calculator = WorkedHoursCalculator(
+            timezone=timezone,
+            tau_hours=2.5,
+            cluster_threshold=0.1,
+            max_session_hours=4.0,
+            min_cluster_gap_minutes=30
+        )
 
         # Determine tracking mode
         if not github_username and not github_org:
@@ -74,6 +87,7 @@ class GitHubCommitTrackerService:
         # State management
         self.state_file = state_file_path or self.STATE_FILE
         self.seen_commits: Set[str] = set()
+        self.pending_commits: List[Dict[str, Any]] = []  # Buffer for cluster processing
         self._running: bool = False
         self._lock = threading.Lock()
 
@@ -114,7 +128,7 @@ class GitHubCommitTrackerService:
         timestamp: Optional[datetime] = None,
     ) -> bool:
         """
-        Create a Clockify time entry for a commit.
+        Create a Clockify time entry for a single commit (legacy mode).
 
         Args:
             sha: Commit SHA
@@ -126,9 +140,9 @@ class GitHubCommitTrackerService:
             True if entry was created successfully
         """
         try:
-            # Calculate time range
+            # Calculate time range (10 minutes per commit)
             start_time = timestamp or datetime.utcnow()
-            end_time = start_time + self.commit_duration
+            end_time = start_time + timedelta(minutes=10)
 
             # Format description
             description = f"Commit {sha[:7]} @ {repo}: {message[:100]}"
@@ -151,6 +165,76 @@ class GitHubCommitTrackerService:
         except Exception as e:
             print(f"[GitHubTracker] Error creating commit entry: {e}")
             return False
+
+    def _create_cluster_entry(self, cluster: CommitCluster) -> bool:
+        """
+        Create a Clockify time entry for a work session cluster.
+
+        Args:
+            cluster: CommitCluster object representing a work session
+
+        Returns:
+            True if entry was created successfully
+        """
+        try:
+            # Create time entry with cluster data
+            response = self.clockify_client.create_time_entry_with_range(
+                start=cluster.start,
+                end=cluster.end,
+                description=cluster.description,
+                project_id=self.settings.get("CLOCKIFY_DEFAULT_PROJECT_ID"),
+            )
+
+            if response and "id" in response:
+                print(
+                    f"[GitHubTracker] Created session for {cluster.author} @ {cluster.repo}: "
+                    f"{cluster.duration_hours:.2f}h ({cluster.commit_count} commits)"
+                )
+                return True
+            else:
+                print(f"[GitHubTracker] Failed to create session for {cluster.author} @ {cluster.repo}")
+                return False
+
+        except Exception as e:
+            print(f"[GitHubTracker] Error creating cluster entry: {e}")
+            return False
+
+    def _process_pending_commits(self) -> int:
+        """
+        Process pending commits and create cluster-based Clockify entries.
+
+        Returns:
+            Number of clusters created
+        """
+        if not self.pending_commits:
+            return 0
+
+        try:
+            # Calculate clusters from pending commits
+            clusters = self.hours_calculator.calculate_clusters(self.pending_commits)
+
+            if not clusters:
+                return 0
+
+            # Create Clockify entries for each cluster
+            created_count = 0
+            for cluster in clusters:
+                if self._create_cluster_entry(cluster):
+                    created_count += 1
+
+            # Display summary
+            if clusters:
+                summary = self.hours_calculator.format_for_display(clusters)
+                print(f"\n[GitHubTracker] Work Sessions Summary:\n{summary}\n")
+
+            # Clear pending commits after processing
+            self.pending_commits.clear()
+
+            return created_count
+
+        except Exception as e:
+            print(f"[GitHubTracker] Error processing pending commits: {e}")
+            return 0
 
     def _fetch_recent_commits(self) -> list[Dict[str, Any]]:
         """
@@ -197,7 +281,7 @@ class GitHubCommitTrackerService:
             events: List of GitHub event objects
 
         Returns:
-            Number of new commits processed
+            Number of new commits/clusters processed
         """
         new_commits_count = 0
 
@@ -207,6 +291,7 @@ class GitHubCommitTrackerService:
 
             repo = event.get("repo", {}).get("name", "unknown-repo")
             commits = event.get("payload", {}).get("commits", [])
+            event_time = event.get("created_at")  # Event timestamp
 
             for commit in commits:
                 sha = commit.get("sha")
@@ -223,9 +308,23 @@ class GitHubCommitTrackerService:
                 message = commit.get("message", "No message")
                 author = commit.get("author", {}).get("name", "unknown")
 
-                # Create Clockify entry
-                if self._create_commit_entry(sha, message, repo):
+                # Process based on mode
+                if self.use_worked_hours:
+                    # Add to pending commits for cluster processing
+                    commit_data = {
+                        "sha": sha,
+                        "author": author,
+                        "repo": repo,
+                        "timestamp": event_time if event_time else datetime.utcnow().isoformat(),
+                        "message": message
+                    }
+                    with self._lock:
+                        self.pending_commits.append(commit_data)
                     new_commits_count += 1
+                else:
+                    # Legacy mode: create individual entries
+                    if self._create_commit_entry(sha, message, repo):
+                        new_commits_count += 1
 
         return new_commits_count
 
@@ -233,6 +332,9 @@ class GitHubCommitTrackerService:
         """Main polling loop that checks GitHub for new commits."""
         target = self.github_org if self.tracking_mode == "org" else self.github_username
         print(f"[GitHubTracker] Started polling for {self.tracking_mode} '{target}'")
+
+        poll_count = 0
+        cluster_processing_interval = 5  # Process clusters every 5 polls
 
         while self._running:
             try:
@@ -246,6 +348,15 @@ class GitHubCommitTrackerService:
                     if new_count > 0:
                         # Save state after processing new commits
                         self._save_state()
+
+                # Process pending commits into clusters periodically
+                poll_count += 1
+                if self.use_worked_hours and poll_count >= cluster_processing_interval:
+                    with self._lock:
+                        if self.pending_commits:
+                            print(f"[GitHubTracker] Processing {len(self.pending_commits)} pending commits into clusters...")
+                            self._process_pending_commits()
+                            poll_count = 0  # Reset counter after processing
 
                 # Wait before next poll
                 time.sleep(self.poll_interval)
