@@ -20,6 +20,8 @@ This tool bridges the gap between these systems, automatically matching time ent
 - **Automated Data Extraction**: Fetches time entries from Clockify and work items from Azure DevOps
 - **Intelligent Matching**: Multiple pattern recognition strategies to link time entries with work items
 - **Multiple Report Formats**: Excel, HTML, JSON, and PDF reports
+- **Activity Tracking**: Automatic Clockify time tracking based on mouse/keyboard activity
+- **GitHub Integration**: Auto-create Clockify entries for GitHub commits
 - **Clean Architecture**: Hexagonal architecture with SOLID principles
 - **Performance Optimized**: Async operations, connection pooling, and caching
 - **Docker Support**: Easy deployment with Docker and docker-compose
@@ -139,6 +141,22 @@ docker-compose --profile with-redis up -d
 ```
 
 ## 📖 Usage
+
+### Activity Tracker
+
+The Activity Tracker automatically manages Clockify time entries based on your activity and GitHub commits.
+
+```bash
+# Start the activity tracker
+python tracker.py
+```
+
+**Features:**
+- **Activity Monitoring**: Auto-start/stop timers based on mouse and keyboard activity
+- **GitHub Integration**: Auto-create entries for new commits
+- **Persistent State**: Prevents duplicate entries across restarts
+
+See [Activity Tracker Documentation](docs/activity-tracker.md) for detailed configuration and usage.
 
 ### Web Interface
 

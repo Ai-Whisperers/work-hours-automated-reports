@@ -54,11 +54,43 @@ jobs:
       
       - name: Generate report
         env:
+          # Clockify Configuration
           CLOCKIFY_API_KEY: ${{ secrets.CLOCKIFY_API_KEY }}
           CLOCKIFY_WORKSPACE_ID: ${{ secrets.CLOCKIFY_WORKSPACE_ID }}
+          CLOCKIFY_BASE_URL: ${{ secrets.CLOCKIFY_BASE_URL || 'https://api.clockify.me/api/v1' }}
+          CLOCKIFY_TIMEOUT: ${{ secrets.CLOCKIFY_TIMEOUT || '30' }}
+          CLOCKIFY_MAX_RETRIES: ${{ secrets.CLOCKIFY_MAX_RETRIES || '3' }}
+          CLOCKIFY_DEFAULT_PROJECT_ID: ${{ secrets.CLOCKIFY_DEFAULT_PROJECT_ID }}
+
+          # Azure DevOps Configuration
           ADO_ORG: ${{ secrets.ADO_ORG }}
           ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
           ADO_PAT: ${{ secrets.ADO_PAT }}
+          ADO_BASE_URL: ${{ secrets.ADO_BASE_URL || 'https://dev.azure.com' }}
+          ADO_API_VERSION: ${{ secrets.ADO_API_VERSION || '7.0' }}
+          ADO_TIMEOUT: ${{ secrets.ADO_TIMEOUT || '30' }}
+          ADO_MAX_RETRIES: ${{ secrets.ADO_MAX_RETRIES || '3' }}
+          ADO_BATCH_SIZE: ${{ secrets.ADO_BATCH_SIZE || '200' }}
+
+          # Application Configuration
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT || 'production' }}
+          DEBUG: ${{ secrets.DEBUG || 'false' }}
+          LOG_LEVEL: ${{ secrets.LOG_LEVEL || 'INFO' }}
+          LOG_TO_CONSOLE: 'true'
+          LOG_TO_FILE: 'false'
+
+          # Cache Configuration
+          CACHE_BACKEND: ${{ secrets.CACHE_BACKEND || 'local' }}
+          CACHE_TTL: ${{ secrets.CACHE_TTL || '3600' }}
+          ENABLE_CACHING: ${{ secrets.ENABLE_CACHING || 'true' }}
+
+          # Performance Configuration
+          MAX_CONCURRENT_REQUESTS: ${{ secrets.MAX_CONCURRENT_REQUESTS || '5' }}
+          REQUEST_TIMEOUT: ${{ secrets.REQUEST_TIMEOUT || '60' }}
+
+          # Feature Flags
+          ENABLE_FUZZY_MATCHING: ${{ secrets.ENABLE_FUZZY_MATCHING || 'true' }}
+          ENABLE_METRICS: ${{ secrets.ENABLE_METRICS || 'true' }}
         run: |
           FORMAT="${{ github.event.inputs.output_format || 'excel' }}"
           python main.py run \

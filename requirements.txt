@@ -25,6 +25,10 @@ plotly==5.18.0  # For charts (optional)
 # API interaction
 tenacity==8.2.3  # Retry logic
 backoff==2.2.1  # Exponential backoff
+requests==2.31.0  # HTTP requests for GitHub API
+
+# Activity tracking (optional)
+pynput==1.7.6  # Mouse and keyboard monitoring
 
 # Caching
 diskcache==5.6.3  # Local disk cache

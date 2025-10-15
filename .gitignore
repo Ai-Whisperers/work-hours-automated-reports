@@ -239,3 +239,8 @@ dump.rdb
 *secret*
 *token*
 !*example*
+
+# Activity Tracker state files
+clockify_tracker_state.json
+clockify_github_state.json
+*_tracker_state.json

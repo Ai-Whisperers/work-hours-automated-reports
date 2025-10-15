@@ -345,7 +345,7 @@ class ClockifyClient(BaseAPIClient):
     
     async def test_connection(self) -> bool:
         """Test API connection.
-        
+
         Returns:
             True if connection is successful
         """
@@ -356,3 +356,87 @@ class ClockifyClient(BaseAPIClient):
         except Exception as e:
             logger.error(f"Failed to connect to Clockify: {e}")
             return False
+
+    async def start_time_entry(
+        self,
+        description: str = "Work (auto)",
+        project_id: Optional[str] = None,
+        tags: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """Start a new time entry (timer).
+
+        Args:
+            description: Entry description
+            project_id: Optional project ID
+            tags: Optional tag IDs
+
+        Returns:
+            Started time entry data
+        """
+        endpoint = f"/workspaces/{self.workspace_id}/time-entries"
+
+        body = {
+            "start": datetime.utcnow().isoformat() + "Z",
+            "description": description
+        }
+
+        if project_id:
+            body["projectId"] = project_id
+
+        if tags:
+            body["tagIds"] = tags
+
+        return await self.post(endpoint, json_data=body)
+
+    async def stop_time_entry(self, entry_id: str) -> Dict[str, Any]:
+        """Stop a running time entry.
+
+        Args:
+            entry_id: Time entry ID to stop
+
+        Returns:
+            Stopped time entry data
+        """
+        endpoint = f"/workspaces/{self.workspace_id}/time-entries/{entry_id}"
+
+        body = {
+            "end": datetime.utcnow().isoformat() + "Z"
+        }
+
+        return await self.patch(endpoint, json_data=body)
+
+    async def create_time_entry_with_range(
+        self,
+        start: datetime,
+        end: datetime,
+        description: str,
+        project_id: Optional[str] = None,
+        tags: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """Create a time entry with specific start and end times.
+
+        Args:
+            start: Start datetime
+            end: End datetime
+            description: Entry description
+            project_id: Optional project ID
+            tags: Optional tag IDs
+
+        Returns:
+            Created time entry data
+        """
+        endpoint = f"/workspaces/{self.workspace_id}/time-entries"
+
+        body = {
+            "start": start.isoformat() + "Z" if not start.isoformat().endswith("Z") else start.isoformat(),
+            "end": end.isoformat() + "Z" if not end.isoformat().endswith("Z") else end.isoformat(),
+            "description": description
+        }
+
+        if project_id:
+            body["projectId"] = project_id
+
+        if tags:
+            body["tagIds"] = tags
+
+        return await self.post(endpoint, json_data=body)
