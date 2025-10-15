@@ -58,10 +58,10 @@ ACTIVITY_TRACKER_CHECK_INTERVAL=5  # 5 seconds
 
 # GitHub Commit Tracker Configuration
 ENABLE_GITHUB_TRACKER=true
-GITHUB_USERNAME=your_github_username
-GITHUB_TOKEN=ghp_your_personal_access_token
-GITHUB_POLL_INTERVAL=60  # 60 seconds
-GITHUB_COMMIT_DURATION=10  # 10 minutes per commit
+COMMIT_TRACKER_USERNAME=your_github_username
+COMMIT_TRACKER_TOKEN=ghp_your_personal_access_token
+COMMIT_TRACKER_POLL_INTERVAL=60  # 60 seconds
+COMMIT_TRACKER_DURATION=10  # 10 minutes per commit
 
 # Clockify Configuration (required)
 CLOCKIFY_API_KEY=your_clockify_api_key
@@ -84,10 +84,10 @@ CLOCKIFY_DEFAULT_PROJECT_ID=  # Optional: default project for auto-tracked entri
 | Parameter | Description | Default | Unit |
 |-----------|-------------|---------|------|
 | `ENABLE_GITHUB_TRACKER` | Enable/disable GitHub tracking | `false` | boolean |
-| `GITHUB_USERNAME` | GitHub username to monitor | - | string |
-| `GITHUB_TOKEN` | GitHub personal access token | - | string |
-| `GITHUB_POLL_INTERVAL` | Time between GitHub API polls | `60` | seconds |
-| `GITHUB_COMMIT_DURATION` | Duration assigned to each commit | `10` | minutes |
+| `COMMIT_TRACKER_USERNAME` | GitHub username to monitor | - | string |
+| `COMMIT_TRACKER_TOKEN` | GitHub personal access token | - | string |
+| `COMMIT_TRACKER_POLL_INTERVAL` | Time between GitHub API polls | `60` | seconds |
+| `COMMIT_TRACKER_DURATION` | Duration assigned to each commit | `10` | minutes |
 
 ## Usage
 
@@ -192,21 +192,21 @@ def main():
 
     # GitHub Commit Tracker
     if os.getenv("ENABLE_GITHUB_TRACKER", "false").lower() == "true":
-        github_username = os.getenv("GITHUB_USERNAME")
+        github_username = os.getenv("COMMIT_TRACKER_USERNAME")
         if github_username:
             github_tracker = GitHubCommitTrackerService(
                 clockify_client=clockify_client,
                 settings=settings,
                 github_username=github_username,
-                github_token=os.getenv("GITHUB_TOKEN"),
-                poll_interval=int(os.getenv("GITHUB_POLL_INTERVAL", "60")),
-                commit_duration_minutes=int(os.getenv("GITHUB_COMMIT_DURATION", "10"))
+                github_token=os.getenv("COMMIT_TRACKER_TOKEN"),
+                poll_interval=int(os.getenv("COMMIT_TRACKER_POLL_INTERVAL", "60")),
+                commit_duration_minutes=int(os.getenv("COMMIT_TRACKER_DURATION", "10"))
             )
             github_tracker.start_tracking()
             trackers.append(("GitHub Tracker", github_tracker))
             print("GitHub Commit Tracker started")
         else:
-            print("GITHUB_USERNAME not configured, skipping GitHub tracker")
+            print("COMMIT_TRACKER_USERNAME not configured, skipping GitHub tracker")
 
     if not trackers:
         print("No trackers enabled. Set ENABLE_ACTIVITY_TRACKER or ENABLE_GITHUB_TRACKER to true.")
@@ -314,9 +314,9 @@ Activity tracking requires input monitoring permissions:
 **Problem**: Commits not creating Clockify entries
 
 **Solutions**:
-1. Verify `GITHUB_USERNAME` is correct
+1. Verify `COMMIT_TRACKER_USERNAME` is correct
 2. Check if commits are public (or use token for private repos)
-3. Verify API rate limits: Add `GITHUB_TOKEN` to `.env`
+3. Verify API rate limits: Add `COMMIT_TRACKER_TOKEN` to `.env`
 4. Check logs for API errors
 5. Ensure state file isn't corrupted: Delete `clockify_github_state.json` and restart
 

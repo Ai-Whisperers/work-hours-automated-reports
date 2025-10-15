@@ -164,7 +164,7 @@ class GitHubCommitTrackerService:
             elif response.status_code == 404:
                 print(f"[GitHubTracker] User '{self.github_username}' not found")
             elif response.status_code == 403:
-                print(f"[GitHubTracker] Rate limit exceeded. Consider adding GITHUB_TOKEN")
+                print(f"[GitHubTracker] Rate limit exceeded. Consider adding COMMIT_TRACKER_TOKEN")
             else:
                 print(f"[GitHubTracker] API error: {response.status_code} - {response.text}")
 

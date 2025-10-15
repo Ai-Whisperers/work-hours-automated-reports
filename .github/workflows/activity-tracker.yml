@@ -57,24 +57,24 @@ jobs:
       - name: Validate GitHub credentials (if enabled)
         if: inputs.enable_github_tracker == 'true'
         env:
-          GITHUB_USERNAME: ${{ secrets.TRACKER_GITHUB_USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.TRACKER_GITHUB_TOKEN }}
+          COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+          COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
         run: |
-          if [ -z "$GITHUB_USERNAME" ]; then
-            echo "⚠ Warning: TRACKER_GITHUB_USERNAME not set"
+          if [ -z "$COMMIT_TRACKER_USERNAME" ]; then
+            echo "⚠ Warning: COMMIT_TRACKER_USERNAME not set"
             exit 1
           fi
 
           # Test GitHub API access
-          if [ -n "$GITHUB_TOKEN" ]; then
-            curl -H "Authorization: token $GITHUB_TOKEN" \
+          if [ -n "$COMMIT_TRACKER_TOKEN" ]; then
+            curl -H "Authorization: token $COMMIT_TRACKER_TOKEN" \
               -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/users/$GITHUB_USERNAME/events" \
+              "https://api.github.com/users/$COMMIT_TRACKER_USERNAME/events" \
               -s -o /dev/null -w "%{http_code}" | grep -q "200" && \
               echo "✓ GitHub API access verified" || \
               echo "⚠ Warning: Could not verify GitHub API access"
           else
-            echo "⚠ Warning: TRACKER_GITHUB_TOKEN not set (rate limits may apply)"
+            echo "⚠ Warning: COMMIT_TRACKER_TOKEN not set (rate limits may apply)"
           fi
 
   run-github-tracker:
@@ -110,15 +110,15 @@ jobs:
           # GitHub Tracker Configuration
           ENABLE_ACTIVITY_TRACKER: 'false'
           ENABLE_GITHUB_TRACKER: 'true'
-          GITHUB_USERNAME: ${{ secrets.TRACKER_GITHUB_USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.TRACKER_GITHUB_TOKEN }}
-          GITHUB_POLL_INTERVAL: ${{ secrets.GITHUB_POLL_INTERVAL || '60' }}
-          GITHUB_COMMIT_DURATION: ${{ secrets.GITHUB_COMMIT_DURATION || '10' }}
+          COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+          COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
+          COMMIT_TRACKER_POLL_INTERVAL: ${{ secrets.COMMIT_TRACKER_POLL_INTERVAL || '60' }}
+          COMMIT_TRACKER_DURATION: ${{ secrets.COMMIT_TRACKER_DURATION || '10' }}
         run: |
           echo "Starting GitHub Commit Tracker..."
-          echo "Username: $GITHUB_USERNAME"
-          echo "Poll interval: ${GITHUB_POLL_INTERVAL}s"
-          echo "Commit duration: ${GITHUB_COMMIT_DURATION}min"
+          echo "Username: $COMMIT_TRACKER_USERNAME"
+          echo "Poll interval: ${COMMIT_TRACKER_POLL_INTERVAL}s"
+          echo "Commit duration: ${COMMIT_TRACKER_DURATION}min"
           echo "Running for: ${{ inputs.duration_minutes }} minutes"
           echo ""
 

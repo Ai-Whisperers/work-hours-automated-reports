@@ -136,7 +136,7 @@ def main():
 
     # GitHub Commit Tracker
     if os.getenv("ENABLE_GITHUB_TRACKER", "false").lower() == "true":
-        github_username = os.getenv("GITHUB_USERNAME")
+        github_username = os.getenv("COMMIT_TRACKER_USERNAME")
         if github_username:
             try:
                 print("\nInitializing GitHub Commit Tracker...")
@@ -144,18 +144,18 @@ def main():
                     clockify_client=clockify_client,
                     settings=settings,
                     github_username=github_username,
-                    github_token=os.getenv("GITHUB_TOKEN"),
-                    poll_interval=int(os.getenv("GITHUB_POLL_INTERVAL", "60")),
-                    commit_duration_minutes=int(os.getenv("GITHUB_COMMIT_DURATION", "10"))
+                    github_token=os.getenv("COMMIT_TRACKER_TOKEN"),
+                    poll_interval=int(os.getenv("COMMIT_TRACKER_POLL_INTERVAL", "60")),
+                    commit_duration_minutes=int(os.getenv("COMMIT_TRACKER_DURATION", "10"))
                 )
                 github_tracker.start_tracking()
                 trackers.append(("GitHub Tracker", github_tracker))
-                token_status = "with token" if os.getenv("GITHUB_TOKEN") else "without token"
+                token_status = "with token" if os.getenv("COMMIT_TRACKER_TOKEN") else "without token"
                 print(f"✓ GitHub Tracker started for @{github_username} ({token_status})")
             except Exception as e:
                 print(f"❌ Failed to start GitHub Tracker: {e}")
         else:
-            print("\n⚠ GITHUB_USERNAME not configured, skipping GitHub tracker")
+            print("\n⚠ COMMIT_TRACKER_USERNAME not configured, skipping GitHub tracker")
     else:
         print("⊘ GitHub Tracker disabled (set ENABLE_GITHUB_TRACKER=true to enable)")
 
@@ -165,7 +165,7 @@ def main():
         print("\nTo enable trackers, set these in your .env file:")
         print("  ENABLE_ACTIVITY_TRACKER=true")
         print("  ENABLE_GITHUB_TRACKER=true")
-        print("  GITHUB_USERNAME=your_username")
+        print("  COMMIT_TRACKER_USERNAME=your_username")
         print("\nSee docs/activity-tracker.md for more information.")
         return 1
 
