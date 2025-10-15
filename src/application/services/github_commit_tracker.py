@@ -36,7 +36,8 @@ class GitHubCommitTrackerService:
         self,
         clockify_client: ClockifySyncAdapter,
         settings: Settings,
-        github_username: str,
+        github_username: Optional[str] = None,
+        github_org: Optional[str] = None,
         github_token: Optional[str] = None,
         poll_interval: int = 60,  # Poll every 60 seconds
         commit_duration_minutes: int = 10,  # Assume 10 minutes per commit
@@ -48,7 +49,8 @@ class GitHubCommitTrackerService:
         Args:
             clockify_client: Clockify sync adapter instance
             settings: Application settings
-            github_username: GitHub username to monitor
+            github_username: GitHub username to monitor (for user mode)
+            github_org: GitHub organization to monitor (for org mode)
             github_token: Optional GitHub personal access token (recommended for rate limits)
             poll_interval: Seconds between GitHub API polls
             commit_duration_minutes: Duration to assign to each commit entry
@@ -57,9 +59,17 @@ class GitHubCommitTrackerService:
         self.clockify_client = clockify_client
         self.settings = settings
         self.github_username = github_username
+        self.github_org = github_org
         self.github_token = github_token
         self.poll_interval = poll_interval
         self.commit_duration = timedelta(minutes=commit_duration_minutes)
+
+        # Determine tracking mode
+        if not github_username and not github_org:
+            raise ValueError("Either github_username or github_org must be provided")
+
+        self.tracking_mode = "org" if github_org else "user"
+        self.tracking_target = github_org if github_org else github_username
 
         # State management
         self.state_file = state_file_path or self.STATE_FILE
@@ -154,7 +164,11 @@ class GitHubCommitTrackerService:
         if self.github_token:
             headers["Authorization"] = f"token {self.github_token}"
 
-        events_url = f"https://api.github.com/users/{self.github_username}/events"
+        # Choose endpoint based on tracking mode
+        if self.tracking_mode == "org":
+            events_url = f"https://api.github.com/orgs/{self.github_org}/events"
+        else:
+            events_url = f"https://api.github.com/users/{self.github_username}/events"
 
         try:
             response = requests.get(events_url, headers=headers, timeout=10)
@@ -162,7 +176,8 @@ class GitHubCommitTrackerService:
             if response.status_code == 200:
                 return response.json()
             elif response.status_code == 404:
-                print(f"[GitHubTracker] User '{self.github_username}' not found")
+                target = self.github_org if self.tracking_mode == "org" else self.github_username
+                print(f"[GitHubTracker] {self.tracking_mode.capitalize()} '{target}' not found")
             elif response.status_code == 403:
                 print(f"[GitHubTracker] Rate limit exceeded. Consider adding COMMIT_TRACKER_TOKEN")
             else:
@@ -216,7 +231,8 @@ class GitHubCommitTrackerService:
 
     def _poll_loop(self) -> None:
         """Main polling loop that checks GitHub for new commits."""
-        print(f"[GitHubTracker] Started polling for user '{self.github_username}'")
+        target = self.github_org if self.tracking_mode == "org" else self.github_username
+        print(f"[GitHubTracker] Started polling for {self.tracking_mode} '{target}'")
 
         while self._running:
             try:
@@ -244,8 +260,8 @@ class GitHubCommitTrackerService:
             print("[GitHubTracker] Already running")
             return
 
-        if not self.github_username:
-            print("[GitHubTracker] Error: GitHub username not configured")
+        if not self.github_username and not self.github_org:
+            print("[GitHubTracker] Error: Neither GitHub username nor organization configured")
             return
 
         self._running = True

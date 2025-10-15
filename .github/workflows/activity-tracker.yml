@@ -57,24 +57,44 @@ jobs:
       - name: Validate GitHub credentials (if enabled)
         if: inputs.enable_github_tracker == 'true'
         env:
+          COMMIT_TRACKER_MODE: ${{ secrets.COMMIT_TRACKER_MODE || 'user' }}
           COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+          COMMIT_TRACKER_ORG: ${{ secrets.COMMIT_TRACKER_ORG }}
           COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
         run: |
-          if [ -z "$COMMIT_TRACKER_USERNAME" ]; then
-            echo "⚠ Warning: COMMIT_TRACKER_USERNAME not set"
-            exit 1
+          # Validate configuration based on mode
+          if [ "$COMMIT_TRACKER_MODE" = "org" ]; then
+            if [ -z "$COMMIT_TRACKER_ORG" ]; then
+              echo "⚠ Warning: COMMIT_TRACKER_ORG not set for org mode"
+              exit 1
+            fi
+            TARGET="$COMMIT_TRACKER_ORG"
+            ENDPOINT="orgs"
+          else
+            if [ -z "$COMMIT_TRACKER_USERNAME" ]; then
+              echo "⚠ Warning: COMMIT_TRACKER_USERNAME not set for user mode"
+              exit 1
+            fi
+            TARGET="$COMMIT_TRACKER_USERNAME"
+            ENDPOINT="users"
           fi
+
+          echo "✓ Tracker mode: $COMMIT_TRACKER_MODE"
+          echo "✓ Target: $TARGET"
 
           # Test GitHub API access
           if [ -n "$COMMIT_TRACKER_TOKEN" ]; then
             curl -H "Authorization: token $COMMIT_TRACKER_TOKEN" \
               -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/users/$COMMIT_TRACKER_USERNAME/events" \
+              "https://api.github.com/$ENDPOINT/$TARGET/events" \
               -s -o /dev/null -w "%{http_code}" | grep -q "200" && \
               echo "✓ GitHub API access verified" || \
               echo "⚠ Warning: Could not verify GitHub API access"
           else
             echo "⚠ Warning: COMMIT_TRACKER_TOKEN not set (rate limits may apply)"
+            if [ "$COMMIT_TRACKER_MODE" = "org" ]; then
+              echo "⚠ Note: Token is required for organization mode"
+            fi
           fi
 
   run-github-tracker:
@@ -110,13 +130,20 @@ jobs:
           # GitHub Tracker Configuration
           ENABLE_ACTIVITY_TRACKER: 'false'
           ENABLE_GITHUB_TRACKER: 'true'
+          COMMIT_TRACKER_MODE: ${{ secrets.COMMIT_TRACKER_MODE || 'user' }}
           COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+          COMMIT_TRACKER_ORG: ${{ secrets.COMMIT_TRACKER_ORG }}
           COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
           COMMIT_TRACKER_POLL_INTERVAL: ${{ secrets.COMMIT_TRACKER_POLL_INTERVAL || '60' }}
           COMMIT_TRACKER_DURATION: ${{ secrets.COMMIT_TRACKER_DURATION || '10' }}
         run: |
           echo "Starting GitHub Commit Tracker..."
-          echo "Username: $COMMIT_TRACKER_USERNAME"
+          echo "Mode: $COMMIT_TRACKER_MODE"
+          if [ "$COMMIT_TRACKER_MODE" = "org" ]; then
+            echo "Organization: $COMMIT_TRACKER_ORG"
+          else
+            echo "Username: $COMMIT_TRACKER_USERNAME"
+          fi
           echo "Poll interval: ${COMMIT_TRACKER_POLL_INTERVAL}s"
           echo "Commit duration: ${COMMIT_TRACKER_DURATION}min"
           echo "Running for: ${{ inputs.duration_minutes }} minutes"

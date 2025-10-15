@@ -136,26 +136,35 @@ def main():
 
     # GitHub Commit Tracker
     if os.getenv("ENABLE_GITHUB_TRACKER", "false").lower() == "true":
+        tracker_mode = os.getenv("COMMIT_TRACKER_MODE", "user").lower()
         github_username = os.getenv("COMMIT_TRACKER_USERNAME")
-        if github_username:
+        github_org = os.getenv("COMMIT_TRACKER_ORG")
+
+        # Validate configuration based on mode
+        if tracker_mode == "org" and not github_org:
+            print("\n⚠ COMMIT_TRACKER_ORG not configured for org mode, skipping GitHub tracker")
+        elif tracker_mode == "user" and not github_username:
+            print("\n⚠ COMMIT_TRACKER_USERNAME not configured for user mode, skipping GitHub tracker")
+        else:
             try:
-                print("\nInitializing GitHub Commit Tracker...")
+                print(f"\nInitializing GitHub Commit Tracker (mode: {tracker_mode})...")
                 github_tracker = GitHubCommitTrackerService(
                     clockify_client=clockify_client,
                     settings=settings,
-                    github_username=github_username,
+                    github_username=github_username if tracker_mode == "user" else None,
+                    github_org=github_org if tracker_mode == "org" else None,
                     github_token=os.getenv("COMMIT_TRACKER_TOKEN"),
                     poll_interval=int(os.getenv("COMMIT_TRACKER_POLL_INTERVAL", "60")),
                     commit_duration_minutes=int(os.getenv("COMMIT_TRACKER_DURATION", "10"))
                 )
                 github_tracker.start_tracking()
                 trackers.append(("GitHub Tracker", github_tracker))
+
                 token_status = "with token" if os.getenv("COMMIT_TRACKER_TOKEN") else "without token"
-                print(f"✓ GitHub Tracker started for @{github_username} ({token_status})")
+                target = github_org if tracker_mode == "org" else github_username
+                print(f"✓ GitHub Tracker started for {tracker_mode} '{target}' ({token_status})")
             except Exception as e:
                 print(f"❌ Failed to start GitHub Tracker: {e}")
-        else:
-            print("\n⚠ COMMIT_TRACKER_USERNAME not configured, skipping GitHub tracker")
     else:
         print("⊘ GitHub Tracker disabled (set ENABLE_GITHUB_TRACKER=true to enable)")
 
@@ -165,7 +174,9 @@ def main():
         print("\nTo enable trackers, set these in your .env file:")
         print("  ENABLE_ACTIVITY_TRACKER=true")
         print("  ENABLE_GITHUB_TRACKER=true")
-        print("  COMMIT_TRACKER_USERNAME=your_username")
+        print("  COMMIT_TRACKER_MODE=user  # or 'org' for organization")
+        print("  COMMIT_TRACKER_USERNAME=your_username  # for user mode")
+        print("  COMMIT_TRACKER_ORG=your_organization  # for org mode")
         print("\nSee docs/activity-tracker.md for more information.")
         return 1
 
