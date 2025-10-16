@@ -153,10 +153,14 @@ python tracker.py
 
 **Features:**
 - **Activity Monitoring**: Auto-start/stop timers based on mouse and keyboard activity
-- **GitHub Integration**: Auto-create entries for new commits
+- **GitHub Integration**: Auto-create entries for new commits with intelligent work session clustering
 - **Persistent State**: Prevents duplicate entries across restarts
+- **Organization Support**: Track commits across entire GitHub organizations
+- **Deduplication**: Updates existing entries instead of creating duplicates
 
-See [Activity Tracker Documentation](docs/activity-tracker.md) for detailed configuration and usage.
+**Documentation:**
+- [Activity Tracker Guide](docs/activity-tracker.md) - Configuration and usage
+- [Clockify Projects Guide](docs/clockify-projects-guide.md) - Using projects for better organization
 
 ### Web Interface
 
