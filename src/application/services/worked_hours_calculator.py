@@ -30,8 +30,43 @@ class CommitCluster:
 
     @property
     def description(self) -> str:
-        """Generate readable description for Clockify."""
-        return f"{self.repo}: {self.commit_count} commits ({self.start:%H:%M}–{self.end:%H:%M})"
+        """Generate readable description for Clockify card display."""
+        return f"{self.author} - {self.duration_hours:.2f}h"
+
+    @property
+    def detailed_description(self) -> str:
+        """
+        Generate detailed description with expandable commit history.
+
+        Format:
+        username - Xh
+
+        Repository: repo-name
+        Commits: X (HH:MM–HH:MM)
+
+        Commit History:
+        • SHA1234 - commit message 1
+        • SHA5678 - commit message 2
+        """
+        # Build commit history
+        commit_lines = []
+        for commit in self.commits:
+            sha_short = commit.get('sha', 'unknown')[:7]
+            message = commit.get('message', 'No message').split('\n')[0][:80]  # First line, max 80 chars
+            commit_lines.append(f"• {sha_short} - {message}")
+
+        commit_history = '\n'.join(commit_lines)
+
+        # Format full description
+        return (
+            f"{self.author} - {self.duration_hours:.2f}h\n"
+            f"\n"
+            f"Repository: {self.repo}\n"
+            f"Commits: {self.commit_count} ({self.start:%H:%M}–{self.end:%H:%M})\n"
+            f"\n"
+            f"Commit History:\n"
+            f"{commit_history}"
+        )
 
 
 class WorkedHoursCalculator:

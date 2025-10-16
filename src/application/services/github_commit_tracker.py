@@ -177,11 +177,11 @@ class GitHubCommitTrackerService:
             True if entry was created successfully
         """
         try:
-            # Create time entry with cluster data
+            # Create time entry with detailed description including commit history
             response = self.clockify_client.create_time_entry_with_range(
                 start=cluster.start,
                 end=cluster.end,
-                description=cluster.description,
+                description=cluster.detailed_description,  # Uses detailed format with commit history
                 project_id=self.settings.get("CLOCKIFY_DEFAULT_PROJECT_ID"),
             )
 
