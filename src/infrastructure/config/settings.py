@@ -63,10 +63,10 @@ class Settings(BaseSettings):
     clockify_max_retries: int = Field(3, env="CLOCKIFY_MAX_RETRIES")
     clockify_default_project_id: Optional[str] = Field(None, env="CLOCKIFY_DEFAULT_PROJECT_ID")
 
-    # Azure DevOps settings
-    ado_organization: str = Field(..., env="ADO_ORG")
-    ado_project: str = Field(..., env="ADO_PROJECT")
-    ado_pat: str = Field(..., env="ADO_PAT")
+    # Azure DevOps settings (optional - only required for report generation)
+    ado_organization: Optional[str] = Field(None, env="ADO_ORG")
+    ado_project: Optional[str] = Field(None, env="ADO_PROJECT")
+    ado_pat: Optional[str] = Field(None, env="ADO_PAT")
     ado_base_url: str = Field(
         "https://dev.azure.com",
         env="ADO_BASE_URL"
@@ -177,6 +177,20 @@ class Settings(BaseSettings):
         if hasattr(info, 'data') and info.data.get("environment") == Environment.DEVELOPMENT:
             return True
         return v
+
+    def validate_ado_required(self):
+        """Validate that ADO credentials are set when needed for reports.
+
+        Call this method before using ADO-related functionality.
+
+        Raises:
+            ValueError: If ADO credentials are missing
+        """
+        if not self.ado_organization or not self.ado_project or not self.ado_pat:
+            raise ValueError(
+                "Azure DevOps credentials are required for report generation. "
+                "Please set: ADO_ORG, ADO_PROJECT, and ADO_PAT environment variables."
+            )
     
     @property
     def is_production(self) -> bool:
