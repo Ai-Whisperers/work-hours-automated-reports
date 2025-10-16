@@ -43,8 +43,8 @@ jobs:
 
       - name: Generate worked hours JSON
         env:
-          # GitHub token for API access
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          # GitHub token for API access (use COMMIT_TRACKER_TOKEN if GH_TOKEN not set)
+          GH_TOKEN: ${{ secrets.GH_TOKEN || secrets.COMMIT_TRACKER_TOKEN }}
 
           # Commit tracker settings
           COMMIT_TRACKER_ENABLED: "true"
