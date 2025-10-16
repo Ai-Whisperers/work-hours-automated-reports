@@ -169,6 +169,7 @@ $RECYCLE.BIN/
 reports/
 *.xlsx
 *.html
+!gh-pages-site/*.html
 *.pdf
 *.csv
 !sample/*.csv
