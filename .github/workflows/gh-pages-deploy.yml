@@ -46,6 +46,10 @@ jobs:
           # GitHub token for API access (use COMMIT_TRACKER_TOKEN if GH_TOKEN not set)
           GH_TOKEN: ${{ secrets.GH_TOKEN || secrets.COMMIT_TRACKER_TOKEN }}
 
+          # Clockify credentials (required by Settings but not actually used for dashboard)
+          CLOCKIFY_API_KEY: ${{ secrets.CLOCKIFY_API_KEY }}
+          CLOCKIFY_WORKSPACE_ID: ${{ secrets.CLOCKIFY_WORKSPACE_ID }}
+
           # Commit tracker settings
           COMMIT_TRACKER_ENABLED: "true"
           COMMIT_TRACKER_MODE: "organization"
