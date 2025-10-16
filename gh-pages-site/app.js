@@ -53,6 +53,7 @@ async function loadWorkedHoursData() {
 
         // Update all UI components
         updateLastUpdated(workedHoursData.generated_at);
+        renderContributors(workedHoursData.sessions);
         updateStatistics(workedHoursData.summary);
         renderCharts(workedHoursData);
         renderSessionsTable(workedHoursData.sessions);
@@ -89,6 +90,83 @@ function updateStatistics(summary) {
     document.getElementById('totalHours').textContent = (summary.total_hours || 0).toFixed(1) + 'h';
     document.getElementById('totalCommits').textContent = summary.total_commits || 0;
     document.getElementById('avgHoursPerDay').textContent = (summary.avg_hours_per_day || 0).toFixed(1) + 'h';
+}
+
+/**
+ * Render contributors list
+ */
+function renderContributors(sessions) {
+    const container = document.getElementById('contributorsList');
+    if (!container) return;
+
+    if (!sessions || sessions.length === 0) {
+        container.innerHTML = '<li class="loading">No contributors found.</li>';
+        return;
+    }
+
+    // Aggregate hours by author
+    const contributorHours = {};
+    sessions.forEach(session => {
+        const author = session.author;
+        if (!contributorHours[author]) {
+            contributorHours[author] = 0;
+        }
+        contributorHours[author] += session.hours;
+    });
+
+    // Sort by hours (descending)
+    const contributors = Object.entries(contributorHours)
+        .map(([author, hours]) => ({ author, hours }))
+        .sort((a, b) => b.hours - a.hours);
+
+    // Render contributor items
+    container.innerHTML = contributors.map(contributor => `
+        <li class="contributor-item">
+            <span class="contributor-name">${escapeHtml(contributor.author)}</span>
+            <span class="contributor-hours">${contributor.hours.toFixed(1)}h</span>
+            <a href="#sessionsTable" class="contributor-link" data-author="${escapeHtml(contributor.author)}">
+                View sessions ↓
+            </a>
+        </li>
+    `).join('');
+
+    // Add click handlers to scroll and highlight
+    container.querySelectorAll('.contributor-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const author = link.dataset.author;
+            scrollToSessionsTable(author);
+        });
+    });
+}
+
+/**
+ * Scroll to sessions table and highlight author's sessions
+ */
+function scrollToSessionsTable(author) {
+    const tableContainer = document.getElementById('sessionsTable');
+    if (!tableContainer) return;
+
+    // Scroll to table
+    tableContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // Highlight matching rows
+    setTimeout(() => {
+        const rows = tableContainer.querySelectorAll('.sessions-table tbody tr');
+        rows.forEach(row => {
+            const authorCell = row.querySelector('.author-name');
+            if (authorCell && authorCell.textContent === author) {
+                row.style.backgroundColor = 'var(--surface-hover)';
+                row.style.borderLeft = '3px solid var(--primary-color)';
+
+                // Remove highlight after 3 seconds
+                setTimeout(() => {
+                    row.style.backgroundColor = '';
+                    row.style.borderLeft = '';
+                }, 3000);
+            }
+        });
+    }, 500);
 }
 
 /**
