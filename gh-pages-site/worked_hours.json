@@ -1,0 +1,268 @@
+{
+  "generated_at": "2025-01-16T18:30:00Z",
+  "summary": {
+    "total_days": 14,
+    "total_hours": 87.5,
+    "total_commits": 234,
+    "avg_hours_per_day": 6.25
+  },
+  "daily_hours": [
+    {"date": "2025-01-03", "hours": 7.2},
+    {"date": "2025-01-04", "hours": 5.8},
+    {"date": "2025-01-05", "hours": 8.1},
+    {"date": "2025-01-06", "hours": 4.5},
+    {"date": "2025-01-07", "hours": 6.3},
+    {"date": "2025-01-08", "hours": 7.9},
+    {"date": "2025-01-09", "hours": 5.2},
+    {"date": "2025-01-10", "hours": 8.4},
+    {"date": "2025-01-11", "hours": 6.7},
+    {"date": "2025-01-12", "hours": 7.1},
+    {"date": "2025-01-13", "hours": 5.9},
+    {"date": "2025-01-14", "hours": 6.8},
+    {"date": "2025-01-15", "hours": 4.3},
+    {"date": "2025-01-16", "hours": 3.3}
+  ],
+  "repo_hours": [
+    {"repo": "clockify-ADO-automated-report", "hours": 32.5},
+    {"repo": "ai-whisperers-website", "hours": 18.3},
+    {"repo": "github-commit-tracker", "hours": 15.7},
+    {"repo": "infrastructure-automation", "hours": 9.2},
+    {"repo": "api-gateway-service", "hours": 6.8},
+    {"repo": "frontend-dashboard", "hours": 3.1},
+    {"repo": "data-processing-pipeline", "hours": 1.9}
+  ],
+  "sessions": [
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-16T14:00:00Z",
+      "end": "2025-01-16T17:20:00Z",
+      "hours": 3.33,
+      "commit_count": 8
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-16T09:15:00Z",
+      "end": "2025-01-16T11:45:00Z",
+      "hours": 2.5,
+      "commit_count": 5
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "github-commit-tracker",
+      "start": "2025-01-15T15:30:00Z",
+      "end": "2025-01-15T19:00:00Z",
+      "hours": 3.5,
+      "commit_count": 12
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-15T10:00:00Z",
+      "end": "2025-01-15T11:20:00Z",
+      "hours": 1.33,
+      "commit_count": 3
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "infrastructure-automation",
+      "start": "2025-01-14T13:45:00Z",
+      "end": "2025-01-14T18:30:00Z",
+      "hours": 4.75,
+      "commit_count": 15
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "api-gateway-service",
+      "start": "2025-01-14T09:00:00Z",
+      "end": "2025-01-14T11:15:00Z",
+      "hours": 2.25,
+      "commit_count": 7
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-13T14:20:00Z",
+      "end": "2025-01-13T18:45:00Z",
+      "hours": 4.42,
+      "commit_count": 18
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "frontend-dashboard",
+      "start": "2025-01-13T10:30:00Z",
+      "end": "2025-01-13T12:00:00Z",
+      "hours": 1.5,
+      "commit_count": 4
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "github-commit-tracker",
+      "start": "2025-01-12T15:00:00Z",
+      "end": "2025-01-12T19:30:00Z",
+      "hours": 4.5,
+      "commit_count": 14
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-12T10:15:00Z",
+      "end": "2025-01-12T13:00:00Z",
+      "hours": 2.75,
+      "commit_count": 9
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "data-processing-pipeline",
+      "start": "2025-01-11T16:00:00Z",
+      "end": "2025-01-11T17:55:00Z",
+      "hours": 1.92,
+      "commit_count": 6
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-11T11:30:00Z",
+      "end": "2025-01-11T15:15:00Z",
+      "hours": 3.75,
+      "commit_count": 11
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "infrastructure-automation",
+      "start": "2025-01-11T08:45:00Z",
+      "end": "2025-01-11T10:30:00Z",
+      "hours": 1.75,
+      "commit_count": 5
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "api-gateway-service",
+      "start": "2025-01-10T14:00:00Z",
+      "end": "2025-01-10T18:45:00Z",
+      "hours": 4.75,
+      "commit_count": 16
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "github-commit-tracker",
+      "start": "2025-01-10T09:30:00Z",
+      "end": "2025-01-10T13:15:00Z",
+      "hours": 3.75,
+      "commit_count": 10
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-09T15:20:00Z",
+      "end": "2025-01-09T18:30:00Z",
+      "hours": 3.17,
+      "commit_count": 8
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "frontend-dashboard",
+      "start": "2025-01-09T11:00:00Z",
+      "end": "2025-01-09T12:40:00Z",
+      "hours": 1.67,
+      "commit_count": 4
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-08T13:45:00Z",
+      "end": "2025-01-08T19:00:00Z",
+      "hours": 5.25,
+      "commit_count": 19
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "infrastructure-automation",
+      "start": "2025-01-08T09:15:00Z",
+      "end": "2025-01-08T12:00:00Z",
+      "hours": 2.75,
+      "commit_count": 7
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "github-commit-tracker",
+      "start": "2025-01-07T14:30:00Z",
+      "end": "2025-01-07T18:15:00Z",
+      "hours": 3.75,
+      "commit_count": 13
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-07T10:00:00Z",
+      "end": "2025-01-07T12:30:00Z",
+      "hours": 2.5,
+      "commit_count": 6
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-06T15:45:00Z",
+      "end": "2025-01-06T19:00:00Z",
+      "hours": 3.25,
+      "commit_count": 10
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "api-gateway-service",
+      "start": "2025-01-06T11:30:00Z",
+      "end": "2025-01-06T12:45:00Z",
+      "hours": 1.25,
+      "commit_count": 3
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-05T13:00:00Z",
+      "end": "2025-01-05T18:30:00Z",
+      "hours": 5.5,
+      "commit_count": 17
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "infrastructure-automation",
+      "start": "2025-01-05T09:45:00Z",
+      "end": "2025-01-05T12:15:00Z",
+      "hours": 2.5,
+      "commit_count": 8
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "github-commit-tracker",
+      "start": "2025-01-04T14:15:00Z",
+      "end": "2025-01-04T17:45:00Z",
+      "hours": 3.5,
+      "commit_count": 11
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-04T10:00:00Z",
+      "end": "2025-01-04T12:20:00Z",
+      "hours": 2.33,
+      "commit_count": 6
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "ai-whisperers-website",
+      "start": "2025-01-03T15:30:00Z",
+      "end": "2025-01-03T19:45:00Z",
+      "hours": 4.25,
+      "commit_count": 14
+    },
+    {
+      "author": "AI Whisperer",
+      "repo": "clockify-ADO-automated-report",
+      "start": "2025-01-03T11:00:00Z",
+      "end": "2025-01-03T14:00:00Z",
+      "hours": 3.0,
+      "commit_count": 9
+    }
+  ]
+}

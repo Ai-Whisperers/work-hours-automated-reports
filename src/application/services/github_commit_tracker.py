@@ -580,3 +580,50 @@ class GitHubCommitTrackerService:
         """Get the number of tracked commits."""
         with self._lock:
             return len(self.seen_commits)
+
+    def get_worked_hours_data(self) -> Dict[str, Any]:
+        """
+        Fetch commits and calculate worked hours data for dashboard.
+
+        Returns:
+            Dictionary with sessions, daily_hours, and repo_hours data
+        """
+        print("[GitHubTracker] Fetching worked hours data for dashboard...")
+
+        # Fetch historical commits
+        historical_commits = self._fetch_historical_commits()
+
+        if not historical_commits:
+            return {
+                'sessions': [],
+                'daily_hours': [],
+                'repo_hours': []
+            }
+
+        # Calculate clusters WITHOUT creating Clockify entries
+        clusters = self.hours_calculator.calculate_clusters(historical_commits)
+
+        if not clusters:
+            return {
+                'sessions': [],
+                'daily_hours': [],
+                'repo_hours': []
+            }
+
+        # Transform clusters into session format for dashboard
+        sessions = []
+        for cluster in clusters:
+            sessions.append({
+                'author': cluster.author,
+                'repo': cluster.repo,
+                'start': cluster.start.isoformat(),
+                'end': cluster.end.isoformat(),
+                'hours': round(cluster.duration_hours, 2),
+                'commit_count': cluster.commit_count
+            })
+
+        return {
+            'sessions': sessions,
+            'daily_hours': [],  # Will be calculated by generate script
+            'repo_hours': []    # Will be calculated by generate script
+        }

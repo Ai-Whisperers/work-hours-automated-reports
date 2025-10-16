@@ -1,0 +1,97 @@
+name: Deploy GitHub Pages Dashboard
+
+on:
+  # Run on schedule (every 6 hours)
+  schedule:
+    - cron: '0 */6 * * *'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+    paths:
+      - 'gh-pages-site/**'
+      - '.github/workflows/gh-pages-deploy.yml'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for commit analysis
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate worked hours JSON
+        env:
+          # GitHub token for API access
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+          # Commit tracker settings
+          COMMIT_TRACKER_ENABLED: "true"
+          COMMIT_TRACKER_MODE: "organization"
+          COMMIT_TRACKER_ORG: ${{ secrets.COMMIT_TRACKER_ORG || 'Ai-Whisperers' }}
+          COMMIT_HISTORY_DAYS: "30"
+          COMMIT_TRACKER_TIMEZONE: "UTC"
+          SESSION_GAP_HOURS: "3"
+          MIN_SESSION_HOURS: "0.25"
+
+          # ADO not required for commit tracking
+          ADO_ORG: "none"
+          ADO_PROJECT: "none"
+          ADO_PAT: "none"
+        run: |
+          echo "🔍 Generating worked hours data from GitHub commits..."
+          python scripts/generate_worked_hours_json.py
+
+      - name: Copy static site files
+        run: |
+          echo "📦 Preparing deployment files..."
+          mkdir -p deploy
+          cp -r gh-pages-site/* deploy/
+
+          # Ensure the generated JSON is in the deploy folder
+          if [ -f "worked_hours.json" ]; then
+            cp worked_hours.json deploy/
+            echo "✓ Copied generated worked_hours.json"
+          else
+            echo "⚠️ worked_hours.json not found, using sample data"
+            cp gh-pages-site/worked_hours.json deploy/
+          fi
+
+          ls -la deploy/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Update dashboard data - ${{ github.event.head_commit.message || github.run_id }}'
+
+      - name: Deployment summary
+        run: |
+          echo "✅ Dashboard deployed successfully!"
+          echo "📊 View your dashboard at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          echo "🕒 Next automatic update: in 6 hours"
