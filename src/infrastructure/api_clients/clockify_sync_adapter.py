@@ -137,3 +137,43 @@ class ClockifySyncAdapter:
             True if connection is successful
         """
         return self._run_async(self.client.test_connection())
+
+    def update_time_entry(
+        self,
+        entry_id: str,
+        start: Optional[datetime] = None,
+        end: Optional[datetime] = None,
+        description: Optional[str] = None,
+        project_id: Optional[str] = None,
+        tags: Optional[List[str]] = None
+    ) -> Dict[str, Any]:
+        """
+        Update an existing time entry.
+
+        Args:
+            entry_id: Time entry ID to update
+            start: Optional new start datetime
+            end: Optional new end datetime
+            description: Optional new description
+            project_id: Optional new project ID
+            tags: Optional new tag IDs
+
+        Returns:
+            Updated time entry data
+        """
+        updates = {}
+
+        if start is not None:
+            updates["start"] = start.isoformat() + "Z"
+        if end is not None:
+            updates["end"] = end.isoformat() + "Z"
+        if description is not None:
+            updates["description"] = description
+        if project_id is not None:
+            updates["projectId"] = project_id
+        if tags is not None:
+            updates["tagIds"] = tags
+
+        return self._run_async(
+            self.client.update_time_entry(entry_id, updates)
+        )
