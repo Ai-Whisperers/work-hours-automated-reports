@@ -61,7 +61,8 @@ class Settings(BaseSettings):
     )
     clockify_timeout: int = Field(30, env="CLOCKIFY_TIMEOUT")
     clockify_max_retries: int = Field(3, env="CLOCKIFY_MAX_RETRIES")
-    
+    clockify_default_project_id: Optional[str] = Field(None, env="CLOCKIFY_DEFAULT_PROJECT_ID")
+
     # Azure DevOps settings
     ado_organization: str = Field(..., env="ADO_ORG")
     ado_project: str = Field(..., env="ADO_PROJECT")
@@ -144,17 +145,10 @@ class Settings(BaseSettings):
     
     class Config:
         """Pydantic configuration."""
-        
+
         env_file = ".env"
         env_file_encoding = "utf-8"
         case_sensitive = False
-        
-        # Allow using Field for environment variable mapping
-        fields = {
-            "ado_organization": {"env": "ADO_ORG"},
-            "ado_project": {"env": "ADO_PROJECT"},
-            "ado_pat": {"env": "ADO_PAT"},
-        }
     
     @field_validator("cache_directory", "report_template_directory", "report_output_directory", "log_file", mode="after")
     @classmethod
@@ -216,6 +210,22 @@ class Settings(BaseSettings):
         if self.debug:
             return "DEBUG"
         return self.log_level.value
+
+    def get(self, key: str, default=None):
+        """Get setting value by key with optional default.
+
+        This provides dict-like access to settings for backward compatibility.
+
+        Args:
+            key: Setting name (case-insensitive, converts to snake_case)
+            default: Default value if setting not found
+
+        Returns:
+            Setting value or default
+        """
+        # Convert to lowercase and replace dashes with underscores
+        attr_name = key.lower().replace("-", "_")
+        return getattr(self, attr_name, default)
 
 
 @lru_cache()
