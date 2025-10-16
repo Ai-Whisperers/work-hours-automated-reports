@@ -1,6 +1,5 @@
 """WebSocket connection manager for real-time updates."""
 
-import json
 import logging
 from typing import Dict, Set
 from fastapi import WebSocket

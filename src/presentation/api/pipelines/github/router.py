@@ -1,7 +1,7 @@
 """GitHub pipeline router."""
 
 import logging
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter
 
 from .schemas import (
     GitHubIssueRequest,

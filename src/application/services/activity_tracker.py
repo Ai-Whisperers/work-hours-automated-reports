@@ -7,7 +7,6 @@ manages Clockify time entries based on activity status.
 
 import time
 import threading
-from datetime import datetime
 from typing import Optional, Callable
 
 from ...infrastructure.api_clients.clockify_sync_adapter import ClockifySyncAdapter
