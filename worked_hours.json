@@ -1,0 +1,631 @@
+{
+  "generated_at": "2025-10-16T16:19:55.754214Z",
+  "summary": {
+    "total_days": 26,
+    "total_hours": 77.04,
+    "total_commits": 341,
+    "avg_hours_per_day": 2.96
+  },
+  "daily_hours": [
+    {
+      "date": "2025-09-16",
+      "hours": 6.77
+    },
+    {
+      "date": "2025-09-17",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-09-18",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-09-19",
+      "hours": 4.25
+    },
+    {
+      "date": "2025-09-20",
+      "hours": 3.51
+    },
+    {
+      "date": "2025-09-21",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-09-23",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-09-24",
+      "hours": 0.25
+    },
+    {
+      "date": "2025-09-25",
+      "hours": 0.26
+    },
+    {
+      "date": "2025-09-26",
+      "hours": 1.76
+    },
+    {
+      "date": "2025-09-27",
+      "hours": 0.25
+    },
+    {
+      "date": "2025-09-29",
+      "hours": 2.15
+    },
+    {
+      "date": "2025-09-30",
+      "hours": 4.03
+    },
+    {
+      "date": "2025-10-01",
+      "hours": 8.0
+    },
+    {
+      "date": "2025-10-02",
+      "hours": 5.56
+    },
+    {
+      "date": "2025-10-03",
+      "hours": 2.4
+    },
+    {
+      "date": "2025-10-04",
+      "hours": 2.41
+    },
+    {
+      "date": "2025-10-05",
+      "hours": 8.57
+    },
+    {
+      "date": "2025-10-08",
+      "hours": 2.73
+    },
+    {
+      "date": "2025-10-09",
+      "hours": 0.5
+    },
+    {
+      "date": "2025-10-10",
+      "hours": 0.25
+    },
+    {
+      "date": "2025-10-11",
+      "hours": 0.25
+    },
+    {
+      "date": "2025-10-13",
+      "hours": 0.82
+    },
+    {
+      "date": "2025-10-14",
+      "hours": 0.25
+    },
+    {
+      "date": "2025-10-15",
+      "hours": 2.28
+    },
+    {
+      "date": "2025-10-16",
+      "hours": 3.79
+    }
+  ],
+  "repo_hours": [
+    {
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "hours": 31.89
+    },
+    {
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "hours": 12.27
+    },
+    {
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "hours": 6.89
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 6.58
+    },
+    {
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "hours": 4.93
+    },
+    {
+      "repo": "Ai-Whisperers/agentic-schemas",
+      "hours": 4.09
+    },
+    {
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "hours": 3.9
+    },
+    {
+      "repo": "Ai-Whisperers/WPG-Amenities",
+      "hours": 3.58
+    },
+    {
+      "repo": "Ai-Whisperers/enhanced-ai-investment",
+      "hours": 0.65
+    },
+    {
+      "repo": "Ai-Whisperers/audio-to-text",
+      "hours": 0.5
+    },
+    {
+      "repo": "Ai-Whisperers/chatbot-rag-rbac",
+      "hours": 0.5
+    },
+    {
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "hours": 0.26
+    },
+    {
+      "repo": "Ai-Whisperers/AI-Whisperers",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/AI-Whisperers-Website",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/Call-Recorder",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/demo-repository",
+      "hours": 0.25
+    }
+  ],
+  "sessions": [
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-16T19:47:48+00:00",
+      "end": "2025-09-17T00:23:20+00:00",
+      "hours": 4.0,
+      "commit_count": 13
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-17T10:53:07+00:00",
+      "end": "2025-09-18T04:34:56+00:00",
+      "hours": 4.0,
+      "commit_count": 42
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-18T11:00:10+00:00",
+      "end": "2025-09-19T03:25:50+00:00",
+      "hours": 4.0,
+      "commit_count": 36
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-19T09:35:11+00:00",
+      "end": "2025-09-19T09:50:11+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-19T16:45:33+00:00",
+      "end": "2025-09-20T02:56:29+00:00",
+      "hours": 4.0,
+      "commit_count": 14
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-20T17:17:04+00:00",
+      "end": "2025-09-20T20:47:45+00:00",
+      "hours": 3.51,
+      "commit_count": 7
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-21T14:48:49+00:00",
+      "end": "2025-09-22T03:28:08+00:00",
+      "hours": 4.0,
+      "commit_count": 11
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-23T20:14:54+00:00",
+      "end": "2025-09-24T14:32:57+00:00",
+      "hours": 4.0,
+      "commit_count": 22
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-26T15:20:49+00:00",
+      "end": "2025-09-26T15:56:22+00:00",
+      "hours": 0.59,
+      "commit_count": 3
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-05T14:49:07+00:00",
+      "end": "2025-10-05T18:06:22+00:00",
+      "hours": 3.29,
+      "commit_count": 10
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-09-30T18:28:01+00:00",
+      "end": "2025-09-30T18:54:57+00:00",
+      "hours": 0.45,
+      "commit_count": 2
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-10-01T21:12:25+00:00",
+      "end": "2025-10-02T01:45:43+00:00",
+      "hours": 4.0,
+      "commit_count": 7
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-10-02T10:25:35+00:00",
+      "end": "2025-10-02T19:44:33+00:00",
+      "hours": 4.0,
+      "commit_count": 27
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-10-03T15:52:09+00:00",
+      "end": "2025-10-03T17:13:52+00:00",
+      "hours": 1.36,
+      "commit_count": 6
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-10-04T23:11:42+00:00",
+      "end": "2025-10-04T23:14:21+00:00",
+      "hours": 0.04,
+      "commit_count": 2
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-10-05T15:43:14+00:00",
+      "end": "2025-10-05T17:53:08+00:00",
+      "hours": 2.17,
+      "commit_count": 5
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-09-27T18:56:33+00:00",
+      "end": "2025-09-27T19:11:33+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-10-02T10:58:16+00:00",
+      "end": "2025-10-02T11:44:21+00:00",
+      "hours": 0.77,
+      "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-10-03T19:07:04+00:00",
+      "end": "2025-10-03T19:22:04+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-10-04T18:46:48+00:00",
+      "end": "2025-10-04T20:54:02+00:00",
+      "hours": 2.12,
+      "commit_count": 7
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-10-14T00:34:06+00:00",
+      "end": "2025-10-14T00:49:06+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-10-16T15:16:59+00:00",
+      "end": "2025-10-16T15:31:59+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/WPG-Amenities",
+      "start": "2025-09-30T18:43:24+00:00",
+      "end": "2025-09-30T22:03:08+00:00",
+      "hours": 3.33,
+      "commit_count": 21
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/agentic-schemas",
+      "start": "2025-09-29T23:14:50+00:00",
+      "end": "2025-09-30T01:23:58+00:00",
+      "hours": 2.15,
+      "commit_count": 13
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/agentic-schemas",
+      "start": "2025-10-08T07:24:05+00:00",
+      "end": "2025-10-08T09:20:31+00:00",
+      "hours": 1.94,
+      "commit_count": 8
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "start": "2025-10-01T20:08:33+00:00",
+      "end": "2025-10-02T01:30:01+00:00",
+      "hours": 4.0,
+      "commit_count": 13
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "start": "2025-10-02T10:52:25+00:00",
+      "end": "2025-10-02T11:07:25+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "start": "2025-10-02T19:17:54+00:00",
+      "end": "2025-10-02T19:43:42+00:00",
+      "hours": 0.43,
+      "commit_count": 2
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "start": "2025-10-03T16:51:30+00:00",
+      "end": "2025-10-03T17:06:30+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/audio-to-text",
+      "start": "2025-10-08T00:40:07+00:00",
+      "end": "2025-10-08T00:55:07+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/audio-to-text",
+      "start": "2025-10-11T15:16:49+00:00",
+      "end": "2025-10-11T15:31:49+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/chatbot-rag-rbac",
+      "start": "2025-10-08T07:12:24+00:00",
+      "end": "2025-10-08T07:27:24+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/chatbot-rag-rbac",
+      "start": "2025-10-09T09:16:12+00:00",
+      "end": "2025-10-09T09:31:12+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-09-24T08:58:48+00:00",
+      "end": "2025-09-24T09:13:48+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/enhanced-ai-investment",
+      "start": "2025-10-02T19:50:55+00:00",
+      "end": "2025-10-02T19:57:29+00:00",
+      "hours": 0.11,
+      "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/enhanced-ai-investment",
+      "start": "2025-10-03T15:39:54+00:00",
+      "end": "2025-10-03T16:12:20+00:00",
+      "hours": 0.54,
+      "commit_count": 4
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "start": "2025-10-04T20:58:27+00:00",
+      "end": "2025-10-04T21:13:27+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "start": "2025-10-05T14:35:55+00:00",
+      "end": "2025-10-05T17:27:48+00:00",
+      "hours": 2.86,
+      "commit_count": 6
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "start": "2025-10-08T14:33:24+00:00",
+      "end": "2025-10-08T14:50:34+00:00",
+      "hours": 0.29,
+      "commit_count": 2
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "start": "2025-10-09T16:10:54+00:00",
+      "end": "2025-10-09T16:25:54+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "start": "2025-10-10T18:54:09+00:00",
+      "end": "2025-10-10T19:09:09+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "start": "2025-10-13T20:49:47+00:00",
+      "end": "2025-10-13T21:39:14+00:00",
+      "hours": 0.82,
+      "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "start": "2025-10-15T21:07:24+00:00",
+      "end": "2025-10-15T23:24:27+00:00",
+      "hours": 2.28,
+      "commit_count": 5
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "start": "2025-10-16T12:46:15+00:00",
+      "end": "2025-10-16T16:18:48+00:00",
+      "hours": 3.54,
+      "commit_count": 12
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-09-16T17:22:08+00:00",
+      "end": "2025-09-16T18:38:24+00:00",
+      "hours": 1.27,
+      "commit_count": 3
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-09-25T22:47:54+00:00",
+      "end": "2025-09-25T23:02:54+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-09-26T15:33:49+00:00",
+      "end": "2025-09-26T16:43:55+00:00",
+      "hours": 1.17,
+      "commit_count": 3
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "start": "2025-09-25T22:51:01+00:00",
+      "end": "2025-09-25T22:51:22+00:00",
+      "hours": 0.01,
+      "commit_count": 2
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/WPG-Amenities",
+      "start": "2025-09-30T17:50:34+00:00",
+      "end": "2025-09-30T18:05:34+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/AI-Whisperers",
+      "start": "2025-09-16T16:25:44+00:00",
+      "end": "2025-09-16T16:40:44+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/AI-Whisperers-Website",
+      "start": "2025-09-16T16:25:49+00:00",
+      "end": "2025-09-16T16:40:49+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "start": "2025-09-16T16:26:09+00:00",
+      "end": "2025-09-16T16:41:09+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/Call-Recorder",
+      "start": "2025-09-16T16:25:59+00:00",
+      "end": "2025-09-16T16:40:59+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "start": "2025-09-16T16:26:13+00:00",
+      "end": "2025-09-16T16:41:13+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/demo-repository",
+      "start": "2025-10-05T15:43:32+00:00",
+      "end": "2025-10-05T15:58:32+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "aiwhispererwvdp",
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "start": "2025-09-16T16:26:04+00:00",
+      "end": "2025-09-16T16:41:04+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    }
+  ]
+}
