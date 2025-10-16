@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Whisperers - Work Hours Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>🤖 AI Whisperers</h1>
+                <p class="subtitle">Automated Work Hours Tracking</p>
+            </div>
+            <div class="last-updated">
+                <span id="lastUpdated">Loading...</span>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="worked-hours">
+                📊 Worked Hours
+            </button>
+            <button class="tab-button" data-tab="ado-report">
+                📋 ADO Report
+            </button>
+            <button class="tab-button" data-tab="clockify-report">
+                ⏱️ Clockify Report
+            </button>
+        </nav>
+
+        <!-- Tab Content -->
+        <main class="content">
+            <!-- Worked Hours Tab -->
+            <div id="worked-hours" class="tab-content active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-value" id="totalDays">-</div>
+                        <div class="stat-label">Days Tracked</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-value" id="totalHours">-</div>
+                        <div class="stat-label">Total Hours</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-value" id="totalCommits">-</div>
+                        <div class="stat-label">Total Commits</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-value" id="avgHoursPerDay">-</div>
+                        <div class="stat-label">Avg Hours/Day</div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h2>Daily Worked Hours</h2>
+                        <canvas id="dailyHoursChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Hours by Repository</h2>
+                        <canvas id="repoHoursChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <h2>Recent Work Sessions</h2>
+                    <div id="sessionsTable">
+                        <p class="loading">Loading sessions...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADO Report Tab (Placeholder) -->
+            <div id="ado-report" class="tab-content">
+                <div class="placeholder">
+                    <div class="placeholder-icon">🚧</div>
+                    <h2>Azure DevOps Report</h2>
+                    <p>This feature is coming soon!</p>
+                    <p class="placeholder-description">
+                        We'll display matched time entries with ADO work items,
+                        showing hours logged per task, project, and sprint.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Clockify Report Tab (Placeholder) -->
+            <div id="clockify-report" class="tab-content">
+                <div class="placeholder">
+                    <div class="placeholder-icon">🚧</div>
+                    <h2>Clockify Time Report</h2>
+                    <p>This feature is coming soon!</p>
+                    <p class="placeholder-description">
+                        We'll display detailed Clockify time entries,
+                        including projects, tags, and billable hours analysis.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                Generated automatically by GitHub Actions •
+                Data updated every 6 hours •
+                <a href="https://github.com/Ai-Whisperers/work-hours-automated-reports" target="_blank">
+                    View on GitHub
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
