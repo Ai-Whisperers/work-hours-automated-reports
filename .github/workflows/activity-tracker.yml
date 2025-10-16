@@ -138,6 +138,11 @@ jobs:
           COMMIT_TRACKER_DURATION: ${{ secrets.COMMIT_TRACKER_DURATION || '10' }}
           COMMIT_TRACKER_USE_WORKED_HOURS: ${{ secrets.COMMIT_TRACKER_USE_WORKED_HOURS || 'true' }}
           COMMIT_TRACKER_TIMEZONE: ${{ secrets.COMMIT_TRACKER_TIMEZONE || 'America/Asuncion' }}
+
+          # Date Range Configuration (NEW)
+          COMMIT_HISTORY_DAYS: ${{ secrets.COMMIT_HISTORY_DAYS || '7' }}
+          COMMIT_START_DATE: ${{ secrets.COMMIT_START_DATE || '' }}
+          COMMIT_END_DATE: ${{ secrets.COMMIT_END_DATE || '' }}
         run: |
           echo "Starting GitHub Commit Tracker..."
           echo "Mode: $COMMIT_TRACKER_MODE"

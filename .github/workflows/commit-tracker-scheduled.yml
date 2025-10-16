@@ -1,0 +1,218 @@
+name: GitHub Commit Tracker - Scheduled Sync
+
+# Best practice: Run automatically on a schedule to sync commits to Clockify
+on:
+  # Run every 6 hours to sync commits (adjust as needed)
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+
+  # Allow manual triggering with custom parameters
+  workflow_dispatch:
+    inputs:
+      history_days:
+        description: 'Days of commit history to fetch'
+        required: false
+        default: '7'
+      start_date:
+        description: 'Start date (YYYY-MM-DD) - overrides history_days'
+        required: false
+        default: ''
+      end_date:
+        description: 'End date (YYYY-MM-DD) - defaults to today'
+        required: false
+        default: ''
+
+jobs:
+  sync-commits:
+    name: Sync Commits to Clockify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate configuration
+        env:
+          CLOCKIFY_API_KEY: ${{ secrets.CLOCKIFY_API_KEY }}
+          CLOCKIFY_WORKSPACE_ID: ${{ secrets.CLOCKIFY_WORKSPACE_ID }}
+          COMMIT_TRACKER_MODE: ${{ secrets.COMMIT_TRACKER_MODE }}
+          COMMIT_TRACKER_ORG: ${{ secrets.COMMIT_TRACKER_ORG }}
+          COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+        run: |
+          echo "✓ Validating configuration..."
+
+          # Check required secrets
+          if [ -z "$CLOCKIFY_API_KEY" ]; then
+            echo "❌ CLOCKIFY_API_KEY secret not set"
+            exit 1
+          fi
+
+          if [ -z "$CLOCKIFY_WORKSPACE_ID" ]; then
+            echo "❌ CLOCKIFY_WORKSPACE_ID secret not set"
+            exit 1
+          fi
+
+          # Check tracker mode
+          MODE="${COMMIT_TRACKER_MODE:-user}"
+          if [ "$MODE" = "org" ]; then
+            if [ -z "$COMMIT_TRACKER_ORG" ]; then
+              echo "❌ COMMIT_TRACKER_ORG required for org mode"
+              exit 1
+            fi
+            echo "✓ Mode: Organization ($COMMIT_TRACKER_ORG)"
+          else
+            if [ -z "$COMMIT_TRACKER_USERNAME" ]; then
+              echo "❌ COMMIT_TRACKER_USERNAME required for user mode"
+              exit 1
+            fi
+            echo "✓ Mode: User ($COMMIT_TRACKER_USERNAME)"
+          fi
+
+      - name: Run commit tracker (one-time sync)
+        env:
+          # Clockify credentials
+          CLOCKIFY_API_KEY: ${{ secrets.CLOCKIFY_API_KEY }}
+          CLOCKIFY_WORKSPACE_ID: ${{ secrets.CLOCKIFY_WORKSPACE_ID }}
+          CLOCKIFY_BASE_URL: ${{ secrets.CLOCKIFY_BASE_URL || 'https://api.clockify.me/api/v1' }}
+          CLOCKIFY_DEFAULT_PROJECT_ID: ${{ secrets.CLOCKIFY_DEFAULT_PROJECT_ID }}
+
+          # GitHub tracker configuration
+          ENABLE_GITHUB_TRACKER: 'true'
+          ENABLE_ACTIVITY_TRACKER: 'false'
+          COMMIT_TRACKER_MODE: ${{ secrets.COMMIT_TRACKER_MODE || 'org' }}
+          COMMIT_TRACKER_ORG: ${{ secrets.COMMIT_TRACKER_ORG }}
+          COMMIT_TRACKER_USERNAME: ${{ secrets.COMMIT_TRACKER_USERNAME }}
+          COMMIT_TRACKER_TOKEN: ${{ secrets.COMMIT_TRACKER_TOKEN }}
+
+          # Date range configuration (use inputs if provided, otherwise defaults)
+          COMMIT_HISTORY_DAYS: ${{ github.event.inputs.history_days || '7' }}
+          COMMIT_START_DATE: ${{ github.event.inputs.start_date || '' }}
+          COMMIT_END_DATE: ${{ github.event.inputs.end_date || '' }}
+
+          # Tracker settings
+          COMMIT_TRACKER_USE_WORKED_HOURS: 'true'
+          COMMIT_TRACKER_TIMEZONE: ${{ secrets.COMMIT_TRACKER_TIMEZONE || 'America/Asuncion' }}
+          COMMIT_TRACKER_POLL_INTERVAL: '60'  # Not used in one-time mode
+        run: |
+          echo "════════════════════════════════════════════════════════"
+          echo "  GitHub Commit Tracker - Scheduled Sync"
+          echo "════════════════════════════════════════════════════════"
+          echo ""
+          echo "Configuration:"
+          echo "  Mode: $COMMIT_TRACKER_MODE"
+          if [ "$COMMIT_TRACKER_MODE" = "org" ]; then
+            echo "  Organization: $COMMIT_TRACKER_ORG"
+          else
+            echo "  Username: $COMMIT_TRACKER_USERNAME"
+          fi
+          echo "  History days: $COMMIT_HISTORY_DAYS"
+          if [ -n "$COMMIT_START_DATE" ]; then
+            echo "  Start date: $COMMIT_START_DATE"
+          fi
+          if [ -n "$COMMIT_END_DATE" ]; then
+            echo "  End date: $COMMIT_END_DATE"
+          fi
+          echo "  Timezone: ${COMMIT_TRACKER_TIMEZONE:-America/Asuncion}"
+          echo ""
+          echo "────────────────────────────────────────────────────────"
+
+          # Create one-time sync script
+          cat > sync_commits.py << 'PYTHON_SCRIPT'
+          import os
+          import sys
+          from src.infrastructure.config import get_settings
+          from src.infrastructure.api_clients.clockify_sync_adapter import ClockifySyncAdapter
+          from src.application.services.github_commit_tracker import GitHubCommitTrackerService
+
+          def main():
+              # Load settings
+              settings = get_settings()
+
+              # Initialize Clockify client
+              clockify_client = ClockifySyncAdapter(settings)
+
+              # Get configuration from environment
+              github_username = os.getenv('COMMIT_TRACKER_USERNAME')
+              github_org = os.getenv('COMMIT_TRACKER_ORG')
+              github_token = os.getenv('COMMIT_TRACKER_TOKEN')
+              history_days = int(os.getenv('COMMIT_HISTORY_DAYS', '7'))
+              start_date = os.getenv('COMMIT_START_DATE') or None
+              end_date = os.getenv('COMMIT_END_DATE') or None
+              timezone = os.getenv('COMMIT_TRACKER_TIMEZONE', 'America/Asuncion')
+
+              print("[Sync] Initializing tracker...")
+
+              # Initialize tracker
+              tracker = GitHubCommitTrackerService(
+                  clockify_client=clockify_client,
+                  settings=settings,
+                  github_username=github_username,
+                  github_org=github_org,
+                  github_token=github_token,
+                  timezone=timezone,
+                  use_worked_hours=True,
+                  history_days=history_days,
+                  start_date=start_date,
+                  end_date=end_date,
+              )
+
+              print("[Sync] Starting one-time commit sync (historical only)...")
+
+              # Run historical sync only (skip real-time polling)
+              tracker.start_tracking(skip_historical=False)
+
+              # Stop immediately after historical sync
+              tracker.stop_tracking()
+
+              print(f"[Sync] ✓ Sync complete! Processed {tracker.commit_count} commits")
+              return 0
+
+          if __name__ == '__main__':
+              sys.exit(main())
+          PYTHON_SCRIPT
+
+          # Run the sync script
+          python sync_commits.py
+
+          echo ""
+          echo "════════════════════════════════════════════════════════"
+          echo "  Sync completed successfully"
+          echo "════════════════════════════════════════════════════════"
+
+      - name: Upload state file
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clockify-state-${{ github.run_id }}
+          path: clockify_github_state.json
+          retention-days: 30
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## Commit Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Configuration:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Mode: ${{ secrets.COMMIT_TRACKER_MODE || 'org' }}" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ secrets.COMMIT_TRACKER_MODE }}" = "org" ]; then
+            echo "- Organization: ${{ secrets.COMMIT_TRACKER_ORG }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- Username: ${{ secrets.COMMIT_TRACKER_USERNAME }}" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "- History: ${{ github.event.inputs.history_days || '7' }} days" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Next sync:** This workflow runs every 6 hours automatically" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "*Synced by GitHub Actions at $(date -u)*" >> $GITHUB_STEP_SUMMARY
