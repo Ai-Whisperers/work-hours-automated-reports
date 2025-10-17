@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-10-16T18:33:58.152576Z",
+  "generated_at": "2025-10-17T01:46:40.640575Z",
   "summary": {
-    "total_days": 26,
-    "total_hours": 77.5,
-    "total_commits": 343,
-    "avg_hours_per_day": 2.98
+    "total_days": 25,
+    "total_hours": 76.74,
+    "total_commits": 348,
+    "avg_hours_per_day": 3.07
   },
   "daily_hours": [
     {
-      "date": "2025-09-16",
-      "hours": 6.77
-    },
-    {
       "date": "2025-09-17",
-      "hours": 4.0
+      "hours": 4.34
     },
     {
       "date": "2025-09-18",
@@ -109,25 +105,29 @@
     },
     {
       "date": "2025-10-16",
-      "hours": 4.25
+      "hours": 9.92
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 31.89
+      "hours": 28.23
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "hours": 12.27
+      "hours": 12.02
     },
     {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
-      "hours": 7.35
+      "hours": 7.1
+    },
+    {
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "hours": 5.67
     },
     {
       "repo": "Ai-Whisperers/Company-Information",
-      "hours": 6.58
+      "hours": 5.31
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
@@ -158,34 +158,22 @@
       "hours": 0.5
     },
     {
-      "repo": "Ai-Whisperers/Taller-Ocampos",
-      "hours": 0.26
-    },
-    {
-      "repo": "Ai-Whisperers/AI-Whisperers",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/AI-Whisperers-Website",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/Call-Recorder",
-      "hours": 0.25
-    },
-    {
       "repo": "Ai-Whisperers/demo-repository",
       "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "hours": 0.01
     }
   ],
   "sessions": [
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-16T19:47:48+00:00",
+      "start": "2025-09-17T00:02:45+00:00",
       "end": "2025-09-17T00:23:20+00:00",
-      "hours": 4.0,
-      "commit_count": 13
+      "hours": 0.34,
+      "commit_count": 3
     },
     {
       "author": "Claude",
@@ -354,6 +342,14 @@
       "end": "2025-10-16T15:31:59+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "start": "2025-10-16T22:54:16+00:00",
+      "end": "2025-10-17T01:24:16+00:00",
+      "hours": 2.5,
+      "commit_count": 6
     },
     {
       "author": "Jonathan Verdun",
@@ -534,14 +530,6 @@
     {
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-09-16T17:22:08+00:00",
-      "end": "2025-09-16T18:38:24+00:00",
-      "hours": 1.27,
-      "commit_count": 3
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Company-Information",
       "start": "2025-09-25T22:47:54+00:00",
       "end": "2025-09-25T23:02:54+00:00",
       "hours": 0.25,
@@ -554,6 +542,14 @@
       "end": "2025-09-26T16:43:55+00:00",
       "hours": 1.17,
       "commit_count": 3
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "start": "2025-10-16T22:28:01+00:00",
+      "end": "2025-10-17T01:38:24+00:00",
+      "hours": 3.17,
+      "commit_count": 18
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
@@ -573,57 +569,9 @@
     },
     {
       "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/AI-Whisperers",
-      "start": "2025-09-16T16:25:44+00:00",
-      "end": "2025-09-16T16:40:44+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/AI-Whisperers-Website",
-      "start": "2025-09-16T16:25:49+00:00",
-      "end": "2025-09-16T16:40:49+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-09-16T16:26:09+00:00",
-      "end": "2025-09-16T16:41:09+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/Call-Recorder",
-      "start": "2025-09-16T16:25:59+00:00",
-      "end": "2025-09-16T16:40:59+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/Taller-Ocampos",
-      "start": "2025-09-16T16:26:13+00:00",
-      "end": "2025-09-16T16:41:13+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
       "repo": "Ai-Whisperers/demo-repository",
       "start": "2025-10-05T15:43:32+00:00",
       "end": "2025-10-05T15:58:32+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "aiwhispererwvdp",
-      "repo": "Ai-Whisperers/work-hours-automated-reports",
-      "start": "2025-09-16T16:26:04+00:00",
-      "end": "2025-09-16T16:41:04+00:00",
       "hours": 0.25,
       "commit_count": 1
     }
