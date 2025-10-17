@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-10-17T01:46:40.640575Z",
+  "generated_at": "2025-10-17T06:34:07.302406Z",
   "summary": {
     "total_days": 25,
-    "total_hours": 76.74,
-    "total_commits": 348,
-    "avg_hours_per_day": 3.07
+    "total_hours": 77.57,
+    "total_commits": 357,
+    "avg_hours_per_day": 3.1
   },
   "daily_hours": [
     {
@@ -105,7 +105,7 @@
     },
     {
       "date": "2025-10-16",
-      "hours": 9.92
+      "hours": 10.75
     }
   ],
   "repo_hours": [
@@ -123,7 +123,7 @@
     },
     {
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 5.67
+      "hours": 6.5
     },
     {
       "repo": "Ai-Whisperers/Company-Information",
@@ -547,9 +547,9 @@
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Negociation-Personal",
       "start": "2025-10-16T22:28:01+00:00",
-      "end": "2025-10-17T01:38:24+00:00",
-      "hours": 3.17,
-      "commit_count": 18
+      "end": "2025-10-17T03:21:33+00:00",
+      "hours": 4.0,
+      "commit_count": 27
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
