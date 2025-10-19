@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-10-18T18:29:40.590673Z",
+  "generated_at": "2025-10-19T01:58:40.886912Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 77.73,
-    "total_commits": 323,
-    "avg_hours_per_day": 3.11
+    "total_days": 24,
+    "total_hours": 71.72,
+    "total_commits": 284,
+    "avg_hours_per_day": 2.99
   },
   "daily_hours": [
     {
-      "date": "2025-09-18",
-      "hours": 8.0
-    },
-    {
       "date": "2025-09-19",
-      "hours": 4.25
+      "hours": 6.24
     },
     {
       "date": "2025-09-20",
@@ -111,7 +107,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 27.89
+      "hours": 21.88
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -174,18 +170,10 @@
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-18T00:17:17+00:00",
-      "end": "2025-09-18T04:34:56+00:00",
-      "hours": 4.0,
-      "commit_count": 9
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-18T11:00:10+00:00",
+      "start": "2025-09-19T01:26:27+00:00",
       "end": "2025-09-19T03:25:50+00:00",
-      "hours": 4.0,
-      "commit_count": 36
+      "hours": 1.99,
+      "commit_count": 6
     },
     {
       "author": "Claude",
