@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-10-22T12:52:21.485854Z",
+  "generated_at": "2025-10-22T18:36:01.806599Z",
   "summary": {
     "total_days": 25,
-    "total_hours": 69.25,
-    "total_commits": 318,
-    "avg_hours_per_day": 2.77
+    "total_hours": 76.22,
+    "total_commits": 340,
+    "avg_hours_per_day": 3.05
   },
   "daily_hours": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "date": "2025-09-26",
-      "hours": 1.76
+      "hours": 2.01
     },
     {
       "date": "2025-09-27",
@@ -33,7 +33,7 @@
     },
     {
       "date": "2025-09-29",
-      "hours": 2.15
+      "hours": 2.4
     },
     {
       "date": "2025-09-30",
@@ -97,21 +97,21 @@
     },
     {
       "date": "2025-10-20",
-      "hours": 1.12
+      "hours": 1.37
     },
     {
       "date": "2025-10-21",
-      "hours": 4.52
+      "hours": 8.52
     },
     {
       "date": "2025-10-22",
-      "hours": 4.25
+      "hours": 6.47
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 19.07
+      "hours": 20.79
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -134,6 +134,10 @@
       "hours": 5.27
     },
     {
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "hours": 4.5
+    },
+    {
       "repo": "Ai-Whisperers/agentic-schemas",
       "hours": 4.09
     },
@@ -144,6 +148,10 @@
     {
       "repo": "Ai-Whisperers/WPG-Amenities",
       "hours": 3.58
+    },
+    {
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "hours": 0.76
     },
     {
       "repo": "Ai-Whisperers/enhanced-ai-investment",
@@ -164,10 +172,6 @@
     {
       "repo": "Ai-Whisperers/demo-repository",
       "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/Taller-Ocampos",
-      "hours": 0.01
     }
   ],
   "sessions": [
@@ -231,9 +235,17 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-22T00:54:17+00:00",
-      "end": "2025-10-22T05:50:12+00:00",
+      "end": "2025-10-22T06:28:18+00:00",
       "hours": 4.0,
-      "commit_count": 11
+      "commit_count": 12
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-22T16:20:29+00:00",
+      "end": "2025-10-22T18:03:48+00:00",
+      "hours": 1.72,
+      "commit_count": 10
     },
     {
       "author": "Jonathan Verdun",
@@ -581,6 +593,30 @@
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "start": "2025-09-26T16:39:21+00:00",
+      "end": "2025-09-26T16:54:21+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "start": "2025-09-29T18:08:32+00:00",
+      "end": "2025-09-29T18:23:32+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "start": "2025-10-22T14:07:42+00:00",
+      "end": "2025-10-22T14:22:42+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/WPG-Amenities",
       "start": "2025-09-30T17:50:34+00:00",
       "end": "2025-09-30T18:05:34+00:00",
@@ -592,6 +628,30 @@
       "repo": "Ai-Whisperers/courseResource",
       "start": "2025-10-17T18:21:34+00:00",
       "end": "2025-10-17T18:36:34+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-10-20T22:45:39+00:00",
+      "end": "2025-10-20T23:00:39+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-10-21T18:02:25+00:00",
+      "end": "2025-10-21T23:50:07+00:00",
+      "hours": 4.0,
+      "commit_count": 6
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-10-22T17:16:06+00:00",
+      "end": "2025-10-22T17:31:06+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
