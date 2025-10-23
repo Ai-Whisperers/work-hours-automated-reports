@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-10-22T18:36:01.806599Z",
+  "generated_at": "2025-10-23T01:48:48.079185Z",
   "summary": {
     "total_days": 25,
-    "total_hours": 76.22,
-    "total_commits": 340,
-    "avg_hours_per_day": 3.05
+    "total_hours": 79.33,
+    "total_commits": 346,
+    "avg_hours_per_day": 3.17
   },
   "daily_hours": [
-    {
-      "date": "2025-09-22",
-      "hours": 1.39
-    },
     {
       "date": "2025-09-23",
       "hours": 4.0
@@ -105,13 +101,17 @@
     },
     {
       "date": "2025-10-22",
-      "hours": 6.47
+      "hours": 10.47
+    },
+    {
+      "date": "2025-10-23",
+      "hours": 0.5
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 20.79
+      "hours": 23.65
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -166,6 +166,10 @@
       "hours": 0.5
     },
     {
+      "repo": "Ai-Whisperers/aws-docker-mcp",
+      "hours": 0.25
+    },
+    {
       "repo": "Ai-Whisperers/courseResource",
       "hours": 0.25
     },
@@ -175,14 +179,6 @@
     }
   ],
   "sessions": [
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-22T02:04:40+00:00",
-      "end": "2025-09-22T03:28:08+00:00",
-      "hours": 1.39,
-      "commit_count": 5
-    },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
@@ -222,6 +218,14 @@
       "end": "2025-10-22T02:43:39+00:00",
       "hours": 4.0,
       "commit_count": 48
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-22T18:56:14+00:00",
+      "end": "2025-10-23T01:45:34+00:00",
+      "hours": 4.0,
+      "commit_count": 9
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -441,6 +445,14 @@
     },
     {
       "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/aws-docker-mcp",
+      "start": "2025-10-23T00:40:10+00:00",
+      "end": "2025-10-23T00:55:10+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/chatbot-rag-rbac",
       "start": "2025-10-08T07:12:24+00:00",
       "end": "2025-10-08T07:27:24+00:00",
@@ -628,6 +640,14 @@
       "repo": "Ai-Whisperers/courseResource",
       "start": "2025-10-17T18:21:34+00:00",
       "end": "2025-10-17T18:36:34+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-23T00:03:39+00:00",
+      "end": "2025-10-23T00:18:39+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
