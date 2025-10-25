@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-10-24T18:32:06.935052Z",
+  "generated_at": "2025-10-25T01:46:15.204589Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 85.59,
-    "total_commits": 381,
-    "avg_hours_per_day": 3.42
+    "total_days": 24,
+    "total_hours": 81.34,
+    "total_commits": 363,
+    "avg_hours_per_day": 3.39
   },
   "daily_hours": [
-    {
-      "date": "2025-09-24",
-      "hours": 4.25
-    },
     {
       "date": "2025-09-25",
       "hours": 0.26
@@ -111,7 +107,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 29.83
+      "hours": 25.58
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -179,14 +175,6 @@
     }
   ],
   "sessions": [
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-24T00:06:49+00:00",
-      "end": "2025-09-24T14:32:57+00:00",
-      "hours": 4.0,
-      "commit_count": 17
-    },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
@@ -480,14 +468,6 @@
       "repo": "Ai-Whisperers/chatbot-rag-rbac",
       "start": "2025-10-09T09:16:12+00:00",
       "end": "2025-10-09T09:31:12+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-09-24T08:58:48+00:00",
-      "end": "2025-09-24T09:13:48+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
