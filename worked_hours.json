@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-10-27T18:34:56.512719Z",
+  "generated_at": "2025-10-28T01:48:52.621513Z",
   "summary": {
-    "total_days": 23,
-    "total_hours": 88.74,
-    "total_commits": 381,
-    "avg_hours_per_day": 3.86
+    "total_days": 25,
+    "total_hours": 100.49,
+    "total_commits": 405,
+    "avg_hours_per_day": 4.02
   },
   "daily_hours": [
-    {
-      "date": "2025-09-27",
-      "hours": 0.25
-    },
     {
       "date": "2025-09-29",
       "hours": 2.4
@@ -97,13 +93,25 @@
     },
     {
       "date": "2025-10-25",
-      "hours": 3.2
+      "hours": 6.95
+    },
+    {
+      "date": "2025-10-26",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-10-27",
+      "hours": 4.0
+    },
+    {
+      "date": "2025-10-28",
+      "hours": 0.25
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 34.66
+      "hours": 46.41
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -115,7 +123,7 @@
     },
     {
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 6.75
+      "hours": 7.0
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
@@ -130,12 +138,12 @@
       "hours": 4.09
     },
     {
-      "repo": "Ai-Whisperers/Company-Information",
-      "hours": 3.97
-    },
-    {
       "repo": "Ai-Whisperers/jira-meta-parser",
       "hours": 3.9
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 3.72
     },
     {
       "repo": "Ai-Whisperers/WPG-Amenities",
@@ -239,7 +247,31 @@
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-25T23:05:22+00:00",
-      "end": "2025-10-25T23:20:22+00:00",
+      "end": "2025-10-26T04:24:17+00:00",
+      "hours": 4.0,
+      "commit_count": 4
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-26T16:50:11+00:00",
+      "end": "2025-10-27T07:04:02+00:00",
+      "hours": 4.0,
+      "commit_count": 14
+    },
+    {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-27T18:36:57+00:00",
+      "end": "2025-10-27T22:56:13+00:00",
+      "hours": 4.0,
+      "commit_count": 7
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "start": "2025-10-28T01:06:18+00:00",
+      "end": "2025-10-28T01:21:18+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
@@ -314,14 +346,6 @@
       "end": "2025-10-05T17:53:08+00:00",
       "hours": 2.17,
       "commit_count": 5
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-09-27T18:56:33+00:00",
-      "end": "2025-09-27T19:11:33+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
