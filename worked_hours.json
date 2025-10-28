@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-10-28T12:50:19.704953Z",
+  "generated_at": "2025-10-28T18:36:14.631823Z",
   "summary": {
     "total_days": 25,
-    "total_hours": 100.49,
-    "total_commits": 405,
-    "avg_hours_per_day": 4.02
+    "total_hours": 107.4,
+    "total_commits": 428,
+    "avg_hours_per_day": 4.3
   },
   "daily_hours": [
     {
@@ -85,7 +85,7 @@
     },
     {
       "date": "2025-10-23",
-      "hours": 2.93
+      "hours": 3.18
     },
     {
       "date": "2025-10-24",
@@ -101,17 +101,17 @@
     },
     {
       "date": "2025-10-27",
-      "hours": 4.0
+      "hours": 8.0
     },
     {
       "date": "2025-10-28",
-      "hours": 0.25
+      "hours": 2.91
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 46.41
+      "hours": 53.32
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
@@ -298,6 +298,22 @@
       "end": "2025-10-22T18:03:48+00:00",
       "hours": 1.72,
       "commit_count": 10
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-27T21:08:34+00:00",
+      "end": "2025-10-28T04:10:24+00:00",
+      "hours": 4.0,
+      "commit_count": 13
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-28T14:16:23+00:00",
+      "end": "2025-10-28T16:56:02+00:00",
+      "hours": 2.66,
+      "commit_count": 9
     },
     {
       "author": "Jonathan Verdun",
@@ -658,6 +674,14 @@
       "end": "2025-10-23T06:57:57+00:00",
       "hours": 4.0,
       "commit_count": 32
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-23T22:11:37+00:00",
+      "end": "2025-10-23T22:26:37+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
