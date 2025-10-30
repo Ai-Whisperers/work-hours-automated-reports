@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-10-29T18:35:17.253572Z",
+  "generated_at": "2025-10-30T01:55:26.787733Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 107.4,
-    "total_commits": 428,
-    "avg_hours_per_day": 4.3
+    "total_days": 24,
+    "total_hours": 106.07,
+    "total_commits": 423,
+    "avg_hours_per_day": 4.42
   },
   "daily_hours": [
     {
-      "date": "2025-09-29",
-      "hours": 2.4
-    },
-    {
       "date": "2025-09-30",
-      "hours": 4.03
+      "hours": 5.1
     },
     {
       "date": "2025-10-01",
@@ -134,10 +130,6 @@
       "hours": 4.5
     },
     {
-      "repo": "Ai-Whisperers/agentic-schemas",
-      "hours": 4.09
-    },
-    {
       "repo": "Ai-Whisperers/jira-meta-parser",
       "hours": 3.9
     },
@@ -148,6 +140,10 @@
     {
       "repo": "Ai-Whisperers/WPG-Amenities",
       "hours": 3.58
+    },
+    {
+      "repo": "Ai-Whisperers/agentic-schemas",
+      "hours": 3.01
     },
     {
       "repo": "Ai-Whisperers/enhanced-ai-investment",
@@ -162,11 +158,11 @@
       "hours": 0.5
     },
     {
-      "repo": "Ai-Whisperers/Taller-Ocampos",
-      "hours": 0.5
+      "repo": "Ai-Whisperers/aws-docker-mcp",
+      "hours": 0.25
     },
     {
-      "repo": "Ai-Whisperers/aws-docker-mcp",
+      "repo": "Ai-Whisperers/Taller-Ocampos",
       "hours": 0.25
     },
     {
@@ -430,10 +426,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/agentic-schemas",
-      "start": "2025-09-29T23:14:50+00:00",
+      "start": "2025-09-30T00:19:55+00:00",
       "end": "2025-09-30T01:23:58+00:00",
-      "hours": 2.15,
-      "commit_count": 13
+      "hours": 1.07,
+      "commit_count": 9
     },
     {
       "author": "Jonathan Verdun",
@@ -632,14 +628,6 @@
       "repo": "Ai-Whisperers/Negociation-Personal",
       "start": "2025-10-17T12:10:29+00:00",
       "end": "2025-10-17T12:25:29+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Taller-Ocampos",
-      "start": "2025-09-29T18:08:32+00:00",
-      "end": "2025-09-29T18:23:32+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
