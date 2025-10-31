@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-10-30T18:34:59.318542Z",
+  "generated_at": "2025-10-31T01:51:47.019791Z",
   "summary": {
     "total_days": 24,
-    "total_hours": 106.07,
-    "total_commits": 423,
-    "avg_hours_per_day": 4.42
+    "total_hours": 104.97,
+    "total_commits": 396,
+    "avg_hours_per_day": 4.37
   },
   "daily_hours": [
-    {
-      "date": "2025-09-30",
-      "hours": 5.1
-    },
     {
       "date": "2025-10-01",
       "hours": 8.0
@@ -102,6 +98,10 @@
     {
       "date": "2025-10-28",
       "hours": 2.91
+    },
+    {
+      "date": "2025-10-30",
+      "hours": 4.0
     }
   ],
   "repo_hours": [
@@ -111,7 +111,11 @@
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "hours": 12.02
+      "hours": 11.57
+    },
+    {
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "hours": 9.27
     },
     {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
@@ -120,10 +124,6 @@
     {
       "repo": "Ai-Whisperers/Negociation-Personal",
       "hours": 7.0
-    },
-    {
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 5.27
     },
     {
       "repo": "Ai-Whisperers/linkedin-content-system",
@@ -138,12 +138,8 @@
       "hours": 3.72
     },
     {
-      "repo": "Ai-Whisperers/WPG-Amenities",
-      "hours": 3.58
-    },
-    {
       "repo": "Ai-Whisperers/agentic-schemas",
-      "hours": 3.01
+      "hours": 1.94
     },
     {
       "repo": "Ai-Whisperers/enhanced-ai-investment",
@@ -314,14 +310,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-09-30T18:28:01+00:00",
-      "end": "2025-09-30T18:54:57+00:00",
-      "hours": 0.45,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
       "start": "2025-10-01T21:12:25+00:00",
       "end": "2025-10-02T01:45:43+00:00",
       "hours": 4.0,
@@ -417,22 +405,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/WPG-Amenities",
-      "start": "2025-09-30T18:43:24+00:00",
-      "end": "2025-09-30T22:03:08+00:00",
-      "hours": 3.33,
-      "commit_count": 21
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/agentic-schemas",
-      "start": "2025-09-30T00:19:55+00:00",
-      "end": "2025-09-30T01:23:58+00:00",
-      "hours": 1.07,
-      "commit_count": 9
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/agentic-schemas",
       "start": "2025-10-08T07:24:05+00:00",
       "end": "2025-10-08T09:20:31+00:00",
@@ -486,6 +458,14 @@
       "end": "2025-10-22T00:40:12+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "start": "2025-10-30T20:52:10+00:00",
+      "end": "2025-10-31T01:49:42+00:00",
+      "hours": 4.0,
+      "commit_count": 6
     },
     {
       "author": "Jonathan Verdun",
@@ -636,14 +616,6 @@
       "repo": "Ai-Whisperers/Taller-Ocampos",
       "start": "2025-10-22T14:07:42+00:00",
       "end": "2025-10-22T14:22:42+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/WPG-Amenities",
-      "start": "2025-09-30T17:50:34+00:00",
-      "end": "2025-09-30T18:05:34+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
