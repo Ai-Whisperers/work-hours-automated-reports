@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-01T12:43:12.505879Z",
+  "generated_at": "2025-11-01T18:30:08.954894Z",
   "summary": {
-    "total_days": 24,
-    "total_hours": 101.47,
-    "total_commits": 384,
-    "avg_hours_per_day": 4.23
+    "total_days": 25,
+    "total_hours": 101.93,
+    "total_commits": 387,
+    "avg_hours_per_day": 4.08
   },
   "daily_hours": [
     {
@@ -102,6 +102,10 @@
     {
       "date": "2025-10-31",
       "hours": 4.0
+    },
+    {
+      "date": "2025-11-01",
+      "hours": 0.46
     }
   ],
   "repo_hours": [
@@ -152,6 +156,10 @@
     {
       "repo": "Ai-Whisperers/chatbot-rag-rbac",
       "hours": 0.5
+    },
+    {
+      "repo": "Ai-Whisperers/claude-portable-improving-system",
+      "hours": 0.46
     },
     {
       "repo": "Ai-Whisperers/aws-docker-mcp",
@@ -514,6 +522,14 @@
       "end": "2025-10-09T09:31:12+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/claude-portable-improving-system",
+      "start": "2025-11-01T16:49:04+00:00",
+      "end": "2025-11-01T17:16:33+00:00",
+      "hours": 0.46,
+      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
