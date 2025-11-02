@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-01T18:30:08.954894Z",
+  "generated_at": "2025-11-02T01:57:26.476894Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 101.93,
-    "total_commits": 387,
-    "avg_hours_per_day": 4.08
+    "total_days": 24,
+    "total_hours": 97.05,
+    "total_commits": 351,
+    "avg_hours_per_day": 4.04
   },
   "daily_hours": [
     {
-      "date": "2025-10-02",
-      "hours": 6.06
-    },
-    {
       "date": "2025-10-03",
-      "hours": 2.4
+      "hours": 1.86
     },
     {
       "date": "2025-10-04",
@@ -105,7 +101,7 @@
     },
     {
       "date": "2025-11-01",
-      "hours": 0.46
+      "hours": 2.18
     }
   ],
   "repo_hours": [
@@ -115,11 +111,7 @@
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 9.52
-    },
-    {
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "hours": 7.82
+      "hours": 8.59
     },
     {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
@@ -138,16 +130,20 @@
       "hours": 3.9
     },
     {
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "hours": 3.57
+    },
+    {
       "repo": "Ai-Whisperers/Company-Information",
-      "hours": 3.72
+      "hours": 2.95
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
       "hours": 1.94
     },
     {
-      "repo": "Ai-Whisperers/enhanced-ai-investment",
-      "hours": 0.65
+      "repo": "Ai-Whisperers/branding-tester",
+      "hours": 1.42
     },
     {
       "repo": "Ai-Whisperers/audio-to-text",
@@ -160,6 +156,10 @@
     {
       "repo": "Ai-Whisperers/claude-portable-improving-system",
       "hours": 0.46
+    },
+    {
+      "repo": "Ai-Whisperers/meeting-ai-agent",
+      "hours": 0.3
     },
     {
       "repo": "Ai-Whisperers/aws-docker-mcp",
@@ -318,22 +318,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-10-02T01:45:43+00:00",
-      "end": "2025-10-02T02:00:43+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-10-02T10:25:35+00:00",
-      "end": "2025-10-02T19:44:33+00:00",
-      "hours": 4.0,
-      "commit_count": 27
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
       "start": "2025-10-03T15:52:09+00:00",
       "end": "2025-10-03T17:13:52+00:00",
       "hours": 1.36,
@@ -354,14 +338,6 @@
       "end": "2025-10-05T17:53:08+00:00",
       "hours": 2.17,
       "commit_count": 5
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-10-02T10:58:16+00:00",
-      "end": "2025-10-02T11:44:21+00:00",
-      "hours": 0.77,
-      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
@@ -418,30 +394,6 @@
       "end": "2025-10-08T09:20:31+00:00",
       "hours": 1.94,
       "commit_count": 8
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-02T01:30:01+00:00",
-      "end": "2025-10-02T01:45:01+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-02T10:52:25+00:00",
-      "end": "2025-10-02T11:07:25+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-02T19:17:54+00:00",
-      "end": "2025-10-02T19:43:42+00:00",
-      "hours": 0.43,
-      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
@@ -509,6 +461,14 @@
     },
     {
       "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/branding-tester",
+      "start": "2025-11-01T18:50:58+00:00",
+      "end": "2025-11-01T20:16:12+00:00",
+      "hours": 1.42,
+      "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/chatbot-rag-rbac",
       "start": "2025-10-08T07:12:24+00:00",
       "end": "2025-10-08T07:27:24+00:00",
@@ -538,22 +498,6 @@
       "end": "2025-10-21T06:06:30+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/enhanced-ai-investment",
-      "start": "2025-10-02T19:50:55+00:00",
-      "end": "2025-10-02T19:57:29+00:00",
-      "hours": 0.11,
-      "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/enhanced-ai-investment",
-      "start": "2025-10-03T15:39:54+00:00",
-      "end": "2025-10-03T16:12:20+00:00",
-      "hours": 0.54,
-      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -594,6 +538,14 @@
       "end": "2025-10-10T19:09:09+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/meeting-ai-agent",
+      "start": "2025-11-01T19:57:39+00:00",
+      "end": "2025-11-01T20:15:57+00:00",
+      "hours": 0.3,
+      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
