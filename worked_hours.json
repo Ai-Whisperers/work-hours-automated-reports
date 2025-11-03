@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-02T18:29:33.407301Z",
+  "generated_at": "2025-11-03T01:57:09.124087Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 97.13,
-    "total_commits": 356,
-    "avg_hours_per_day": 3.89
+    "total_days": 24,
+    "total_hours": 95.27,
+    "total_commits": 348,
+    "avg_hours_per_day": 3.97
   },
   "daily_hours": [
-    {
-      "date": "2025-10-03",
-      "hours": 1.86
-    },
     {
       "date": "2025-10-04",
       "hours": 2.41
@@ -115,7 +111,7 @@
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 8.59
+      "hours": 8.34
     },
     {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
@@ -134,12 +130,12 @@
       "hours": 3.9
     },
     {
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "hours": 3.57
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 2.7
     },
     {
-      "repo": "Ai-Whisperers/Company-Information",
-      "hours": 2.95
+      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
+      "hours": 2.21
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
@@ -322,14 +318,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-10-03T15:52:09+00:00",
-      "end": "2025-10-03T17:13:52+00:00",
-      "hours": 1.36,
-      "commit_count": 6
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
       "start": "2025-10-04T23:11:42+00:00",
       "end": "2025-10-04T23:14:21+00:00",
       "hours": 0.04,
@@ -342,14 +330,6 @@
       "end": "2025-10-05T17:53:08+00:00",
       "hours": 2.17,
       "commit_count": 5
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-10-03T19:07:04+00:00",
-      "end": "2025-10-03T19:22:04+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
@@ -398,14 +378,6 @@
       "end": "2025-10-08T09:20:31+00:00",
       "hours": 1.94,
       "commit_count": 8
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-03T16:51:30+00:00",
-      "end": "2025-10-03T17:06:30+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
