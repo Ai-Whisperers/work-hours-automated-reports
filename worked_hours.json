@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-03T18:33:05.459451Z",
+  "generated_at": "2025-11-04T01:52:33.170617Z",
   "summary": {
-    "total_days": 25,
-    "total_hours": 95.74,
-    "total_commits": 351,
-    "avg_hours_per_day": 3.83
+    "total_days": 24,
+    "total_hours": 93.83,
+    "total_commits": 343,
+    "avg_hours_per_day": 3.91
   },
   "daily_hours": [
-    {
-      "date": "2025-10-04",
-      "hours": 2.41
-    },
     {
       "date": "2025-10-05",
       "hours": 8.57
@@ -105,7 +101,7 @@
     },
     {
       "date": "2025-11-03",
-      "hours": 0.47
+      "hours": 0.97
     }
   ],
   "repo_hours": [
@@ -131,15 +127,11 @@
     },
     {
       "repo": "Ai-Whisperers/jira-meta-parser",
-      "hours": 3.9
-    },
-    {
-      "repo": "Ai-Whisperers/Company-Information",
-      "hours": 2.7
+      "hours": 3.65
     },
     {
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "hours": 2.21
+      "hours": 2.17
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
@@ -150,7 +142,15 @@
       "hours": 1.42
     },
     {
+      "repo": "Ai-Whisperers/meeting-ai-agent",
+      "hours": 0.8
+    },
+    {
       "repo": "Ai-Whisperers/audio-to-text",
+      "hours": 0.58
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
       "hours": 0.58
     },
     {
@@ -164,10 +164,6 @@
     {
       "repo": "Ai-Whisperers/claude-portable-improving-system",
       "hours": 0.46
-    },
-    {
-      "repo": "Ai-Whisperers/meeting-ai-agent",
-      "hours": 0.3
     },
     {
       "repo": "Ai-Whisperers/aws-docker-mcp",
@@ -326,26 +322,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
-      "start": "2025-10-04T23:11:42+00:00",
-      "end": "2025-10-04T23:14:21+00:00",
-      "hours": 0.04,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/AI-Whisperers-website-and-courses",
       "start": "2025-10-05T15:43:14+00:00",
       "end": "2025-10-05T17:53:08+00:00",
       "hours": 2.17,
       "commit_count": 5
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-10-04T18:46:48+00:00",
-      "end": "2025-10-04T20:54:02+00:00",
-      "hours": 2.12,
-      "commit_count": 7
     },
     {
       "author": "Jonathan Verdun",
@@ -502,14 +482,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/jira-meta-parser",
-      "start": "2025-10-04T20:58:27+00:00",
-      "end": "2025-10-04T21:13:27+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/jira-meta-parser",
       "start": "2025-10-05T14:35:55+00:00",
       "end": "2025-10-05T17:27:48+00:00",
       "hours": 2.86,
@@ -546,6 +518,14 @@
       "end": "2025-11-01T20:15:57+00:00",
       "hours": 0.3,
       "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/meeting-ai-agent",
+      "start": "2025-11-03T20:20:30+00:00",
+      "end": "2025-11-03T20:50:28+00:00",
+      "hours": 0.5,
+      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
