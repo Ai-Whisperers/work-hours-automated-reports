@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-05T12:51:21.709742Z",
+  "generated_at": "2025-11-05T18:34:51.216785Z",
   "summary": {
-    "total_days": 24,
-    "total_hours": 85.76,
-    "total_commits": 323,
-    "avg_hours_per_day": 3.57
+    "total_days": 25,
+    "total_hours": 86.66,
+    "total_commits": 327,
+    "avg_hours_per_day": 3.47
   },
   "daily_hours": [
     {
@@ -97,11 +97,15 @@
     },
     {
       "date": "2025-11-03",
-      "hours": 0.97
+      "hours": 1.22
     },
     {
       "date": "2025-11-04",
-      "hours": 0.5
+      "hours": 0.75
+    },
+    {
+      "date": "2025-11-05",
+      "hours": 0.4
     }
   ],
   "repo_hours": [
@@ -123,7 +127,7 @@
     },
     {
       "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 4.5
+      "hours": 5.4
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
@@ -618,6 +622,30 @@
       "end": "2025-10-22T17:31:06+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-11-03T20:58:56+00:00",
+      "end": "2025-11-03T21:13:56+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-11-04T22:14:49+00:00",
+      "end": "2025-11-04T22:29:49+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "start": "2025-11-05T17:01:58+00:00",
+      "end": "2025-11-05T17:26:13+00:00",
+      "hours": 0.4,
+      "commit_count": 2
     },
     {
       "author": "dependabot[bot]",
