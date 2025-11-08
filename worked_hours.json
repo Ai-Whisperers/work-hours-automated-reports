@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-07T18:33:38.585362Z",
+  "generated_at": "2025-11-08T01:46:35.804278Z",
   "summary": {
     "total_days": 26,
-    "total_hours": 88.77,
-    "total_commits": 333,
-    "avg_hours_per_day": 3.41
+    "total_hours": 88.91,
+    "total_commits": 332,
+    "avg_hours_per_day": 3.42
   },
   "daily_hours": [
-    {
-      "date": "2025-10-08",
-      "hours": 2.73
-    },
     {
       "date": "2025-10-09",
       "hours": 0.5
@@ -110,6 +106,10 @@
     {
       "date": "2025-11-06",
       "hours": 0.5
+    },
+    {
+      "date": "2025-11-07",
+      "hours": 2.87
     }
   ],
   "repo_hours": [
@@ -134,8 +134,8 @@
       "hours": 6.65
     },
     {
-      "repo": "Ai-Whisperers/agentic-schemas",
-      "hours": 1.94
+      "repo": "Ai-Whisperers/excel-parsing-service",
+      "hours": 2.37
     },
     {
       "repo": "Ai-Whisperers/branding-tester",
@@ -146,14 +146,6 @@
       "hours": 0.8
     },
     {
-      "repo": "Ai-Whisperers/jira-meta-parser",
-      "hours": 0.79
-    },
-    {
-      "repo": "Ai-Whisperers/audio-to-text",
-      "hours": 0.58
-    },
-    {
       "repo": "Ai-Whisperers/Company-Information",
       "hours": 0.58
     },
@@ -162,7 +154,11 @@
       "hours": 0.5
     },
     {
-      "repo": "Ai-Whisperers/chatbot-rag-rbac",
+      "repo": "Ai-Whisperers/jira-meta-parser",
+      "hours": 0.5
+    },
+    {
+      "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 0.5
     },
     {
@@ -174,11 +170,19 @@
       "hours": 0.46
     },
     {
+      "repo": "Ai-Whisperers/audio-to-text",
+      "hours": 0.33
+    },
+    {
       "repo": "Ai-Whisperers/aws-docker-mcp",
       "hours": 0.25
     },
     {
-      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "repo": "Ai-Whisperers/chatbot-rag-rbac",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/templates-standard",
       "hours": 0.25
     },
     {
@@ -365,14 +369,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/agentic-schemas",
-      "start": "2025-10-08T07:24:05+00:00",
-      "end": "2025-10-08T09:20:31+00:00",
-      "hours": 1.94,
-      "commit_count": 8
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
       "start": "2025-10-21T15:34:39+00:00",
       "end": "2025-10-21T15:35:56+00:00",
@@ -422,14 +418,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/audio-to-text",
-      "start": "2025-10-08T00:40:07+00:00",
-      "end": "2025-10-08T00:55:07+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/audio-to-text",
       "start": "2025-10-11T15:16:49+00:00",
       "end": "2025-10-11T15:31:49+00:00",
       "hours": 0.25,
@@ -470,14 +458,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/chatbot-rag-rbac",
-      "start": "2025-10-08T07:12:24+00:00",
-      "end": "2025-10-08T07:27:24+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/chatbot-rag-rbac",
       "start": "2025-10-09T09:16:12+00:00",
       "end": "2025-10-09T09:31:12+00:00",
       "hours": 0.25,
@@ -501,11 +481,11 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/jira-meta-parser",
-      "start": "2025-10-08T14:33:24+00:00",
-      "end": "2025-10-08T14:50:34+00:00",
-      "hours": 0.29,
-      "commit_count": 2
+      "repo": "Ai-Whisperers/excel-parsing-service",
+      "start": "2025-11-07T18:52:32+00:00",
+      "end": "2025-11-07T21:14:44+00:00",
+      "hours": 2.37,
+      "commit_count": 9
     },
     {
       "author": "Jonathan Verdun",
@@ -538,6 +518,14 @@
       "end": "2025-11-03T20:50:28+00:00",
       "hours": 0.5,
       "commit_count": 2
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/templates-standard",
+      "start": "2025-11-07T23:14:34+00:00",
+      "end": "2025-11-07T23:29:34+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
@@ -589,9 +577,17 @@
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Taller-Ocampos",
+      "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-10-22T14:07:42+00:00",
       "end": "2025-10-22T14:22:42+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "start": "2025-11-07T18:48:54+00:00",
+      "end": "2025-11-07T19:03:54+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
