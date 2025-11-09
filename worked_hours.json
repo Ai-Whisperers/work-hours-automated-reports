@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-08T18:31:16.449633Z",
+  "generated_at": "2025-11-09T01:56:32.487057Z",
   "summary": {
     "total_days": 26,
-    "total_hours": 88.91,
-    "total_commits": 332,
-    "avg_hours_per_day": 3.42
+    "total_hours": 90.66,
+    "total_commits": 337,
+    "avg_hours_per_day": 3.49
   },
   "daily_hours": [
-    {
-      "date": "2025-10-09",
-      "hours": 0.5
-    },
     {
       "date": "2025-10-10",
       "hours": 0.25
@@ -110,6 +106,10 @@
     {
       "date": "2025-11-07",
       "hours": 2.87
+    },
+    {
+      "date": "2025-11-08",
+      "hours": 2.25
     }
   ],
   "repo_hours": [
@@ -135,7 +135,11 @@
     },
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
-      "hours": 2.37
+      "hours": 2.62
+    },
+    {
+      "repo": "Ai-Whisperers/templates-standard",
+      "hours": 2.25
     },
     {
       "repo": "Ai-Whisperers/branding-tester",
@@ -151,10 +155,6 @@
     },
     {
       "repo": "Ai-Whisperers/analysis-engine",
-      "hours": 0.5
-    },
-    {
-      "repo": "Ai-Whisperers/jira-meta-parser",
       "hours": 0.5
     },
     {
@@ -178,11 +178,7 @@
       "hours": 0.25
     },
     {
-      "repo": "Ai-Whisperers/chatbot-rag-rbac",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/templates-standard",
+      "repo": "Ai-Whisperers/jira-meta-parser",
       "hours": 0.25
     },
     {
@@ -457,14 +453,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/chatbot-rag-rbac",
-      "start": "2025-10-09T09:16:12+00:00",
-      "end": "2025-10-09T09:31:12+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/claude-portable-improving-system",
       "start": "2025-11-01T16:49:04+00:00",
       "end": "2025-11-01T17:16:33+00:00",
@@ -489,9 +477,9 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/jira-meta-parser",
-      "start": "2025-10-09T16:10:54+00:00",
-      "end": "2025-10-09T16:25:54+00:00",
+      "repo": "Ai-Whisperers/excel-parsing-service",
+      "start": "2025-11-08T19:35:36+00:00",
+      "end": "2025-11-08T19:50:36+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
@@ -526,6 +514,14 @@
       "end": "2025-11-07T23:29:34+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/templates-standard",
+      "start": "2025-11-08T20:58:20+00:00",
+      "end": "2025-11-08T22:58:31+00:00",
+      "hours": 2.0,
+      "commit_count": 6
     },
     {
       "author": "Jonathan Verdun",
