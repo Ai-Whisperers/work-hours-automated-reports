@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-09T18:30:28.504676Z",
+  "generated_at": "2025-11-10T01:57:55.128455Z",
   "summary": {
-    "total_days": 27,
-    "total_hours": 92.06,
-    "total_commits": 341,
-    "avg_hours_per_day": 3.41
+    "total_days": 26,
+    "total_hours": 96.06,
+    "total_commits": 346,
+    "avg_hours_per_day": 3.69
   },
   "daily_hours": [
-    {
-      "date": "2025-10-10",
-      "hours": 0.25
-    },
     {
       "date": "2025-10-11",
       "hours": 0.25
@@ -109,17 +105,17 @@
     },
     {
       "date": "2025-11-08",
-      "hours": 2.25
+      "hours": 6.25
     },
     {
       "date": "2025-11-09",
-      "hours": 1.4
+      "hours": 1.65
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 50.03
+      "hours": 54.28
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
@@ -179,10 +175,6 @@
     },
     {
       "repo": "Ai-Whisperers/aws-docker-mcp",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/jira-meta-parser",
       "hours": 0.25
     },
     {
@@ -280,6 +272,14 @@
       "commit_count": 7
     },
     {
+      "author": "Claude",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-08T20:59:37+00:00",
+      "end": "2025-11-09T03:18:18+00:00",
+      "hours": 4.0,
+      "commit_count": 5
+    },
+    {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Negociation-Personal",
       "start": "2025-10-28T01:06:18+00:00",
@@ -334,6 +334,14 @@
       "end": "2025-10-28T16:56:02+00:00",
       "hours": 2.66,
       "commit_count": 9
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-09T20:34:46+00:00",
+      "end": "2025-11-09T20:49:46+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
@@ -494,14 +502,6 @@
       "end": "2025-11-09T03:26:04+00:00",
       "hours": 1.4,
       "commit_count": 4
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/jira-meta-parser",
-      "start": "2025-10-10T18:54:09+00:00",
-      "end": "2025-10-10T19:09:09+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
