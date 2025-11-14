@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-13T18:34:45.269032Z",
+  "generated_at": "2025-11-14T01:54:36.984237Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 113.5,
-    "total_commits": 401,
-    "avg_hours_per_day": 4.05
+    "total_days": 27,
+    "total_hours": 113.25,
+    "total_commits": 400,
+    "avg_hours_per_day": 4.19
   },
   "daily_hours": [
-    {
-      "date": "2025-10-14",
-      "hours": 0.25
-    },
     {
       "date": "2025-10-15",
       "hours": 2.28
@@ -166,10 +162,6 @@
       "hours": 0.8
     },
     {
-      "repo": "Ai-Whisperers/Company-Information",
-      "hours": 0.58
-    },
-    {
       "repo": "Ai-Whisperers/analysis-engine",
       "hours": 0.5
     },
@@ -180,6 +172,10 @@
     {
       "repo": "Ai-Whisperers/claude-portable-improving-system",
       "hours": 0.46
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 0.33
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
@@ -396,14 +392,6 @@
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-11-10T15:17:27+00:00",
       "end": "2025-11-10T15:32:27+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-10-14T00:34:06+00:00",
-      "end": "2025-10-14T00:49:06+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
