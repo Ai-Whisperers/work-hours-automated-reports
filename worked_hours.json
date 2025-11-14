@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-14T12:50:19.097134Z",
+  "generated_at": "2025-11-14T18:34:25.871609Z",
   "summary": {
-    "total_days": 27,
-    "total_hours": 113.25,
-    "total_commits": 400,
-    "avg_hours_per_day": 4.19
+    "total_days": 28,
+    "total_hours": 158.31,
+    "total_commits": 1013,
+    "avg_hours_per_day": 5.65
   },
   "daily_hours": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "date": "2025-10-21",
-      "hours": 8.52
+      "hours": 8.02
     },
     {
       "date": "2025-10-22",
@@ -53,19 +53,23 @@
     },
     {
       "date": "2025-10-28",
-      "hours": 2.91
+      "hours": 8.25
+    },
+    {
+      "date": "2025-10-29",
+      "hours": 8.0
     },
     {
       "date": "2025-10-30",
-      "hours": 4.0
+      "hours": 12.0
     },
     {
       "date": "2025-10-31",
-      "hours": 4.0
+      "hours": 8.0
     },
     {
       "date": "2025-11-01",
-      "hours": 2.18
+      "hours": 6.18
     },
     {
       "date": "2025-11-02",
@@ -73,43 +77,43 @@
     },
     {
       "date": "2025-11-03",
-      "hours": 1.22
+      "hours": 1.67
     },
     {
       "date": "2025-11-04",
-      "hours": 0.75
+      "hours": 4.77
     },
     {
       "date": "2025-11-05",
-      "hours": 2.01
+      "hours": 3.94
     },
     {
       "date": "2025-11-06",
-      "hours": 0.5
+      "hours": 4.5
     },
     {
       "date": "2025-11-07",
-      "hours": 2.87
+      "hours": 6.24
     },
     {
       "date": "2025-11-08",
-      "hours": 6.25
+      "hours": 2.28
     },
     {
       "date": "2025-11-09",
-      "hours": 1.65
+      "hours": 3.87
     },
     {
       "date": "2025-11-10",
-      "hours": 13.76
+      "hours": 13.71
     },
     {
       "date": "2025-11-11",
-      "hours": 4.0
+      "hours": 4.25
     },
     {
       "date": "2025-11-12",
-      "hours": 0.5
+      "hours": 4.5
     },
     {
       "date": "2025-11-13",
@@ -119,7 +123,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 57.41
+      "hours": 102.47
     },
     {
       "repo": "Ai-Whisperers/linkedin-content-system",
@@ -217,7 +221,7 @@
       "start": "2025-10-20T19:38:15+00:00",
       "end": "2025-10-20T20:41:08+00:00",
       "hours": 1.05,
-      "commit_count": 2
+      "commit_count": 4
     },
     {
       "author": "Claude",
@@ -225,7 +229,7 @@
       "start": "2025-10-21T05:16:45+00:00",
       "end": "2025-10-22T02:43:39+00:00",
       "hours": 4.0,
-      "commit_count": 48
+      "commit_count": 96
     },
     {
       "author": "Claude",
@@ -233,7 +237,7 @@
       "start": "2025-10-22T18:56:14+00:00",
       "end": "2025-10-23T04:07:54+00:00",
       "hours": 4.0,
-      "commit_count": 11
+      "commit_count": 22
     },
     {
       "author": "Claude",
@@ -241,7 +245,7 @@
       "start": "2025-10-23T12:14:16+00:00",
       "end": "2025-10-23T14:55:04+00:00",
       "hours": 2.68,
-      "commit_count": 6
+      "commit_count": 12
     },
     {
       "author": "Claude",
@@ -249,7 +253,7 @@
       "start": "2025-10-24T02:42:05+00:00",
       "end": "2025-10-24T04:55:23+00:00",
       "hours": 2.22,
-      "commit_count": 2
+      "commit_count": 4
     },
     {
       "author": "Claude",
@@ -257,7 +261,7 @@
       "start": "2025-10-24T17:03:09+00:00",
       "end": "2025-10-25T02:21:01+00:00",
       "hours": 4.0,
-      "commit_count": 19
+      "commit_count": 38
     },
     {
       "author": "Claude",
@@ -265,7 +269,7 @@
       "start": "2025-10-25T10:44:55+00:00",
       "end": "2025-10-25T13:41:58+00:00",
       "hours": 2.95,
-      "commit_count": 5
+      "commit_count": 10
     },
     {
       "author": "Claude",
@@ -273,7 +277,7 @@
       "start": "2025-10-25T23:05:22+00:00",
       "end": "2025-10-26T04:24:17+00:00",
       "hours": 4.0,
-      "commit_count": 4
+      "commit_count": 8
     },
     {
       "author": "Claude",
@@ -281,38 +285,38 @@
       "start": "2025-10-26T16:50:11+00:00",
       "end": "2025-10-27T07:04:02+00:00",
       "hours": 4.0,
-      "commit_count": 14
+      "commit_count": 28
     },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-27T18:36:57+00:00",
-      "end": "2025-10-27T22:56:13+00:00",
+      "end": "2025-10-28T05:14:02+00:00",
       "hours": 4.0,
-      "commit_count": 7
+      "commit_count": 50
     },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-08T20:59:37+00:00",
-      "end": "2025-11-09T03:18:18+00:00",
+      "start": "2025-10-28T13:12:17+00:00",
+      "end": "2025-10-29T02:15:02+00:00",
       "hours": 4.0,
-      "commit_count": 5
+      "commit_count": 22
     },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-10T00:51:49+00:00",
-      "end": "2025-11-10T02:49:37+00:00",
-      "hours": 1.96,
-      "commit_count": 6
+      "start": "2025-10-29T16:33:16+00:00",
+      "end": "2025-10-30T00:12:29+00:00",
+      "hours": 4.0,
+      "commit_count": 10
     },
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-10T14:17:21+00:00",
-      "end": "2025-11-10T14:57:36+00:00",
-      "hours": 0.67,
+      "start": "2025-10-30T17:05:15+00:00",
+      "end": "2025-10-30T22:42:30+00:00",
+      "hours": 4.0,
       "commit_count": 5
     },
     {
@@ -345,7 +349,7 @@
       "start": "2025-10-22T00:54:17+00:00",
       "end": "2025-10-22T06:28:18+00:00",
       "hours": 4.0,
-      "commit_count": 12
+      "commit_count": 24
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -353,7 +357,7 @@
       "start": "2025-10-22T16:20:29+00:00",
       "end": "2025-10-22T18:03:48+00:00",
       "hours": 1.72,
-      "commit_count": 10
+      "commit_count": 20
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -367,33 +371,145 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-28T14:16:23+00:00",
-      "end": "2025-10-28T16:56:02+00:00",
-      "hours": 2.66,
-      "commit_count": 9
+      "end": "2025-10-28T21:10:40+00:00",
+      "hours": 4.0,
+      "commit_count": 10
     },
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-09T20:34:46+00:00",
-      "end": "2025-11-09T20:49:46+00:00",
+      "start": "2025-10-29T17:00:38+00:00",
+      "end": "2025-10-30T04:10:30+00:00",
+      "hours": 4.0,
+      "commit_count": 40
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-30T22:23:59+00:00",
+      "end": "2025-10-31T04:58:39+00:00",
+      "hours": 4.0,
+      "commit_count": 34
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-10-31T15:25:05+00:00",
+      "end": "2025-10-31T23:13:56+00:00",
+      "hours": 4.0,
+      "commit_count": 25
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-01T18:47:58+00:00",
+      "end": "2025-11-02T06:22:40+00:00",
+      "hours": 4.0,
+      "commit_count": 85
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-03T01:15:15+00:00",
+      "end": "2025-11-03T01:39:39+00:00",
+      "hours": 0.41,
+      "commit_count": 2
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-03T20:32:16+00:00",
+      "end": "2025-11-03T20:34:56+00:00",
+      "hours": 0.04,
+      "commit_count": 5
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-04T07:46:42+00:00",
+      "end": "2025-11-04T07:48:10+00:00",
+      "hours": 0.02,
+      "commit_count": 6
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-04T18:50:12+00:00",
+      "end": "2025-11-05T06:53:18+00:00",
+      "hours": 4.0,
+      "commit_count": 59
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-05T20:58:38+00:00",
+      "end": "2025-11-05T22:54:28+00:00",
+      "hours": 1.93,
+      "commit_count": 23
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-06T15:41:37+00:00",
+      "end": "2025-11-07T00:09:25+00:00",
+      "hours": 4.0,
+      "commit_count": 47
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-07T06:56:28+00:00",
+      "end": "2025-11-07T07:11:28+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-10T03:07:24+00:00",
-      "end": "2025-11-10T03:22:24+00:00",
+      "start": "2025-11-07T16:08:25+00:00",
+      "end": "2025-11-07T19:15:55+00:00",
+      "hours": 3.12,
+      "commit_count": 8
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-08T20:31:25+00:00",
+      "end": "2025-11-08T20:33:20+00:00",
+      "hours": 0.03,
+      "commit_count": 7
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-09T19:42:08+00:00",
+      "end": "2025-11-09T22:10:37+00:00",
+      "hours": 2.47,
+      "commit_count": 3
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-10T14:14:27+00:00",
+      "end": "2025-11-10T17:19:25+00:00",
+      "hours": 3.08,
+      "commit_count": 13
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-11-11T02:50:09+00:00",
+      "end": "2025-11-11T03:05:09+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-10T15:17:27+00:00",
-      "end": "2025-11-10T15:32:27+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "start": "2025-11-12T21:36:08+00:00",
+      "end": "2025-11-13T06:35:48+00:00",
+      "hours": 4.0,
+      "commit_count": 25
     },
     {
       "author": "Jonathan Verdun",
@@ -543,9 +659,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-21T05:51:30+00:00",
-      "end": "2025-10-21T06:06:30+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-10-21T05:51:30+00:00",
+      "hours": 0.0,
+      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
@@ -705,7 +821,7 @@
       "start": "2025-10-22T23:31:28+00:00",
       "end": "2025-10-23T06:57:57+00:00",
       "hours": 4.0,
-      "commit_count": 32
+      "commit_count": 64
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
@@ -791,9 +907,9 @@
       "author": "dependabot[bot]",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-10-21T05:48:48+00:00",
-      "end": "2025-10-21T06:03:48+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-10-21T05:48:48+00:00",
+      "hours": 0.0,
+      "commit_count": 2
     }
   ]
 }
