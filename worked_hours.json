@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-15T18:30:52.710270Z",
+  "generated_at": "2025-11-16T01:59:30.911287Z",
   "summary": {
     "total_days": 28,
-    "total_hours": 160.03,
-    "total_commits": 1014,
-    "avg_hours_per_day": 5.72
+    "total_hours": 155.31,
+    "total_commits": 993,
+    "avg_hours_per_day": 5.55
   },
   "daily_hours": [
     {
-      "date": "2025-10-16",
-      "hours": 10.75
-    },
-    {
       "date": "2025-10-17",
-      "hours": 0.5
+      "hours": 3.78
     },
     {
       "date": "2025-10-20",
@@ -118,6 +114,10 @@
     {
       "date": "2025-11-14",
       "hours": 4.0
+    },
+    {
+      "date": "2025-11-15",
+      "hours": 2.75
     }
   ],
   "repo_hours": [
@@ -138,20 +138,16 @@
       "hours": 8.34
     },
     {
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 7.86
+      "repo": "Ai-Whisperers/yt-transcript-headless",
+      "hours": 6.75
     },
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
       "hours": 5.01
     },
     {
-      "repo": "Ai-Whisperers/work-hours-automated-reports",
-      "hours": 4.0
-    },
-    {
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "hours": 4.0
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "hours": 4.64
     },
     {
       "repo": "Ai-Whisperers/templates-standard",
@@ -182,10 +178,6 @@
       "hours": 0.46
     },
     {
-      "repo": "Ai-Whisperers/Company-Information",
-      "hours": 0.33
-    },
-    {
       "repo": "Ai-Whisperers/agentic-schemas",
       "hours": 0.25
     },
@@ -204,6 +196,10 @@
     {
       "repo": "Ai-Whisperers/legal",
       "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 0.08
     },
     {
       "repo": "Ai-Whisperers/audio-to-text",
@@ -518,14 +514,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/Company-Information",
-      "start": "2025-10-16T15:16:59+00:00",
-      "end": "2025-10-16T15:31:59+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Company-Information",
       "start": "2025-10-24T18:11:36+00:00",
       "end": "2025-10-24T18:16:23+00:00",
       "hours": 0.08,
@@ -534,10 +522,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-16T22:54:16+00:00",
+      "start": "2025-10-17T01:24:05+00:00",
       "end": "2025-10-17T01:24:16+00:00",
-      "hours": 2.5,
-      "commit_count": 6
+      "hours": 0.0,
+      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
@@ -757,14 +745,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/work-hours-automated-reports",
-      "start": "2025-10-16T12:46:15+00:00",
-      "end": "2025-10-16T18:25:59+00:00",
-      "hours": 4.0,
-      "commit_count": 14
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/yt-transcript-headless",
       "start": "2025-11-14T18:08:36+00:00",
       "end": "2025-11-14T23:13:13+00:00",
@@ -772,12 +752,20 @@
       "commit_count": 6
     },
     {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/yt-transcript-headless",
+      "start": "2025-11-15T21:42:13+00:00",
+      "end": "2025-11-16T00:27:13+00:00",
+      "hours": 2.75,
+      "commit_count": 10
+    },
+    {
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-16T22:28:01+00:00",
+      "start": "2025-10-17T00:04:45+00:00",
       "end": "2025-10-17T03:21:33+00:00",
-      "hours": 4.0,
-      "commit_count": 27
+      "hours": 3.28,
+      "commit_count": 15
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
