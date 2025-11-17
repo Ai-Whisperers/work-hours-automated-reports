@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-11-16T18:31:38.503194Z",
+  "generated_at": "2025-11-17T01:55:12.849176Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 159.21,
-    "total_commits": 998,
-    "avg_hours_per_day": 5.49
+    "total_days": 28,
+    "total_hours": 155.53,
+    "total_commits": 985,
+    "avg_hours_per_day": 5.55
   },
   "daily_hours": [
-    {
-      "date": "2025-10-17",
-      "hours": 3.78
-    },
     {
       "date": "2025-10-20",
       "hours": 1.37
@@ -121,7 +117,7 @@
     },
     {
       "date": "2025-11-16",
-      "hours": 3.9
+      "hours": 4.0
     }
   ],
   "repo_hours": [
@@ -131,7 +127,7 @@
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
-      "hours": 10.65
+      "hours": 10.75
     },
     {
       "repo": "Ai-Whisperers/linkedin-content-system",
@@ -150,10 +146,6 @@
       "hours": 5.01
     },
     {
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 4.64
-    },
-    {
       "repo": "Ai-Whisperers/templates-standard",
       "hours": 2.5
     },
@@ -164,6 +156,10 @@
     {
       "repo": "Ai-Whisperers/branding-tester",
       "hours": 1.42
+    },
+    {
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "hours": 1.11
     },
     {
       "repo": "Ai-Whisperers/meeting-ai-agent",
@@ -191,10 +187,6 @@
     },
     {
       "repo": "Ai-Whisperers/clustering-for-ai-whisperers-hosting-and-deploys",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/courseResource",
       "hours": 0.25
     },
     {
@@ -525,14 +517,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-17T01:24:05+00:00",
-      "end": "2025-10-17T01:24:16+00:00",
-      "hours": 0.0,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-11-10T16:00:25+00:00",
       "end": "2025-11-10T20:32:19+00:00",
@@ -767,25 +751,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/yt-transcript-headless",
       "start": "2025-11-16T12:43:53+00:00",
-      "end": "2025-11-16T16:37:41+00:00",
-      "hours": 3.9,
-      "commit_count": 5
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-17T00:04:45+00:00",
-      "end": "2025-10-17T03:21:33+00:00",
-      "hours": 3.28,
-      "commit_count": 15
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-17T12:10:29+00:00",
-      "end": "2025-10-17T12:25:29+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-11-16T21:25:56+00:00",
+      "hours": 4.0,
+      "commit_count": 11
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
@@ -808,14 +776,6 @@
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-11-10T15:28:15+00:00",
       "end": "2025-11-10T15:43:15+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/courseResource",
-      "start": "2025-10-17T18:21:34+00:00",
-      "end": "2025-10-17T18:36:34+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
