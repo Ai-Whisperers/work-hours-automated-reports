@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-22T01:48:49.225434Z",
+  "generated_at": "2025-11-22T06:33:15.169266Z",
   "summary": {
     "total_days": 32,
-    "total_hours": 157.84,
-    "total_commits": 884,
-    "avg_hours_per_day": 4.93
+    "total_hours": 164.54,
+    "total_commits": 896,
+    "avg_hours_per_day": 5.14
   },
   "daily_hours": [
     {
@@ -125,11 +125,11 @@
     },
     {
       "date": "2025-11-20",
-      "hours": 0.88
+      "hours": 1.85
     },
     {
       "date": "2025-11-21",
-      "hours": 0.5
+      "hours": 6.23
     },
     {
       "date": "2025-11-22",
@@ -162,6 +162,14 @@
       "hours": 5.01
     },
     {
+      "repo": "Ai-Whisperers/AutomationQA",
+      "hours": 3.62
+    },
+    {
+      "repo": "Ai-Whisperers/Courses-Content",
+      "hours": 3.58
+    },
+    {
       "repo": "Ai-Whisperers/Lawfirm-website",
       "hours": 3.01
     },
@@ -188,10 +196,6 @@
     {
       "repo": "Ai-Whisperers/meeting-ai-agent",
       "hours": 0.8
-    },
-    {
-      "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 0.5
     },
     {
       "repo": "Ai-Whisperers/analysis-engine",
@@ -359,9 +363,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
       "start": "2025-11-21T23:41:21+00:00",
-      "end": "2025-11-21T23:56:21+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-11-22T03:00:57+00:00",
+      "hours": 3.33,
+      "commit_count": 2
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -818,6 +822,22 @@
       "end": "2025-11-20T19:34:08+00:00",
       "hours": 0.12,
       "commit_count": 2
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/AutomationQA",
+      "start": "2025-11-20T19:51:55+00:00",
+      "end": "2025-11-20T20:50:17+00:00",
+      "hours": 0.97,
+      "commit_count": 8
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/AutomationQA",
+      "start": "2025-11-21T23:54:59+00:00",
+      "end": "2025-11-22T02:33:54+00:00",
+      "hours": 2.65,
+      "commit_count": 3
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
