@@ -1,20 +1,12 @@
 {
-  "generated_at": "2025-11-22T18:32:24.435300Z",
+  "generated_at": "2025-11-23T02:07:20.472885Z",
   "summary": {
-    "total_days": 32,
-    "total_hours": 164.79,
-    "total_commits": 897,
+    "total_days": 30,
+    "total_hours": 154.6,
+    "total_commits": 808,
     "avg_hours_per_day": 5.15
   },
   "daily_hours": [
-    {
-      "date": "2025-10-22",
-      "hours": 4.0
-    },
-    {
-      "date": "2025-10-23",
-      "hours": 6.44
-    },
     {
       "date": "2025-10-24",
       "hours": 6.3
@@ -133,13 +125,13 @@
     },
     {
       "date": "2025-11-22",
-      "hours": 1.01
+      "hours": 1.26
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 90.96
+      "hours": 80.77
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -163,7 +155,7 @@
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 3.83
+      "hours": 4.08
     },
     {
       "repo": "Ai-Whisperers/AutomationQA",
@@ -218,10 +210,6 @@
       "hours": 0.25
     },
     {
-      "repo": "Ai-Whisperers/aws-docker-mcp",
-      "hours": 0.25
-    },
-    {
       "repo": "Ai-Whisperers/clustering-for-ai-whisperers-hosting-and-deploys",
       "hours": 0.25
     },
@@ -246,22 +234,6 @@
       "end": "2025-11-05T11:16:47+00:00",
       "hours": 0.61,
       "commit_count": 3
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-23T00:52:33+00:00",
-      "end": "2025-10-23T04:07:54+00:00",
-      "hours": 3.26,
-      "commit_count": 12
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-23T12:14:16+00:00",
-      "end": "2025-10-23T14:55:04+00:00",
-      "hours": 2.68,
-      "commit_count": 12
     },
     {
       "author": "Claude",
@@ -372,6 +344,14 @@
       "repo": "Ai-Whisperers/Courses-Content",
       "start": "2025-11-22T16:39:29+00:00",
       "end": "2025-11-22T16:54:29+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Courses-Content",
+      "start": "2025-11-22T23:52:12+00:00",
+      "end": "2025-11-23T00:07:12+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
@@ -633,14 +613,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/aws-docker-mcp",
-      "start": "2025-10-23T00:40:10+00:00",
-      "end": "2025-10-23T00:55:10+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/branding-tester",
       "start": "2025-11-01T18:50:58+00:00",
       "end": "2025-11-01T20:16:12+00:00",
@@ -868,22 +840,6 @@
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-11-10T15:28:15+00:00",
       "end": "2025-11-10T15:43:15+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-22T23:31:28+00:00",
-      "end": "2025-10-23T06:57:57+00:00",
-      "hours": 4.0,
-      "commit_count": 64
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-23T22:11:37+00:00",
-      "end": "2025-10-23T22:26:37+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
