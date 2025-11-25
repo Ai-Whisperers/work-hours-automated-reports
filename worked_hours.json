@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-24T18:36:49.170276Z",
+  "generated_at": "2025-11-25T01:55:06.146692Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 154.69,
-    "total_commits": 790,
-    "avg_hours_per_day": 5.16
+    "total_days": 29,
+    "total_hours": 157.91,
+    "total_commits": 779,
+    "avg_hours_per_day": 5.45
   },
   "daily_hours": [
     {
-      "date": "2025-10-25",
-      "hours": 6.96
-    },
-    {
       "date": "2025-10-26",
-      "hours": 4.0
+      "hours": 8.0
     },
     {
       "date": "2025-10-27",
@@ -125,13 +121,13 @@
     },
     {
       "date": "2025-11-24",
-      "hours": 6.38
+      "hours": 12.56
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 74.56
+      "hours": 71.6
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -146,12 +142,12 @@
       "hours": 8.5
     },
     {
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 5.8
+      "repo": "Ai-Whisperers/Courses-Content",
+      "hours": 8.08
     },
     {
-      "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 5.77
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "hours": 5.8
     },
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
@@ -166,6 +162,10 @@
       "hours": 3.01
     },
     {
+      "repo": "Ai-Whisperers/marketing-strategy",
+      "hours": 2.87
+    },
+    {
       "repo": "Ai-Whisperers/team-tasks",
       "hours": 2.56
     },
@@ -175,7 +175,7 @@
     },
     {
       "repo": "Ai-Whisperers/Comment-Exctractor",
-      "hours": 2.09
+      "hours": 2.34
     },
     {
       "repo": "Ai-Whisperers/normalizer-service",
@@ -186,12 +186,12 @@
       "hours": 1.42
     },
     {
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 1.11
+      "repo": "Ai-Whisperers/feedbackScope-backend",
+      "hours": 1.36
     },
     {
-      "repo": "Ai-Whisperers/feedbackScope-backend",
-      "hours": 0.86
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "hours": 1.11
     },
     {
       "repo": "Ai-Whisperers/meeting-ai-agent",
@@ -212,6 +212,10 @@
     {
       "repo": "Ai-Whisperers/cluster-template",
       "hours": 0.45
+    },
+    {
+      "repo": "Ai-Whisperers/social-media-intelligence-marketing",
+      "hours": 0.25
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
@@ -242,26 +246,10 @@
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-25T02:20:39+00:00",
-      "end": "2025-10-25T02:21:01+00:00",
-      "hours": 0.01,
-      "commit_count": 4
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-25T10:44:55+00:00",
-      "end": "2025-10-25T13:41:58+00:00",
-      "hours": 2.95,
-      "commit_count": 10
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-25T23:05:22+00:00",
+      "start": "2025-10-26T00:23:55+00:00",
       "end": "2025-10-26T04:24:17+00:00",
       "hours": 4.0,
-      "commit_count": 8
+      "commit_count": 4
     },
     {
       "author": "Claude",
@@ -326,6 +314,14 @@
       "end": "2025-11-24T01:55:01+00:00",
       "hours": 1.08,
       "commit_count": 4
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Comment-Exctractor",
+      "start": "2025-11-24T19:02:33+00:00",
+      "end": "2025-11-24T19:17:33+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -529,6 +525,14 @@
     },
     {
       "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/social-media-intelligence-marketing",
+      "start": "2025-11-24T20:03:12+00:00",
+      "end": "2025-11-24T20:18:12+00:00",
+      "hours": 0.25,
+      "commit_count": 1
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/team-tasks",
       "start": "2025-11-24T14:51:52+00:00",
       "end": "2025-11-24T17:25:35+00:00",
@@ -683,9 +687,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "start": "2025-11-24T17:19:52+00:00",
-      "end": "2025-11-24T18:11:17+00:00",
-      "hours": 0.86,
-      "commit_count": 2
+      "end": "2025-11-24T18:41:42+00:00",
+      "hours": 1.36,
+      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
@@ -843,9 +847,9 @@
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
       "start": "2025-11-24T15:56:53+00:00",
-      "end": "2025-11-24T17:38:34+00:00",
-      "hours": 1.69,
-      "commit_count": 5
+      "end": "2025-11-24T20:00:57+00:00",
+      "hours": 4.0,
+      "commit_count": 7
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
@@ -918,6 +922,14 @@
       "end": "2025-11-10T19:51:10+00:00",
       "hours": 3.65,
       "commit_count": 7
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/marketing-strategy",
+      "start": "2025-11-24T18:54:38+00:00",
+      "end": "2025-11-24T21:46:37+00:00",
+      "hours": 2.87,
+      "commit_count": 2
     }
   ]
 }
