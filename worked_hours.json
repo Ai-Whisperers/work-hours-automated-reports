@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-25T18:37:39.761034Z",
+  "generated_at": "2025-11-26T01:55:02.152530Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 158.72,
-    "total_commits": 782,
-    "avg_hours_per_day": 5.29
+    "total_days": 29,
+    "total_hours": 157.91,
+    "total_commits": 762,
+    "avg_hours_per_day": 5.45
   },
   "daily_hours": [
     {
-      "date": "2025-10-26",
-      "hours": 8.0
-    },
-    {
       "date": "2025-10-27",
-      "hours": 8.0
+      "hours": 12.0
     },
     {
       "date": "2025-10-28",
@@ -125,13 +121,13 @@
     },
     {
       "date": "2025-11-25",
-      "hours": 0.81
+      "hours": 4.0
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 71.6
+      "hours": 67.6
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -139,7 +135,7 @@
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 9.32
+      "hours": 12.51
     },
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
@@ -250,18 +246,10 @@
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-26T00:23:55+00:00",
-      "end": "2025-10-26T04:24:17+00:00",
-      "hours": 4.0,
-      "commit_count": 4
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-26T16:50:11+00:00",
+      "start": "2025-10-27T00:16:03+00:00",
       "end": "2025-10-27T07:04:02+00:00",
       "hours": 4.0,
-      "commit_count": 28
+      "commit_count": 6
     },
     {
       "author": "Claude",
@@ -595,9 +583,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
       "start": "2025-11-25T17:31:22+00:00",
-      "end": "2025-11-25T18:20:11+00:00",
-      "hours": 0.81,
-      "commit_count": 3
+      "end": "2025-11-25T22:38:13+00:00",
+      "hours": 4.0,
+      "commit_count": 9
     },
     {
       "author": "Jonathan Verdun",
