@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-26T18:32:16.350216Z",
+  "generated_at": "2025-11-27T01:52:49.696420Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 163.67,
-    "total_commits": 780,
-    "avg_hours_per_day": 5.46
+    "total_days": 29,
+    "total_hours": 160.69,
+    "total_commits": 764,
+    "avg_hours_per_day": 5.54
   },
   "daily_hours": [
     {
-      "date": "2025-10-27",
-      "hours": 12.0
-    },
-    {
       "date": "2025-10-28",
-      "hours": 8.25
+      "hours": 15.99
     },
     {
       "date": "2025-10-29",
@@ -125,13 +121,13 @@
     },
     {
       "date": "2025-11-26",
-      "hours": 3.28
+      "hours": 4.56
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 67.6
+      "hours": 63.34
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -163,7 +159,7 @@
     },
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
-      "hours": 3.88
+      "hours": 4.38
     },
     {
       "repo": "Ai-Whisperers/AutomationQA",
@@ -202,6 +198,10 @@
       "hours": 1.11
     },
     {
+      "repo": "Ai-Whisperers/Company-resarcher",
+      "hours": 1.03
+    },
+    {
       "repo": "Ai-Whisperers/meeting-ai-agent",
       "hours": 0.8
     },
@@ -220,10 +220,6 @@
     {
       "repo": "Ai-Whisperers/cluster-template",
       "hours": 0.45
-    },
-    {
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "hours": 0.25
     },
     {
       "repo": "Ai-Whisperers/social-media-intelligence-marketing",
@@ -258,18 +254,10 @@
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-27T00:16:03+00:00",
-      "end": "2025-10-27T07:04:02+00:00",
-      "hours": 4.0,
-      "commit_count": 6
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-27T18:36:57+00:00",
+      "start": "2025-10-28T00:54:53+00:00",
       "end": "2025-10-28T05:14:02+00:00",
       "hours": 4.0,
-      "commit_count": 50
+      "commit_count": 36
     },
     {
       "author": "Claude",
@@ -315,9 +303,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
       "start": "2025-11-26T15:47:05+00:00",
-      "end": "2025-11-26T18:19:06+00:00",
-      "hours": 2.53,
-      "commit_count": 8
+      "end": "2025-11-26T18:48:36+00:00",
+      "hours": 3.03,
+      "commit_count": 9
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -354,10 +342,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Company-resarcher",
-      "start": "2025-11-26T16:29:29+00:00",
-      "end": "2025-11-26T16:44:29+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "start": "2025-11-26T20:15:00+00:00",
+      "end": "2025-11-26T21:16:59+00:00",
+      "hours": 1.03,
+      "commit_count": 7
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -410,10 +398,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-27T21:08:34+00:00",
+      "start": "2025-10-28T00:25:51+00:00",
       "end": "2025-10-28T04:10:24+00:00",
-      "hours": 4.0,
-      "commit_count": 13
+      "hours": 3.74,
+      "commit_count": 10
     },
     {
       "author": "Ivan Weiss Van Der Pol",
