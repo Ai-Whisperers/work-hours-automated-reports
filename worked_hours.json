@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-27T01:52:49.696420Z",
+  "generated_at": "2025-11-27T06:38:29.887669Z",
   "summary": {
     "total_days": 29,
-    "total_hours": 160.69,
-    "total_commits": 764,
-    "avg_hours_per_day": 5.54
+    "total_hours": 163.66,
+    "total_commits": 765,
+    "avg_hours_per_day": 5.64
   },
   "daily_hours": [
     {
@@ -121,7 +121,7 @@
     },
     {
       "date": "2025-11-26",
-      "hours": 4.56
+      "hours": 7.53
     }
   ],
   "repo_hours": [
@@ -162,6 +162,10 @@
       "hours": 4.38
     },
     {
+      "repo": "Ai-Whisperers/Company-resarcher",
+      "hours": 4.0
+    },
+    {
       "repo": "Ai-Whisperers/AutomationQA",
       "hours": 3.81
     },
@@ -196,10 +200,6 @@
     {
       "repo": "Ai-Whisperers/Negociation-Personal",
       "hours": 1.11
-    },
-    {
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "hours": 1.03
     },
     {
       "repo": "Ai-Whisperers/meeting-ai-agent",
@@ -343,9 +343,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Company-resarcher",
       "start": "2025-11-26T20:15:00+00:00",
-      "end": "2025-11-26T21:16:59+00:00",
-      "hours": 1.03,
-      "commit_count": 7
+      "end": "2025-11-27T02:36:29+00:00",
+      "hours": 4.0,
+      "commit_count": 8
     },
     {
       "author": "Ivan Weiss Van Der Pol",
