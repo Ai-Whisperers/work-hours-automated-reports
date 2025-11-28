@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-27T18:34:10.850173Z",
+  "generated_at": "2025-11-28T01:52:30.111641Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 163.91,
-    "total_commits": 766,
-    "avg_hours_per_day": 5.46
+    "total_days": 29,
+    "total_hours": 148.04,
+    "total_commits": 689,
+    "avg_hours_per_day": 5.1
   },
   "daily_hours": [
     {
-      "date": "2025-10-28",
-      "hours": 15.99
-    },
-    {
       "date": "2025-10-29",
-      "hours": 8.0
+      "hours": 8.12
     },
     {
       "date": "2025-10-30",
@@ -131,7 +127,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 63.34
+      "hours": 47.72
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -203,7 +199,7 @@
     },
     {
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 1.11
+      "hours": 0.86
     },
     {
       "repo": "Ai-Whisperers/meeting-ai-agent",
@@ -258,18 +254,10 @@
     {
       "author": "Claude",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-28T00:54:53+00:00",
-      "end": "2025-10-28T05:14:02+00:00",
-      "hours": 4.0,
-      "commit_count": 36
-    },
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-28T13:12:17+00:00",
+      "start": "2025-10-29T02:07:57+00:00",
       "end": "2025-10-29T02:15:02+00:00",
-      "hours": 4.0,
-      "commit_count": 22
+      "hours": 0.12,
+      "commit_count": 2
     },
     {
       "author": "Claude",
@@ -394,34 +382,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-10-28T01:06:18+00:00",
-      "end": "2025-10-28T01:21:18+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Negociation-Personal",
       "start": "2025-11-06T00:46:49+00:00",
       "end": "2025-11-06T01:01:49+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-28T00:25:51+00:00",
-      "end": "2025-10-28T04:10:24+00:00",
-      "hours": 3.74,
-      "commit_count": 10
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-28T14:16:23+00:00",
-      "end": "2025-10-28T21:10:40+00:00",
-      "hours": 4.0,
-      "commit_count": 10
     },
     {
       "author": "Ivan Weiss Van Der Pol",
