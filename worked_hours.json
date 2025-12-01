@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-11-30T18:33:05.398531Z",
+  "generated_at": "2025-12-01T02:13:26.264990Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 130.53,
-    "total_commits": 617,
-    "avg_hours_per_day": 4.66
+    "total_days": 27,
+    "total_hours": 119.81,
+    "total_commits": 558,
+    "avg_hours_per_day": 4.44
   },
   "daily_hours": [
     {
-      "date": "2025-10-31",
-      "hours": 11.09
-    },
-    {
       "date": "2025-11-01",
-      "hours": 6.18
+      "hours": 6.55
     },
     {
       "date": "2025-11-02",
@@ -123,7 +119,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 34.44
+      "hours": 27.6
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
@@ -132,10 +128,6 @@
     {
       "repo": "Ai-Whisperers/Courses-Content",
       "hours": 11.16
-    },
-    {
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 8.76
     },
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
@@ -148,6 +140,10 @@
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
       "hours": 5.01
+    },
+    {
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "hours": 4.88
     },
     {
       "repo": "Ai-Whisperers/marketing-strategy",
@@ -362,22 +358,6 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-31T02:08:19+00:00",
-      "end": "2025-10-31T04:58:39+00:00",
-      "hours": 2.84,
-      "commit_count": 29
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-10-31T15:25:05+00:00",
-      "end": "2025-10-31T23:13:56+00:00",
-      "hours": 4.0,
-      "commit_count": 25
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-11-01T18:47:58+00:00",
       "end": "2025-11-02T06:22:40+00:00",
       "hours": 4.0,
@@ -530,18 +510,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-31T01:49:42+00:00",
-      "end": "2025-10-31T02:04:42+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-10-31T20:18:14+00:00",
+      "start": "2025-11-01T02:19:52+00:00",
       "end": "2025-11-01T02:42:13+00:00",
-      "hours": 4.0,
-      "commit_count": 6
+      "hours": 0.37,
+      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
