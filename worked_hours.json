@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-12-01T18:40:46.419076Z",
+  "generated_at": "2025-12-02T01:56:58.461142Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 122.43,
-    "total_commits": 573,
-    "avg_hours_per_day": 4.37
+    "total_days": 27,
+    "total_hours": 119.88,
+    "total_commits": 540,
+    "avg_hours_per_day": 4.44
   },
   "daily_hours": [
     {
-      "date": "2025-11-01",
-      "hours": 6.55
-    },
-    {
       "date": "2025-11-02",
-      "hours": 0.08
+      "hours": 4.08
     },
     {
       "date": "2025-11-03",
@@ -150,12 +146,12 @@
       "hours": 5.01
     },
     {
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "hours": 4.88
-    },
-    {
       "repo": "Ai-Whisperers/marketing-strategy",
       "hours": 4.75
+    },
+    {
+      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
+      "hours": 4.51
     },
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
@@ -182,10 +178,6 @@
       "hours": 1.49
     },
     {
-      "repo": "Ai-Whisperers/branding-tester",
-      "hours": 1.42
-    },
-    {
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "hours": 1.36
     },
@@ -194,20 +186,16 @@
       "hours": 0.86
     },
     {
-      "repo": "Ai-Whisperers/meeting-ai-agent",
-      "hours": 0.8
+      "repo": "Ai-Whisperers/analysis-engine",
+      "hours": 0.5
     },
     {
-      "repo": "Ai-Whisperers/analysis-engine",
+      "repo": "Ai-Whisperers/meeting-ai-agent",
       "hours": 0.5
     },
     {
       "repo": "Ai-Whisperers/transcriptions",
       "hours": 0.47
-    },
-    {
-      "repo": "Ai-Whisperers/claude-portable-improving-system",
-      "hours": 0.46
     },
     {
       "repo": "Ai-Whisperers/cluster-template",
@@ -386,10 +374,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-01T18:47:58+00:00",
+      "start": "2025-11-02T00:19:21+00:00",
       "end": "2025-11-02T06:22:40+00:00",
       "hours": 4.0,
-      "commit_count": 85
+      "commit_count": 63
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -538,14 +526,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
-      "start": "2025-11-01T02:19:52+00:00",
-      "end": "2025-11-01T02:42:13+00:00",
-      "hours": 0.37,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
       "start": "2025-11-20T23:28:52+00:00",
       "end": "2025-11-20T23:59:20+00:00",
       "hours": 0.51,
@@ -590,22 +570,6 @@
       "end": "2025-11-02T15:23:33+00:00",
       "hours": 0.03,
       "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/branding-tester",
-      "start": "2025-11-01T18:50:58+00:00",
-      "end": "2025-11-01T20:16:12+00:00",
-      "hours": 1.42,
-      "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/claude-portable-improving-system",
-      "start": "2025-11-01T16:49:04+00:00",
-      "end": "2025-11-01T17:16:33+00:00",
-      "hours": 0.46,
-      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
@@ -661,14 +625,6 @@
       "start": "2025-11-24T17:19:52+00:00",
       "end": "2025-11-24T18:41:42+00:00",
       "hours": 1.36,
-      "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/meeting-ai-agent",
-      "start": "2025-11-01T19:57:39+00:00",
-      "end": "2025-11-01T20:15:57+00:00",
-      "hours": 0.3,
       "commit_count": 3
     },
     {
