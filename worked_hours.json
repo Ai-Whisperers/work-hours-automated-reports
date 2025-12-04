@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-03T18:39:09.372586Z",
+  "generated_at": "2025-12-04T01:57:49.098116Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 117.57,
-    "total_commits": 478,
-    "avg_hours_per_day": 4.2
+    "total_days": 27,
+    "total_hours": 120.49,
+    "total_commits": 486,
+    "avg_hours_per_day": 4.46
   },
   "daily_hours": [
-    {
-      "date": "2025-11-03",
-      "hours": 1.67
-    },
     {
       "date": "2025-11-04",
       "hours": 4.77
@@ -117,33 +113,33 @@
     },
     {
       "date": "2025-12-03",
-      "hours": 1.0
+      "hours": 5.59
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
-      "hours": 24.18
+      "hours": 26.16
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 23.6
+      "hours": 23.15
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
       "hours": 11.68
     },
     {
+      "repo": "Ai-Whisperers/Company-resarcher",
+      "hours": 10.48
+    },
+    {
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 8.5
     },
     {
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "hours": 7.87
-    },
-    {
       "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 5.8
+      "hours": 5.55
     },
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
@@ -192,14 +188,6 @@
     {
       "repo": "Ai-Whisperers/analysis-engine",
       "hours": 0.5
-    },
-    {
-      "repo": "Ai-Whisperers/meeting-ai-agent",
-      "hours": 0.5
-    },
-    {
-      "repo": "Ai-Whisperers/transcriptions",
-      "hours": 0.47
     },
     {
       "repo": "Ai-Whisperers/cluster-template",
@@ -349,6 +337,14 @@
     },
     {
       "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Company-resarcher",
+      "start": "2025-12-03T20:29:56+00:00",
+      "end": "2025-12-03T23:06:34+00:00",
+      "hours": 2.61,
+      "commit_count": 15
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
       "start": "2025-11-20T23:41:01+00:00",
       "end": "2025-11-20T23:56:01+00:00",
@@ -386,22 +382,6 @@
       "end": "2025-11-06T01:01:49+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-03T01:15:15+00:00",
-      "end": "2025-11-03T01:39:39+00:00",
-      "hours": 0.41,
-      "commit_count": 2
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-03T20:32:16+00:00",
-      "end": "2025-11-03T20:34:56+00:00",
-      "hours": 0.04,
-      "commit_count": 5
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -621,14 +601,6 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/meeting-ai-agent",
-      "start": "2025-11-03T20:20:30+00:00",
-      "end": "2025-11-03T20:50:28+00:00",
-      "hours": 0.5,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/normalizer-service",
       "start": "2025-11-10T15:30:03+00:00",
       "end": "2025-11-10T16:59:13+00:00",
@@ -658,14 +630,6 @@
       "end": "2025-11-12T22:46:56+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/transcriptions",
-      "start": "2025-11-03T16:33:05+00:00",
-      "end": "2025-11-03T17:01:24+00:00",
-      "hours": 0.47,
-      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
@@ -740,6 +704,14 @@
       "commit_count": 2
     },
     {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/yt-transcript-headless",
+      "start": "2025-12-03T19:46:14+00:00",
+      "end": "2025-12-03T21:44:47+00:00",
+      "hours": 1.98,
+      "commit_count": 6
+    },
+    {
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
       "start": "2025-11-24T15:56:53+00:00",
@@ -792,14 +764,6 @@
       "repo": "Ai-Whisperers/legal",
       "start": "2025-11-13T02:19:46+00:00",
       "end": "2025-11-13T02:34:46+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "start": "2025-11-03T20:58:56+00:00",
-      "end": "2025-11-03T21:13:56+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
