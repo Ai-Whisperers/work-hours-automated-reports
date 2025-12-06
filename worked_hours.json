@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-05T18:34:38.338471Z",
+  "generated_at": "2025-12-06T01:51:34.020791Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 126.02,
-    "total_commits": 490,
-    "avg_hours_per_day": 4.5
+    "total_days": 27,
+    "total_hours": 118.33,
+    "total_commits": 422,
+    "avg_hours_per_day": 4.38
   },
   "daily_hours": [
-    {
-      "date": "2025-11-05",
-      "hours": 7.94
-    },
     {
       "date": "2025-11-06",
       "hours": 4.5
@@ -117,7 +113,7 @@
     },
     {
       "date": "2025-12-05",
-      "hours": 0.84
+      "hours": 1.09
     }
   ],
   "repo_hours": [
@@ -127,7 +123,7 @@
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 23.13
+      "hours": 17.2
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
@@ -140,10 +136,6 @@
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 9.45
-    },
-    {
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 5.3
     },
     {
       "repo": "Ai-Whisperers/excel-parsing-service",
@@ -160,6 +152,10 @@
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
       "hours": 4.38
+    },
+    {
+      "repo": "Ai-Whisperers/linkedin-content-system",
+      "hours": 3.9
     },
     {
       "repo": "Ai-Whisperers/Lawfirm-website",
@@ -186,12 +182,16 @@
       "hours": 1.36
     },
     {
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 0.86
-    },
-    {
       "repo": "Ai-Whisperers/cluster-template",
       "hours": 0.45
+    },
+    {
+      "repo": "Ai-Whisperers/LangAi",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "hours": 0.25
     },
     {
       "repo": "Ai-Whisperers/social-media-intelligence-marketing",
@@ -215,14 +215,6 @@
     }
   ],
   "sessions": [
-    {
-      "author": "Claude",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-11-05T10:39:59+00:00",
-      "end": "2025-11-05T11:16:47+00:00",
-      "hours": 0.61,
-      "commit_count": 3
-    },
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
@@ -385,27 +377,19 @@
     },
     {
       "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-11-06T00:46:49+00:00",
-      "end": "2025-11-06T01:01:49+00:00",
+      "repo": "Ai-Whisperers/LangAi",
+      "start": "2025-12-05T20:07:21+00:00",
+      "end": "2025-12-05T20:22:21+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-05T01:02:19+00:00",
-      "end": "2025-11-05T06:53:18+00:00",
-      "hours": 4.0,
-      "commit_count": 40
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-05T20:58:38+00:00",
-      "end": "2025-11-05T22:54:28+00:00",
-      "hours": 1.93,
-      "commit_count": 23
+      "repo": "Ai-Whisperers/Negociation-Personal",
+      "start": "2025-11-06T00:46:49+00:00",
+      "end": "2025-11-06T01:01:49+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -774,14 +758,6 @@
       "end": "2025-11-13T02:34:46+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "start": "2025-11-05T17:01:58+00:00",
-      "end": "2025-11-05T18:26:13+00:00",
-      "hours": 1.4,
-      "commit_count": 3
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
