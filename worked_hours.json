@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-12-06T18:33:05.598359Z",
+  "generated_at": "2025-12-07T02:06:33.601248Z",
   "summary": {
     "total_days": 27,
-    "total_hours": 118.33,
-    "total_commits": 422,
-    "avg_hours_per_day": 4.38
+    "total_hours": 114.33,
+    "total_commits": 375,
+    "avg_hours_per_day": 4.23
   },
   "daily_hours": [
     {
-      "date": "2025-11-06",
-      "hours": 4.5
-    },
-    {
       "date": "2025-11-07",
-      "hours": 6.24
+      "hours": 6.49
     },
     {
       "date": "2025-11-08",
@@ -114,6 +110,10 @@
     {
       "date": "2025-12-05",
       "hours": 1.09
+    },
+    {
+      "date": "2025-12-06",
+      "hours": 0.25
     }
   ],
   "repo_hours": [
@@ -123,7 +123,7 @@
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 17.2
+      "hours": 13.45
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
@@ -155,7 +155,7 @@
     },
     {
       "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 3.9
+      "hours": 3.65
     },
     {
       "repo": "Ai-Whisperers/Lawfirm-website",
@@ -182,16 +182,12 @@
       "hours": 1.36
     },
     {
+      "repo": "Ai-Whisperers/LangAi",
+      "hours": 0.5
+    },
+    {
       "repo": "Ai-Whisperers/cluster-template",
       "hours": 0.45
-    },
-    {
-      "repo": "Ai-Whisperers/LangAi",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "hours": 0.25
     },
     {
       "repo": "Ai-Whisperers/social-media-intelligence-marketing",
@@ -385,19 +381,19 @@
     },
     {
       "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Negociation-Personal",
-      "start": "2025-11-06T00:46:49+00:00",
-      "end": "2025-11-06T01:01:49+00:00",
+      "repo": "Ai-Whisperers/LangAi",
+      "start": "2025-12-06T22:14:48+00:00",
+      "end": "2025-12-06T22:29:48+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-06T15:41:37+00:00",
-      "end": "2025-11-07T00:09:25+00:00",
-      "hours": 4.0,
-      "commit_count": 47
+      "start": "2025-11-07T00:09:25+00:00",
+      "end": "2025-11-07T00:24:25+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -756,14 +752,6 @@
       "repo": "Ai-Whisperers/legal",
       "start": "2025-11-13T02:19:46+00:00",
       "end": "2025-11-13T02:34:46+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "start": "2025-11-06T12:24:26+00:00",
-      "end": "2025-11-06T12:39:26+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
