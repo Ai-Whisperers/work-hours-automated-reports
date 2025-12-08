@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-12-08T12:53:27.214330Z",
+  "generated_at": "2025-12-08T18:38:37.478691Z",
   "summary": {
     "total_days": 28,
-    "total_hours": 108.95,
-    "total_commits": 362,
-    "avg_hours_per_day": 3.89
+    "total_hours": 109.12,
+    "total_commits": 364,
+    "avg_hours_per_day": 3.9
   },
   "daily_hours": [
     {
@@ -117,7 +117,7 @@
     },
     {
       "date": "2025-12-08",
-      "hours": 0.86
+      "hours": 1.03
     }
   ],
   "repo_hours": [
@@ -178,15 +178,15 @@
       "hours": 2.25
     },
     {
+      "repo": "Ai-Whisperers/LangAi",
+      "hours": 1.53
+    },
+    {
       "repo": "Ai-Whisperers/normalizer-service",
       "hours": 1.49
     },
     {
       "repo": "Ai-Whisperers/feedbackScope-backend",
-      "hours": 1.36
-    },
-    {
-      "repo": "Ai-Whisperers/LangAi",
       "hours": 1.36
     },
     {
@@ -398,6 +398,14 @@
       "end": "2025-12-08T05:30:16+00:00",
       "hours": 0.86,
       "commit_count": 7
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/LangAi",
+      "start": "2025-12-08T17:55:45+00:00",
+      "end": "2025-12-08T18:05:46+00:00",
+      "hours": 0.17,
+      "commit_count": 2
     },
     {
       "author": "Ivan Weiss Van Der Pol",
