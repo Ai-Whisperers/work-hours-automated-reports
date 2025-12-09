@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-08T18:38:37.478691Z",
+  "generated_at": "2025-12-09T01:57:54.594411Z",
   "summary": {
-    "total_days": 28,
-    "total_hours": 109.12,
-    "total_commits": 364,
-    "avg_hours_per_day": 3.9
+    "total_days": 27,
+    "total_hours": 110.67,
+    "total_commits": 351,
+    "avg_hours_per_day": 4.1
   },
   "daily_hours": [
-    {
-      "date": "2025-11-08",
-      "hours": 2.28
-    },
     {
       "date": "2025-11-09",
       "hours": 3.87
@@ -117,7 +113,7 @@
     },
     {
       "date": "2025-12-08",
-      "hours": 1.03
+      "hours": 4.86
     }
   ],
   "repo_hours": [
@@ -135,11 +131,15 @@
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 9.83
+      "hours": 9.8
     },
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 9.45
+    },
+    {
+      "repo": "Ai-Whisperers/LangAi",
+      "hours": 5.36
     },
     {
       "repo": "Ai-Whisperers/marketing-strategy",
@@ -162,24 +162,16 @@
       "hours": 3.01
     },
     {
-      "repo": "Ai-Whisperers/excel-parsing-service",
-      "hours": 2.64
-    },
-    {
       "repo": "Ai-Whisperers/team-tasks",
       "hours": 2.56
     },
     {
+      "repo": "Ai-Whisperers/excel-parsing-service",
+      "hours": 2.39
+    },
+    {
       "repo": "Ai-Whisperers/Comment-Exctractor",
       "hours": 2.34
-    },
-    {
-      "repo": "Ai-Whisperers/templates-standard",
-      "hours": 2.25
-    },
-    {
-      "repo": "Ai-Whisperers/LangAi",
-      "hours": 1.53
     },
     {
       "repo": "Ai-Whisperers/normalizer-service",
@@ -203,6 +195,10 @@
     },
     {
       "repo": "Ai-Whisperers/clustering-for-ai-whisperers-hosting-and-deploys",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/templates-standard",
       "hours": 0.25
     },
     {
@@ -403,17 +399,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/LangAi",
       "start": "2025-12-08T17:55:45+00:00",
-      "end": "2025-12-08T18:05:46+00:00",
-      "hours": 0.17,
-      "commit_count": 2
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-08T20:31:25+00:00",
-      "end": "2025-11-08T20:33:20+00:00",
-      "hours": 0.03,
-      "commit_count": 7
+      "end": "2025-12-08T23:14:15+00:00",
+      "hours": 4.0,
+      "commit_count": 3
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -546,14 +534,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/excel-parsing-service",
-      "start": "2025-11-08T19:35:36+00:00",
-      "end": "2025-11-08T19:50:36+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/excel-parsing-service",
       "start": "2025-11-09T02:01:55+00:00",
       "end": "2025-11-09T03:26:04+00:00",
       "hours": 1.4,
@@ -582,14 +562,6 @@
       "end": "2025-11-10T16:59:13+00:00",
       "hours": 1.49,
       "commit_count": 4
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/templates-standard",
-      "start": "2025-11-08T20:58:20+00:00",
-      "end": "2025-11-08T22:58:31+00:00",
-      "hours": 2.0,
-      "commit_count": 6
     },
     {
       "author": "Jonathan Verdun",
