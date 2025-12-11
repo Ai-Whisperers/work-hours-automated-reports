@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-10T18:40:06.753619Z",
+  "generated_at": "2025-12-11T02:01:12.526624Z",
   "summary": {
     "total_days": 28,
-    "total_hours": 138.05,
-    "total_commits": 458,
-    "avg_hours_per_day": 4.93
+    "total_hours": 128.34,
+    "total_commits": 425,
+    "avg_hours_per_day": 4.58
   },
   "daily_hours": [
-    {
-      "date": "2025-11-10",
-      "hours": 13.71
-    },
     {
       "date": "2025-11-11",
       "hours": 4.25
@@ -118,6 +114,10 @@
     {
       "date": "2025-12-09",
       "hours": 2.99
+    },
+    {
+      "date": "2025-12-10",
+      "hours": 4.0
     }
   ],
   "repo_hours": [
@@ -138,16 +138,12 @@
       "hours": 10.5
     },
     {
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "hours": 9.45
-    },
-    {
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 7.33
-    },
-    {
       "repo": "Ai-Whisperers/LangAi",
       "hours": 5.61
+    },
+    {
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "hours": 5.2
     },
     {
       "repo": "Ai-Whisperers/marketing-strategy",
@@ -162,8 +158,12 @@
       "hours": 4.38
     },
     {
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "hours": 3.65
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "hours": 4.25
+    },
+    {
+      "repo": "Ai-Whisperers/deploy-automated-blueprint",
+      "hours": 4.0
     },
     {
       "repo": "Ai-Whisperers/Lawfirm-website",
@@ -182,16 +182,8 @@
       "hours": 2.34
     },
     {
-      "repo": "Ai-Whisperers/normalizer-service",
-      "hours": 1.49
-    },
-    {
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "hours": 1.36
-    },
-    {
-      "repo": "Ai-Whisperers/excel-parsing-service",
-      "hours": 0.99
     },
     {
       "repo": "Ai-Whisperers/cluster-template",
@@ -203,10 +195,6 @@
     },
     {
       "repo": "Ai-Whisperers/agentic-schemas",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/clustering-for-ai-whisperers-hosting-and-deploys",
       "hours": 0.25
     },
     {
@@ -426,14 +414,6 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-10T14:14:27+00:00",
-      "end": "2025-11-10T17:19:25+00:00",
-      "hours": 3.08,
-      "commit_count": 13
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-11-11T02:50:09+00:00",
       "end": "2025-11-11T03:05:09+00:00",
       "hours": 0.25,
@@ -470,14 +450,6 @@
       "end": "2025-12-09T22:36:47+00:00",
       "hours": 0.03,
       "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "start": "2025-11-10T16:00:25+00:00",
-      "end": "2025-11-10T20:32:19+00:00",
-      "hours": 4.0,
-      "commit_count": 12
     },
     {
       "author": "Jonathan Verdun",
@@ -545,19 +517,11 @@
     },
     {
       "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/clustering-for-ai-whisperers-hosting-and-deploys",
-      "start": "2025-11-10T19:21:12+00:00",
-      "end": "2025-11-10T19:36:12+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/excel-parsing-service",
-      "start": "2025-11-10T16:24:14+00:00",
-      "end": "2025-11-10T17:23:24+00:00",
-      "hours": 0.99,
-      "commit_count": 4
+      "repo": "Ai-Whisperers/deploy-automated-blueprint",
+      "start": "2025-12-10T21:27:05+00:00",
+      "end": "2025-12-11T01:44:15+00:00",
+      "hours": 4.0,
+      "commit_count": 9
     },
     {
       "author": "Jonathan Verdun",
@@ -566,14 +530,6 @@
       "end": "2025-11-24T18:41:42+00:00",
       "hours": 1.36,
       "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/normalizer-service",
-      "start": "2025-11-10T15:30:03+00:00",
-      "end": "2025-11-10T16:59:13+00:00",
-      "hours": 1.49,
-      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -817,27 +773,11 @@
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "start": "2025-11-10T15:28:15+00:00",
-      "end": "2025-11-10T15:43:15+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/legal",
       "start": "2025-11-13T02:19:46+00:00",
       "end": "2025-11-13T02:34:46+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/linkedin-content-system",
-      "start": "2025-11-10T16:12:03+00:00",
-      "end": "2025-11-10T19:51:10+00:00",
-      "hours": 3.65,
-      "commit_count": 7
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
