@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-12-11T18:38:00.464033Z",
+  "generated_at": "2025-12-12T02:00:35.849929Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 128.59,
-    "total_commits": 429,
-    "avg_hours_per_day": 4.43
+    "total_days": 28,
+    "total_hours": 127.43,
+    "total_commits": 421,
+    "avg_hours_per_day": 4.55
   },
   "daily_hours": [
     {
-      "date": "2025-11-11",
-      "hours": 4.25
-    },
-    {
       "date": "2025-11-12",
-      "hours": 4.5
+      "hours": 7.59
     },
     {
       "date": "2025-11-13",
@@ -146,10 +142,6 @@
       "hours": 5.61
     },
     {
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "hours": 5.2
-    },
-    {
       "repo": "Ai-Whisperers/marketing-strategy",
       "hours": 5.0
     },
@@ -162,8 +154,12 @@
       "hours": 4.38
     },
     {
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "hours": 4.29
+    },
+    {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 4.25
+      "hours": 4.0
     },
     {
       "repo": "Ai-Whisperers/deploy-automated-blueprint",
@@ -430,14 +426,6 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-11T02:50:09+00:00",
-      "end": "2025-11-11T03:05:09+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-11-12T21:36:08+00:00",
       "end": "2025-11-13T06:35:48+00:00",
       "hours": 4.0,
@@ -470,10 +458,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/Taller_Ocampos",
-      "start": "2025-11-11T20:22:36+00:00",
+      "start": "2025-11-12T02:01:05+00:00",
       "end": "2025-11-12T05:06:41+00:00",
-      "hours": 4.0,
-      "commit_count": 14
+      "hours": 3.09,
+      "commit_count": 7
     },
     {
       "author": "Jonathan Verdun",
