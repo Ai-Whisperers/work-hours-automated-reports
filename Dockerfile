@@ -33,7 +33,6 @@ COPY --from=builder /root/.local /root/.local
 # Copy application code
 COPY src/ ./src/
 COPY main.py .
-COPY templates/ ./templates/
 
 # Create necessary directories
 RUN mkdir -p logs reports .cache
