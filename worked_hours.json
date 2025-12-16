@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-12-16T12:55:53.546535Z",
+  "generated_at": "2025-12-16T18:39:20.349434Z",
   "summary": {
     "total_days": 29,
-    "total_hours": 148.65,
-    "total_commits": 490,
-    "avg_hours_per_day": 5.13
+    "total_hours": 155.5,
+    "total_commits": 515,
+    "avg_hours_per_day": 5.36
   },
   "daily_hours": [
     {
@@ -121,13 +121,13 @@
     },
     {
       "date": "2025-12-16",
-      "hours": 3.38
+      "hours": 10.23
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 34.72
+      "hours": 36.34
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
@@ -162,6 +162,10 @@
       "hours": 4.0
     },
     {
+      "repo": "Ai-Whisperers/mcp-for-deploys",
+      "hours": 4.0
+    },
+    {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
       "hours": 3.07
     },
@@ -174,6 +178,10 @@
       "hours": 2.71
     },
     {
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "hours": 2.68
+    },
+    {
       "repo": "Ai-Whisperers/team-tasks",
       "hours": 2.56
     },
@@ -184,10 +192,6 @@
     {
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "hours": 1.36
-    },
-    {
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "hours": 1.2
     },
     {
       "repo": "Ai-Whisperers/cluster-template",
@@ -203,10 +207,6 @@
     },
     {
       "repo": "Ai-Whisperers/social-media-intelligence-marketing",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/mcp-for-deploys",
       "hours": 0.25
     },
     {
@@ -270,6 +270,14 @@
       "end": "2025-12-16T08:09:18+00:00",
       "hours": 2.63,
       "commit_count": 3
+    },
+    {
+      "author": "Gestalt",
+      "repo": "Ai-Whisperers/customer-feedback-app",
+      "start": "2025-12-16T15:48:40+00:00",
+      "end": "2025-12-16T17:26:05+00:00",
+      "hours": 1.62,
+      "commit_count": 5
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -667,9 +675,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/mcp-for-deploys",
       "start": "2025-12-16T02:51:23+00:00",
-      "end": "2025-12-16T03:06:23+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-12-16T16:16:01+00:00",
+      "hours": 4.0,
+      "commit_count": 13
     },
     {
       "author": "Jonathan Verdun",
@@ -918,6 +926,14 @@
       "end": "2025-11-17T21:12:27+00:00",
       "hours": 3.01,
       "commit_count": 3
+    },
+    {
+      "author": "Kyrian Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "start": "2025-12-16T16:42:49+00:00",
+      "end": "2025-12-16T18:11:23+00:00",
+      "hours": 1.48,
+      "commit_count": 8
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
