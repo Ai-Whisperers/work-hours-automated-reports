@@ -30,8 +30,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
             # Echo back for heartbeat
             await ws_manager.send_personal_message(
-                {"type": "pong", "message": "Connection alive"},
-                websocket
+                {"type": "pong", "message": "Connection alive"}, websocket
             )
 
     except WebSocketDisconnect:
@@ -55,9 +54,9 @@ async def report_websocket_endpoint(websocket: WebSocket, report_id: str):
             {
                 "type": "connected",
                 "report_id": report_id,
-                "message": f"Subscribed to report {report_id}"
+                "message": f"Subscribed to report {report_id}",
             },
-            websocket
+            websocket,
         )
 
         while True:

@@ -37,7 +37,7 @@ async def health_check():
     return HealthResponse(
         status="healthy",
         version=settings.app_version,
-        environment=settings.environment.value
+        environment=settings.environment.value,
     )
 
 
@@ -57,10 +57,7 @@ async def check_services():
         clockify_status = await clockify_client.test_connection()
         ado_status = await ado_client.test_connection()
 
-        return ServiceStatusResponse(
-            clockify=clockify_status,
-            azure_devops=ado_status
-        )
+        return ServiceStatusResponse(clockify=clockify_status, azure_devops=ado_status)
     finally:
         await clockify_client.close()
         await ado_client.close()

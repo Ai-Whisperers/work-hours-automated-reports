@@ -16,6 +16,7 @@ from dataclasses import dataclass
 @dataclass
 class CommitCluster:
     """Represents a cluster of commits (work session)."""
+
     author: str
     repo: str
     start: datetime
@@ -51,11 +52,13 @@ class CommitCluster:
         # Build commit history
         commit_lines = []
         for commit in self.commits:
-            sha_short = commit.get('sha', 'unknown')[:7]
-            message = commit.get('message', 'No message').split('\n')[0][:80]  # First line, max 80 chars
+            sha_short = commit.get("sha", "unknown")[:7]
+            message = commit.get("message", "No message").split("\n")[0][
+                :80
+            ]  # First line, max 80 chars
             commit_lines.append(f"• {sha_short} - {message}")
 
-        commit_history = '\n'.join(commit_lines)
+        commit_history = "\n".join(commit_lines)
 
         # Format full description
         return (
@@ -109,10 +112,7 @@ class WorkedHoursCalculator:
         self.max_session_hours = max_session_hours
         self.min_cluster_gap_minutes = min_cluster_gap_minutes
 
-    def calculate_clusters(
-        self,
-        commits: List[Dict[str, Any]]
-    ) -> List[CommitCluster]:
+    def calculate_clusters(self, commits: List[Dict[str, Any]]) -> List[CommitCluster]:
         """
         Calculate work session clusters from commit data.
 
@@ -134,59 +134,56 @@ class WorkedHoursCalculator:
         df = pd.DataFrame(commits)
 
         # Ensure timestamp is datetime
-        if not pd.api.types.is_datetime64_any_dtype(df['timestamp']):
-            df['timestamp'] = pd.to_datetime(df['timestamp'])
+        if not pd.api.types.is_datetime64_any_dtype(df["timestamp"]):
+            df["timestamp"] = pd.to_datetime(df["timestamp"])
 
         # Convert to specified timezone
-        if df['timestamp'].dt.tz is None:
-            df['timestamp'] = df['timestamp'].dt.tz_localize('UTC')
-        df['timestamp'] = df['timestamp'].dt.tz_convert(self.timezone)
+        if df["timestamp"].dt.tz is None:
+            df["timestamp"] = df["timestamp"].dt.tz_localize("UTC")
+        df["timestamp"] = df["timestamp"].dt.tz_convert(self.timezone)
 
         # Sort by author, repo, and timestamp
-        df = df.sort_values(['author', 'repo', 'timestamp']).reset_index(drop=True)
+        df = df.sort_values(["author", "repo", "timestamp"]).reset_index(drop=True)
 
         # Calculate time gaps within each author+repo group
-        df['gap_hours'] = (
-            df.groupby(['author', 'repo'])['timestamp']
-            .diff()
-            .dt.total_seconds() / 3600
+        df["gap_hours"] = (
+            df.groupby(["author", "repo"])["timestamp"].diff().dt.total_seconds() / 3600
         )
 
         # Apply exponential decay clustering
         # W_i = e^(-Δt_i / τ)
         # New cluster when W_i < threshold (or first commit in group)
-        df['weight'] = np.where(
-            df['gap_hours'].isna(),
+        df["weight"] = np.where(
+            df["gap_hours"].isna(),
             1.0,  # First commit in group
-            np.exp(-df['gap_hours'] / self.tau_hours)
+            np.exp(-df["gap_hours"] / self.tau_hours),
         )
 
         # Mark cluster boundaries (weight < threshold means new cluster)
-        df['is_new_cluster'] = (df['weight'] < self.cluster_threshold)
-        df['cluster_id'] = df.groupby(['author', 'repo'])['is_new_cluster'].cumsum()
+        df["is_new_cluster"] = df["weight"] < self.cluster_threshold
+        df["cluster_id"] = df.groupby(["author", "repo"])["is_new_cluster"].cumsum()
 
         # Create global cluster ID
-        df['global_cluster_id'] = (
-            df['author'].astype(str) + '_' +
-            df['repo'].astype(str) + '_' +
-            df['cluster_id'].astype(str)
+        df["global_cluster_id"] = (
+            df["author"].astype(str)
+            + "_"
+            + df["repo"].astype(str)
+            + "_"
+            + df["cluster_id"].astype(str)
         )
 
         # Group by cluster and calculate session times
         clusters = []
 
-        for cluster_id, group in df.groupby('global_cluster_id'):
-            author = group['author'].iloc[0]
-            repo = group['repo'].iloc[0]
-            start = group['timestamp'].min()
-            end = group['timestamp'].max()
+        for cluster_id, group in df.groupby("global_cluster_id"):
+            author = group["author"].iloc[0]
+            repo = group["repo"].iloc[0]
+            start = group["timestamp"].min()
+            end = group["timestamp"].max()
 
             # Calculate duration (capped at max_session_hours)
             duration_seconds = (end - start).total_seconds()
-            duration_hours = min(
-                duration_seconds / 3600,
-                self.max_session_hours
-            )
+            duration_hours = min(duration_seconds / 3600, self.max_session_hours)
 
             # If only one commit, use a minimum duration
             if len(group) == 1:
@@ -198,8 +195,8 @@ class WorkedHoursCalculator:
                 repo=repo,
                 start=start,
                 end=end if len(group) > 1 else start + timedelta(minutes=15),
-                commits=group.to_dict('records'),
-                duration_hours=duration_hours
+                commits=group.to_dict("records"),
+                duration_hours=duration_hours,
             )
 
             clusters.append(cluster)
@@ -210,8 +207,7 @@ class WorkedHoursCalculator:
         return clusters
 
     def _merge_close_clusters(
-        self,
-        clusters: List[CommitCluster]
+        self, clusters: List[CommitCluster]
     ) -> List[CommitCluster]:
         """
         Merge clusters that are closer than min_cluster_gap.
@@ -231,14 +227,10 @@ class WorkedHoursCalculator:
         merged = []
 
         # Sort clusters
-        sorted_clusters = sorted(
-            clusters,
-            key=lambda c: (c.author, c.repo, c.start)
-        )
+        sorted_clusters = sorted(clusters, key=lambda c: (c.author, c.repo, c.start))
 
         for (author, repo), group_clusters in groupby(
-            sorted_clusters,
-            key=lambda c: (c.author, c.repo)
+            sorted_clusters, key=lambda c: (c.author, c.repo)
         ):
             group_list = list(group_clusters)
 
@@ -261,9 +253,10 @@ class WorkedHoursCalculator:
                         end=next_cluster.end,
                         commits=current_cluster.commits + next_cluster.commits,
                         duration_hours=min(
-                            (next_cluster.end - current_cluster.start).total_seconds() / 3600,
-                            self.max_session_hours
-                        )
+                            (next_cluster.end - current_cluster.start).total_seconds()
+                            / 3600,
+                            self.max_session_hours,
+                        ),
                     )
                 else:
                     # Save current cluster and start new one
@@ -275,10 +268,7 @@ class WorkedHoursCalculator:
 
         return merged
 
-    def calculate_daily_hours(
-        self,
-        clusters: List[CommitCluster]
-    ) -> pd.DataFrame:
+    def calculate_daily_hours(self, clusters: List[CommitCluster]) -> pd.DataFrame:
         """
         Aggregate worked hours by author and date.
 
@@ -289,33 +279,32 @@ class WorkedHoursCalculator:
             DataFrame with columns: date, author, hours
         """
         if not clusters:
-            return pd.DataFrame(columns=['date', 'author', 'hours'])
+            return pd.DataFrame(columns=["date", "author", "hours"])
 
         # Create DataFrame from clusters
         data = []
         for cluster in clusters:
-            data.append({
-                'date': cluster.start.date(),
-                'author': cluster.author,
-                'hours': cluster.duration_hours
-            })
+            data.append(
+                {
+                    "date": cluster.start.date(),
+                    "author": cluster.author,
+                    "hours": cluster.duration_hours,
+                }
+            )
 
         df = pd.DataFrame(data)
 
         # Aggregate by date and author
         daily = (
-            df.groupby(['date', 'author'])['hours']
+            df.groupby(["date", "author"])["hours"]
             .sum()
             .reset_index()
-            .sort_values(['date', 'author'])
+            .sort_values(["date", "author"])
         )
 
         return daily
 
-    def format_for_display(
-        self,
-        clusters: List[CommitCluster]
-    ) -> str:
+    def format_for_display(self, clusters: List[CommitCluster]) -> str:
         """
         Format clusters for human-readable display.
 

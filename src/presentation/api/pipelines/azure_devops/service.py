@@ -65,23 +65,38 @@ class AzureDevOpsService:
                 try:
                     wi = await self.repository.get_by_id(work_item_id)
                     if wi:
-                        work_items.append(WorkItemResponse(
-                            id=wi.id,
-                            title=wi.title,
-                            type=wi.type.value if hasattr(wi.type, 'value') else str(wi.type),
-                            state=wi.state.value if hasattr(wi.state, 'value') else str(wi.state),
-                            assigned_to=getattr(wi, 'assigned_to', None),
-                            created_date=wi.created_date.isoformat() if wi.created_date else None,
-                            changed_date=wi.changed_date.isoformat() if wi.changed_date else None
-                        ))
+                        work_items.append(
+                            WorkItemResponse(
+                                id=wi.id,
+                                title=wi.title,
+                                type=(
+                                    wi.type.value
+                                    if hasattr(wi.type, "value")
+                                    else str(wi.type)
+                                ),
+                                state=(
+                                    wi.state.value
+                                    if hasattr(wi.state, "value")
+                                    else str(wi.state)
+                                ),
+                                assigned_to=getattr(wi, "assigned_to", None),
+                                created_date=(
+                                    wi.created_date.isoformat()
+                                    if wi.created_date
+                                    else None
+                                ),
+                                changed_date=(
+                                    wi.changed_date.isoformat()
+                                    if wi.changed_date
+                                    else None
+                                ),
+                            )
+                        )
                 except Exception as e:
                     logger.error(f"Failed to fetch work item {work_item_id}: {e}")
                     continue
 
-            return WorkItemBatchResponse(
-                work_items=work_items,
-                count=len(work_items)
-            )
+            return WorkItemBatchResponse(work_items=work_items, count=len(work_items))
 
         except Exception as e:
             logger.error(f"Failed to get work items: {e}")

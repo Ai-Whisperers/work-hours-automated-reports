@@ -23,7 +23,7 @@ def create_app() -> FastAPI:
         version=settings.app_version,
         docs_url="/api/docs",
         redoc_url="/api/redoc",
-        openapi_url="/api/openapi.json"
+        openapi_url="/api/openapi.json",
     )
 
     # CORS middleware
@@ -41,9 +41,13 @@ def create_app() -> FastAPI:
     app.include_router(websockets.router, prefix="/api", tags=["websockets"])
 
     # Include pipeline routers
-    app.include_router(azure_devops.router, prefix="/api/pipelines/azure-devops", tags=["Azure DevOps"])
+    app.include_router(
+        azure_devops.router, prefix="/api/pipelines/azure-devops", tags=["Azure DevOps"]
+    )
     app.include_router(github.router, prefix="/api/pipelines/github", tags=["GitHub"])
-    app.include_router(clockify.router, prefix="/api/pipelines/clockify", tags=["Clockify"])
+    app.include_router(
+        clockify.router, prefix="/api/pipelines/clockify", tags=["Clockify"]
+    )
 
     @app.exception_handler(Exception)
     async def global_exception_handler(request, exc):
@@ -52,8 +56,8 @@ def create_app() -> FastAPI:
             status_code=500,
             content={
                 "error": "Internal server error",
-                "message": str(exc) if settings.debug else "An error occurred"
-            }
+                "message": str(exc) if settings.debug else "An error occurred",
+            },
         )
 
     return app

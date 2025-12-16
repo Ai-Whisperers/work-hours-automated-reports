@@ -26,9 +26,7 @@ class GitHubService:
         Returns:
             Headers dictionary
         """
-        headers = {
-            "Accept": "application/vnd.github.v3+json"
-        }
+        headers = {"Accept": "application/vnd.github.v3+json"}
 
         if self.token:
             headers["Authorization"] = f"token {self.token}"
@@ -44,8 +42,7 @@ class GitHubService:
         try:
             async with httpx.AsyncClient() as client:
                 response = await client.get(
-                    f"{self.base_url}/rate_limit",
-                    headers=self._get_headers()
+                    f"{self.base_url}/rate_limit", headers=self._get_headers()
                 )
 
                 if response.status_code == 200:
@@ -59,7 +56,9 @@ class GitHubService:
             logger.error(f"GitHub connection test failed: {e}")
             return False, None
 
-    async def get_issue(self, owner: str, repo: str, issue_number: int) -> Optional[dict]:
+    async def get_issue(
+        self, owner: str, repo: str, issue_number: int
+    ) -> Optional[dict]:
         """Get a GitHub issue.
 
         Args:
@@ -74,7 +73,7 @@ class GitHubService:
             async with httpx.AsyncClient() as client:
                 response = await client.get(
                     f"{self.base_url}/repos/{owner}/{repo}/issues/{issue_number}",
-                    headers=self._get_headers()
+                    headers=self._get_headers(),
                 )
 
                 if response.status_code == 200:

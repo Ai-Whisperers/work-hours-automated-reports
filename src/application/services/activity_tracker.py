@@ -94,9 +94,13 @@ class ActivityTrackerService:
                 if response and "id" in response:
                     self._current_entry_id = response["id"]
                     self._timer_running = True
-                    print(f"[ActivityTracker] Timer started: {description} | id={self._current_entry_id}")
+                    print(
+                        f"[ActivityTracker] Timer started: {description} | id={self._current_entry_id}"
+                    )
                 else:
-                    print("[ActivityTracker] Failed to start timer - no entry ID returned")
+                    print(
+                        "[ActivityTracker] Failed to start timer - no entry ID returned"
+                    )
 
             except Exception as e:
                 print(f"[ActivityTracker] Error starting timer: {e}")
@@ -112,7 +116,9 @@ class ActivityTrackerService:
                 response = self.clockify_client.stop_time_entry(self._current_entry_id)
 
                 if response:
-                    print(f"[ActivityTracker] Timer stopped: id={self._current_entry_id}")
+                    print(
+                        f"[ActivityTracker] Timer stopped: id={self._current_entry_id}"
+                    )
                     if self.on_inactivity_callback:
                         self.on_inactivity_callback()
                 else:
@@ -202,7 +208,9 @@ class ActivityTrackerService:
             print("[ActivityTracker] Input listeners started")
 
         except ImportError:
-            print("[ActivityTracker] Warning: pynput not installed. Activity detection disabled.")
+            print(
+                "[ActivityTracker] Warning: pynput not installed. Activity detection disabled."
+            )
             print("[ActivityTracker] Install with: pip install pynput")
         except Exception as e:
             print(f"[ActivityTracker] Error starting listeners: {e}")

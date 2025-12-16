@@ -8,7 +8,7 @@ from typing import Optional, List
 @dataclass
 class WorkItemDTO:
     """DTO for work item data transfer."""
-    
+
     id: int
     title: str
     state: str
@@ -22,7 +22,7 @@ class WorkItemDTO:
     effort: Optional[float] = None
     created_date: Optional[datetime] = None
     changed_date: Optional[datetime] = None
-    
+
     def __post_init__(self):
         """Initialize defaults."""
         if self.tags is None:
@@ -32,7 +32,7 @@ class WorkItemDTO:
 @dataclass
 class WorkItemSummaryDTO:
     """DTO for work item summary data."""
-    
+
     work_item_id: int
     title: str
     work_item_type: str

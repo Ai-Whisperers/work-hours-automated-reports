@@ -54,7 +54,7 @@ class ClockifyService:
         start_date: str,
         end_date: str,
         user_ids: Optional[List[str]] = None,
-        project_ids: Optional[List[str]] = None
+        project_ids: Optional[List[str]] = None,
     ) -> TimeEntryBatchResponse:
         """Get time entries for a date range.
 
@@ -71,15 +71,13 @@ class ClockifyService:
 
         try:
             # Parse dates
-            start = datetime.fromisoformat(start_date.replace('Z', '+00:00'))
-            end = datetime.fromisoformat(end_date.replace('Z', '+00:00'))
+            start = datetime.fromisoformat(start_date.replace("Z", "+00:00"))
+            end = datetime.fromisoformat(end_date.replace("Z", "+00:00"))
             date_range = DateRange(start, end)
 
             # Fetch time entries
             entries = await self.repository.get_by_date_range(
-                date_range,
-                user_ids=user_ids,
-                project_ids=project_ids
+                date_range, user_ids=user_ids, project_ids=project_ids
             )
 
             # Convert to response models
@@ -90,22 +88,24 @@ class ClockifyService:
                 duration_hours = entry.duration.total_seconds() / 3600
                 total_hours += duration_hours
 
-                time_entries.append(TimeEntryResponse(
-                    id=entry.id,
-                    description=entry.description,
-                    start=entry.start_time.isoformat(),
-                    end=entry.end_time.isoformat() if entry.end_time else None,
-                    duration_hours=round(duration_hours, 2),
-                    user_id=entry.user_id,
-                    user_name=entry.user_name,
-                    project_id=getattr(entry, 'project_id', None),
-                    project_name=getattr(entry, 'project_name', None)
-                ))
+                time_entries.append(
+                    TimeEntryResponse(
+                        id=entry.id,
+                        description=entry.description,
+                        start=entry.start_time.isoformat(),
+                        end=entry.end_time.isoformat() if entry.end_time else None,
+                        duration_hours=round(duration_hours, 2),
+                        user_id=entry.user_id,
+                        user_name=entry.user_name,
+                        project_id=getattr(entry, "project_id", None),
+                        project_name=getattr(entry, "project_name", None),
+                    )
+                )
 
             return TimeEntryBatchResponse(
                 time_entries=time_entries,
                 count=len(time_entries),
-                total_hours=round(total_hours, 2)
+                total_hours=round(total_hours, 2),
             )
 
         except Exception as e:

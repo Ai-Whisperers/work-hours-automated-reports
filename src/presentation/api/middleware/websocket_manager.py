@@ -33,7 +33,9 @@ class WebSocketManager:
                 self.active_connections[report_id] = set()
             self.active_connections[report_id].add(websocket)
 
-        logger.info(f"WebSocket connected. Report ID: {report_id}, Total connections: {len(self.all_connections)}")
+        logger.info(
+            f"WebSocket connected. Report ID: {report_id}, Total connections: {len(self.all_connections)}"
+        )
 
     def disconnect(self, websocket: WebSocket, report_id: str = None):
         """Remove a WebSocket connection.
@@ -49,7 +51,9 @@ class WebSocketManager:
             if not self.active_connections[report_id]:
                 del self.active_connections[report_id]
 
-        logger.info(f"WebSocket disconnected. Report ID: {report_id}, Total connections: {len(self.all_connections)}")
+        logger.info(
+            f"WebSocket disconnected. Report ID: {report_id}, Total connections: {len(self.all_connections)}"
+        )
 
     async def send_personal_message(self, message: dict, websocket: WebSocket):
         """Send a message to a specific WebSocket connection.
@@ -120,11 +124,13 @@ class WebSocketManager:
                 "type": "progress",
                 "report_id": report_id,
                 "progress": progress,
-                "message": message
-            }
+                "message": message,
+            },
         )
 
-    async def send_status_update(self, report_id: str, status: str, message: str = None, error: str = None):
+    async def send_status_update(
+        self, report_id: str, status: str, message: str = None, error: str = None
+    ):
         """Send a status update for a report.
 
         Args:
@@ -160,8 +166,8 @@ class WebSocketManager:
                 "report_id": report_id,
                 "status": "completed",
                 "download_url": download_url,
-                "message": "Report generated successfully"
-            }
+                "message": "Report generated successfully",
+            },
         )
 
 

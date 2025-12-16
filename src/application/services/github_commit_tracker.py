@@ -89,7 +89,7 @@ class GitHubCommitTrackerService:
             tau_hours=2.5,
             cluster_threshold=0.1,
             max_session_hours=4.0,
-            min_cluster_gap_minutes=30
+            min_cluster_gap_minutes=30,
         )
 
         # Determine tracking mode
@@ -102,12 +102,18 @@ class GitHubCommitTrackerService:
         # Date range configuration
         self.history_days = history_days
         self.start_date = self._parse_date(start_date) if start_date else None
-        self.end_date = self._parse_date(end_date) if end_date else datetime.now(self.timezone).date()
+        self.end_date = (
+            self._parse_date(end_date)
+            if end_date
+            else datetime.now(self.timezone).date()
+        )
 
         # State management
         self.state_file = state_file_path or self.STATE_FILE
         self.seen_commits: Set[str] = set()
-        self.clockify_entries: Dict[str, str] = {}  # Maps "date_author_repo" -> clockify_entry_id
+        self.clockify_entries: Dict[str, str] = (
+            {}
+        )  # Maps "date_author_repo" -> clockify_entry_id
         self._running: bool = False
         self._lock = threading.Lock()
 
@@ -119,7 +125,9 @@ class GitHubCommitTrackerService:
         try:
             return datetime.strptime(date_str, "%Y-%m-%d").date()
         except ValueError as e:
-            raise ValueError(f"Invalid date format '{date_str}'. Expected YYYY-MM-DD") from e
+            raise ValueError(
+                f"Invalid date format '{date_str}'. Expected YYYY-MM-DD"
+            ) from e
 
     def _get_date_range(self) -> Tuple[datetime, datetime]:
         """
@@ -136,7 +144,9 @@ class GitHubCommitTrackerService:
 
         # Convert to timezone-aware datetimes
         start_dt = self.timezone.localize(datetime.combine(start, datetime.min.time()))
-        end_dt = self.timezone.localize(datetime.combine(self.end_date, datetime.max.time()))
+        end_dt = self.timezone.localize(
+            datetime.combine(self.end_date, datetime.max.time())
+        )
 
         return start_dt, end_dt
 
@@ -167,10 +177,14 @@ class GitHubCommitTrackerService:
             state_path.parent.mkdir(parents=True, exist_ok=True)
 
             with open(self.state_file, "w") as f:
-                json.dump({
-                    "seen_commits": list(self.seen_commits),
-                    "clockify_entries": self.clockify_entries
-                }, f, indent=2)
+                json.dump(
+                    {
+                        "seen_commits": list(self.seen_commits),
+                        "clockify_entries": self.clockify_entries,
+                    },
+                    f,
+                    indent=2,
+                )
         except Exception as e:
             print(f"[GitHubTracker] Error saving state: {e}")
 
@@ -213,10 +227,14 @@ class GitHubCommitTrackerService:
                     print(f"[GitHubTracker] Organization '{self.github_org}' not found")
                     return []
                 elif response.status_code == 403:
-                    print(f"[GitHubTracker] Rate limit or permission error: {response.json()}")
+                    print(
+                        f"[GitHubTracker] Rate limit or permission error: {response.json()}"
+                    )
                     return []
                 else:
-                    print(f"[GitHubTracker] Error fetching repos: {response.status_code}")
+                    print(
+                        f"[GitHubTracker] Error fetching repos: {response.status_code}"
+                    )
                     return []
 
             except requests.RequestException as e:
@@ -227,10 +245,7 @@ class GitHubCommitTrackerService:
         return repos
 
     def _fetch_commits_from_repo(
-        self,
-        repo: str,
-        since: datetime,
-        until: datetime
+        self, repo: str, since: datetime, until: datetime
     ) -> List[Dict[str, Any]]:
         """
         Fetch commits from a specific repository within date range.
@@ -257,7 +272,7 @@ class GitHubCommitTrackerService:
                 "since": since.isoformat(),
                 "until": until.isoformat(),
                 "page": page,
-                "per_page": per_page
+                "per_page": per_page,
             }
 
             try:
@@ -270,14 +285,16 @@ class GitHubCommitTrackerService:
 
                     # Transform to our format
                     for commit in page_commits:
-                        commits.append({
-                            "sha": commit["sha"],
-                            "author": commit["commit"]["author"]["name"],
-                            "email": commit["commit"]["author"]["email"],
-                            "repo": repo,
-                            "timestamp": commit["commit"]["author"]["date"],
-                            "message": commit["commit"]["message"]
-                        })
+                        commits.append(
+                            {
+                                "sha": commit["sha"],
+                                "author": commit["commit"]["author"]["name"],
+                                "email": commit["commit"]["author"]["email"],
+                                "repo": repo,
+                                "timestamp": commit["commit"]["author"]["date"],
+                                "message": commit["commit"]["message"],
+                            }
+                        )
 
                     page += 1
 
@@ -291,11 +308,15 @@ class GitHubCommitTrackerService:
                     print(f"[GitHubTracker] Rate limit for {repo}: {response.json()}")
                     break
                 else:
-                    print(f"[GitHubTracker] Error fetching commits from {repo}: {response.status_code}")
+                    print(
+                        f"[GitHubTracker] Error fetching commits from {repo}: {response.status_code}"
+                    )
                     break
 
             except requests.RequestException as e:
-                print(f"[GitHubTracker] Network error fetching commits from {repo}: {e}")
+                print(
+                    f"[GitHubTracker] Network error fetching commits from {repo}: {e}"
+                )
                 break
 
         return commits
@@ -308,7 +329,9 @@ class GitHubCommitTrackerService:
             List of commit data dictionaries
         """
         start_dt, end_dt = self._get_date_range()
-        print(f"[GitHubTracker] Fetching commits from {start_dt.date()} to {end_dt.date()}")
+        print(
+            f"[GitHubTracker] Fetching commits from {start_dt.date()} to {end_dt.date()}"
+        )
 
         all_commits = []
 
@@ -347,7 +370,9 @@ class GitHubCommitTrackerService:
         page = 1
         per_page = 100
 
-        print(f"[GitHubTracker] Fetching repositories for user '{self.github_username}'...")
+        print(
+            f"[GitHubTracker] Fetching repositories for user '{self.github_username}'..."
+        )
 
         while True:
             url = f"https://api.github.com/users/{self.github_username}/repos"
@@ -370,7 +395,9 @@ class GitHubCommitTrackerService:
                     print(f"[GitHubTracker] User '{self.github_username}' not found")
                     return []
                 else:
-                    print(f"[GitHubTracker] Error fetching repos: {response.status_code}")
+                    print(
+                        f"[GitHubTracker] Error fetching repos: {response.status_code}"
+                    )
                     return []
 
             except requests.RequestException as e:
@@ -413,7 +440,9 @@ class GitHubCommitTrackerService:
                     )
                     return True
                 else:
-                    print(f"[GitHubTracker] Failed to update session {cluster_key}, will create new")
+                    print(
+                        f"[GitHubTracker] Failed to update session {cluster_key}, will create new"
+                    )
                     # Fall through to create new entry
 
             # Create new entry
@@ -435,7 +464,9 @@ class GitHubCommitTrackerService:
                 )
                 return True
             else:
-                print(f"[GitHubTracker] Failed to create session for {cluster.author} @ {cluster.repo}")
+                print(
+                    f"[GitHubTracker] Failed to create session for {cluster.author} @ {cluster.repo}"
+                )
                 return False
 
         except Exception as e:
@@ -496,8 +527,12 @@ class GitHubCommitTrackerService:
 
     def _poll_loop(self) -> None:
         """Main polling loop that checks GitHub for new commits in real-time."""
-        target = self.github_org if self.tracking_mode == "org" else self.github_username
-        print(f"[GitHubTracker] Started real-time polling for {self.tracking_mode} '{target}'")
+        target = (
+            self.github_org if self.tracking_mode == "org" else self.github_username
+        )
+        print(
+            f"[GitHubTracker] Started real-time polling for {self.tracking_mode} '{target}'"
+        )
 
         # Use a small window for real-time polling (last 24 hours)
         while self._running:
@@ -543,7 +578,9 @@ class GitHubCommitTrackerService:
             return
 
         if not self.github_username and not self.github_org:
-            print("[GitHubTracker] Error: Neither GitHub username nor organization configured")
+            print(
+                "[GitHubTracker] Error: Neither GitHub username nor organization configured"
+            )
             return
 
         # Phase 1: Fetch and process historical commits
@@ -594,36 +631,30 @@ class GitHubCommitTrackerService:
         historical_commits = self._fetch_historical_commits()
 
         if not historical_commits:
-            return {
-                'sessions': [],
-                'daily_hours': [],
-                'repo_hours': []
-            }
+            return {"sessions": [], "daily_hours": [], "repo_hours": []}
 
         # Calculate clusters WITHOUT creating Clockify entries
         clusters = self.hours_calculator.calculate_clusters(historical_commits)
 
         if not clusters:
-            return {
-                'sessions': [],
-                'daily_hours': [],
-                'repo_hours': []
-            }
+            return {"sessions": [], "daily_hours": [], "repo_hours": []}
 
         # Transform clusters into session format for dashboard
         sessions = []
         for cluster in clusters:
-            sessions.append({
-                'author': cluster.author,
-                'repo': cluster.repo,
-                'start': cluster.start.isoformat(),
-                'end': cluster.end.isoformat(),
-                'hours': round(cluster.duration_hours, 2),
-                'commit_count': cluster.commit_count
-            })
+            sessions.append(
+                {
+                    "author": cluster.author,
+                    "repo": cluster.repo,
+                    "start": cluster.start.isoformat(),
+                    "end": cluster.end.isoformat(),
+                    "hours": round(cluster.duration_hours, 2),
+                    "commit_count": cluster.commit_count,
+                }
+            )
 
         return {
-            'sessions': sessions,
-            'daily_hours': [],  # Will be calculated by generate script
-            'repo_hours': []    # Will be calculated by generate script
+            "sessions": sessions,
+            "daily_hours": [],  # Will be calculated by generate script
+            "repo_hours": [],  # Will be calculated by generate script
         }

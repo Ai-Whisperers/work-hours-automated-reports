@@ -9,7 +9,7 @@ from typing import Optional, List, Dict, Any
 @dataclass
 class ReportRequest:
     """DTO for report generation requests."""
-    
+
     start_date: datetime
     end_date: datetime
     output_format: str = "excel"
@@ -24,7 +24,7 @@ class ReportRequest:
 @dataclass
 class ReportStatistics:
     """DTO for report statistics."""
-    
+
     total_entries: int
     matched_entries: int
     unmatched_entries: int
@@ -40,7 +40,7 @@ class ReportStatistics:
 @dataclass
 class ReportResponse:
     """DTO for report generation responses."""
-    
+
     success: bool
     report_path: Optional[Path]
     statistics: Optional[ReportStatistics]

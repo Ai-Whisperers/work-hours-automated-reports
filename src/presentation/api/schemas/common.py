@@ -41,6 +41,8 @@ class StatusUpdate(BaseModel):
 
     type: str = "status"
     report_id: str
-    status: str = Field(..., description="Status: pending, processing, completed, failed")
+    status: str = Field(
+        ..., description="Status: pending, processing, completed, failed"
+    )
     message: Optional[str] = None
     error: Optional[str] = None

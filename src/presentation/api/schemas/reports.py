@@ -8,29 +8,15 @@ class ReportGenerationRequest(BaseModel):
     """Request model for report generation."""
 
     start_date: Optional[str] = Field(
-        None,
-        description="Start date in YYYY-MM-DD format. Default: 7 days ago"
+        None, description="Start date in YYYY-MM-DD format. Default: 7 days ago"
     )
     end_date: Optional[str] = Field(
-        None,
-        description="End date in YYYY-MM-DD format. Default: today"
+        None, description="End date in YYYY-MM-DD format. Default: today"
     )
-    format: str = Field(
-        "excel",
-        description="Output format: excel, html, json"
-    )
-    user_ids: Optional[List[str]] = Field(
-        None,
-        description="Filter by user IDs"
-    )
-    project_ids: Optional[List[str]] = Field(
-        None,
-        description="Filter by project IDs"
-    )
-    include_unmatched: bool = Field(
-        True,
-        description="Include unmatched time entries"
-    )
+    format: str = Field("excel", description="Output format: excel, html, json")
+    user_ids: Optional[List[str]] = Field(None, description="Filter by user IDs")
+    project_ids: Optional[List[str]] = Field(None, description="Filter by project IDs")
+    include_unmatched: bool = Field(True, description="Include unmatched time entries")
 
 
 class ReportGenerationResponse(BaseModel):

@@ -7,10 +7,7 @@ from pydantic import BaseModel, Field
 class WorkItemQueryRequest(BaseModel):
     """Request model for querying work items."""
 
-    work_item_ids: List[int] = Field(
-        ...,
-        description="List of work item IDs to query"
-    )
+    work_item_ids: List[int] = Field(..., description="List of work item IDs to query")
 
 
 class WorkItemResponse(BaseModel):

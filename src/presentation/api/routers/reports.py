@@ -13,7 +13,7 @@ from ....infrastructure.config import get_settings
 from ....infrastructure.api_clients import ClockifyClient, AzureDevOpsClient
 from ....infrastructure.repositories import (
     ClockifyTimeEntryRepository,
-    AzureDevOpsWorkItemRepository
+    AzureDevOpsWorkItemRepository,
 )
 from ....infrastructure.adapters import ExcelReportGenerator, HTMLReportGenerator
 from ....domain.value_objects import DateRange
@@ -21,7 +21,7 @@ from ....domain.services import MatchingService
 from ....application.use_cases import GenerateReportUseCase
 from ....application.use_cases.generate_report_use_case import (
     GenerateReportRequest,
-    ReportFormat
+    ReportFormat,
 )
 from ..middleware.websocket_manager import ws_manager
 
@@ -37,29 +37,15 @@ class ReportGenerationRequest(BaseModel):
     """Request model for report generation."""
 
     start_date: Optional[str] = Field(
-        None,
-        description="Start date in YYYY-MM-DD format. Default: 7 days ago"
+        None, description="Start date in YYYY-MM-DD format. Default: 7 days ago"
     )
     end_date: Optional[str] = Field(
-        None,
-        description="End date in YYYY-MM-DD format. Default: today"
+        None, description="End date in YYYY-MM-DD format. Default: today"
     )
-    format: str = Field(
-        "excel",
-        description="Output format: excel, html, json"
-    )
-    user_ids: Optional[List[str]] = Field(
-        None,
-        description="Filter by user IDs"
-    )
-    project_ids: Optional[List[str]] = Field(
-        None,
-        description="Filter by project IDs"
-    )
-    include_unmatched: bool = Field(
-        True,
-        description="Include unmatched time entries"
-    )
+    format: str = Field("excel", description="Output format: excel, html, json")
+    user_ids: Optional[List[str]] = Field(None, description="Filter by user IDs")
+    project_ids: Optional[List[str]] = Field(None, description="Filter by project IDs")
+    include_unmatched: bool = Field(True, description="Include unmatched time entries")
 
 
 class ReportGenerationResponse(BaseModel):
@@ -84,8 +70,7 @@ class ReportStatusResponse(BaseModel):
 
 @router.post("/generate", response_model=ReportGenerationResponse)
 async def generate_report(
-    request: ReportGenerationRequest,
-    background_tasks: BackgroundTasks
+    request: ReportGenerationRequest, background_tasks: BackgroundTasks
 ):
     """Generate a new report.
 
@@ -103,21 +88,17 @@ async def generate_report(
     report_status_store[report_id] = {
         "status": "pending",
         "progress": 0.0,
-        "message": "Report generation queued"
+        "message": "Report generation queued",
     }
 
     # Add background task
-    background_tasks.add_task(
-        generate_report_task,
-        report_id,
-        request
-    )
+    background_tasks.add_task(generate_report_task, report_id, request)
 
     return ReportGenerationResponse(
         report_id=report_id,
         status="pending",
         message="Report generation started",
-        websocket_url=f"/api/ws/report/{report_id}"
+        websocket_url=f"/api/ws/report/{report_id}",
     )
 
 
@@ -140,7 +121,7 @@ async def get_report_status(report_id: str):
         report_id=report_id,
         status=status["status"],
         progress=status.get("progress"),
-        message=status.get("message")
+        message=status.get("message"),
     )
 
     if status["status"] == "completed":
@@ -177,14 +158,11 @@ async def download_report(report_id: str):
     return FileResponse(
         path=file_path,
         filename=Path(file_path).name,
-        media_type="application/octet-stream"
+        media_type="application/octet-stream",
     )
 
 
-async def generate_report_task(
-    report_id: str,
-    request: ReportGenerationRequest
-):
+async def generate_report_task(report_id: str, request: ReportGenerationRequest):
     """Background task for report generation.
 
     Args:
@@ -220,7 +198,9 @@ async def generate_report_task(
         report_status_store[report_id]["message"] = "Connecting to services..."
         report_status_store[report_id]["progress"] = 0.2
 
-        await ws_manager.send_progress_update(report_id, 0.2, "Connecting to services...")
+        await ws_manager.send_progress_update(
+            report_id, 0.2, "Connecting to services..."
+        )
 
         clockify_client = ClockifyClient(settings)
         ado_client = AzureDevOpsClient(settings)
@@ -242,6 +222,7 @@ async def generate_report_task(
         cache_service = None
         if settings.enable_caching:
             from ....infrastructure.adapters import LocalCacheService
+
             cache_service = LocalCacheService(settings.cache_directory)
 
         # Create use case
@@ -250,7 +231,7 @@ async def generate_report_task(
             work_item_repo=work_item_repo,
             matching_service=matching_service,
             report_generator=report_generator,
-            cache_service=cache_service
+            cache_service=cache_service,
         )
 
         # Generate report
@@ -259,7 +240,10 @@ async def generate_report_task(
 
         await ws_manager.send_progress_update(report_id, 0.5, "Generating report...")
 
-        output_path = Path(settings.report_output_directory) / f"report_{report_id}.{request.format}"
+        output_path = (
+            Path(settings.report_output_directory)
+            / f"report_{report_id}.{request.format}"
+        )
 
         use_case_request = GenerateReportRequest(
             date_range=date_range,
@@ -268,7 +252,7 @@ async def generate_report_task(
             user_ids=request.user_ids,
             project_ids=request.project_ids,
             include_unmatched=request.include_unmatched,
-            group_by=["user", "work_item"]
+            group_by=["user", "work_item"],
         )
 
         response = await use_case.execute(use_case_request)
@@ -285,8 +269,7 @@ async def generate_report_task(
 
             # Broadcast completion via WebSocket
             await ws_manager.send_completion_update(
-                report_id,
-                f"/api/reports/download/{report_id}"
+                report_id, f"/api/reports/download/{report_id}"
             )
         else:
             report_status_store[report_id]["status"] = "failed"
@@ -294,9 +277,7 @@ async def generate_report_task(
 
             # Broadcast failure via WebSocket
             await ws_manager.send_status_update(
-                report_id,
-                "failed",
-                error="; ".join(response.errors)
+                report_id, "failed", error="; ".join(response.errors)
             )
 
     except Exception as e:

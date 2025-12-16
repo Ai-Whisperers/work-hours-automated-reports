@@ -62,7 +62,7 @@ class ClockifySyncAdapter:
         self,
         description: str = "Work (auto)",
         project_id: Optional[str] = None,
-        tags: Optional[List[str]] = None
+        tags: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
         Start a new time entry.
@@ -89,9 +89,7 @@ class ClockifySyncAdapter:
         Returns:
             Stopped time entry data
         """
-        return self._run_async(
-            self.client.stop_time_entry(entry_id)
-        )
+        return self._run_async(self.client.stop_time_entry(entry_id))
 
     def create_time_entry_with_range(
         self,
@@ -99,7 +97,7 @@ class ClockifySyncAdapter:
         end: datetime,
         description: str,
         project_id: Optional[str] = None,
-        tags: Optional[List[str]] = None
+        tags: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
         Create a time entry with specific start and end times.
@@ -145,7 +143,7 @@ class ClockifySyncAdapter:
         end: Optional[datetime] = None,
         description: Optional[str] = None,
         project_id: Optional[str] = None,
-        tags: Optional[List[str]] = None
+        tags: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
         """
         Update an existing time entry.
@@ -174,6 +172,4 @@ class ClockifySyncAdapter:
         if tags is not None:
             updates["tagIds"] = tags
 
-        return self._run_async(
-            self.client.update_time_entry(entry_id, updates)
-        )
+        return self._run_async(self.client.update_time_entry(entry_id, updates))

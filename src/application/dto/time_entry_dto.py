@@ -8,7 +8,7 @@ from typing import Optional, List
 @dataclass
 class TimeEntryDTO:
     """DTO for time entry data transfer."""
-    
+
     id: str
     user_id: str
     user_name: str
@@ -22,7 +22,7 @@ class TimeEntryDTO:
     tags: List[str] = None
     work_item_ids: List[int] = None
     confidence_score: float = 0.0
-    
+
     def __post_init__(self):
         """Initialize defaults."""
         if self.tags is None:
@@ -34,7 +34,7 @@ class TimeEntryDTO:
 @dataclass
 class TimeEntrySummaryDTO:
     """DTO for time entry summary data."""
-    
+
     user_name: str
     total_hours: float
     entry_count: int

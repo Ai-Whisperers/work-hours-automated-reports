@@ -5,12 +5,12 @@ from .common import (
     ServiceStatusResponse,
     ErrorResponse,
     ProgressUpdate,
-    StatusUpdate
+    StatusUpdate,
 )
 from .reports import (
     ReportGenerationRequest,
     ReportGenerationResponse,
-    ReportStatusResponse
+    ReportStatusResponse,
 )
 
 __all__ = [

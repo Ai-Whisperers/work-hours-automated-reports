@@ -2,11 +2,7 @@
 
 from fastapi import APIRouter, HTTPException, Depends
 
-from .schemas import (
-    WorkItemQueryRequest,
-    WorkItemBatchResponse,
-    ADOConnectionResponse
-)
+from .schemas import WorkItemQueryRequest, WorkItemBatchResponse, ADOConnectionResponse
 from .service import AzureDevOpsService
 
 
@@ -32,7 +28,7 @@ async def check_connection(service: AzureDevOpsService = Depends(get_ado_service
             connected=connected,
             organization=service.settings.ado_organization,
             project=service.settings.ado_project,
-            message="Connected successfully" if connected else "Connection failed"
+            message="Connected successfully" if connected else "Connection failed",
         )
     finally:
         await service.close()
@@ -41,7 +37,7 @@ async def check_connection(service: AzureDevOpsService = Depends(get_ado_service
 @router.post("/work-items", response_model=WorkItemBatchResponse)
 async def get_work_items(
     request: WorkItemQueryRequest,
-    service: AzureDevOpsService = Depends(get_ado_service)
+    service: AzureDevOpsService = Depends(get_ado_service),
 ):
     """Get work items by IDs.
 
