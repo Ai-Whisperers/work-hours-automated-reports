@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-16T18:39:20.349434Z",
+  "generated_at": "2025-12-17T01:56:44.493155Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 155.5,
-    "total_commits": 515,
-    "avg_hours_per_day": 5.36
+    "total_days": 28,
+    "total_hours": 155.39,
+    "total_commits": 513,
+    "avg_hours_per_day": 5.55
   },
   "daily_hours": [
-    {
-      "date": "2025-11-16",
-      "hours": 4.23
-    },
     {
       "date": "2025-11-17",
       "hours": 11.81
@@ -121,13 +117,13 @@
     },
     {
       "date": "2025-12-16",
-      "hours": 10.23
+      "hours": 14.35
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 36.34
+      "hours": 38.72
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
@@ -135,7 +131,7 @@
     },
     {
       "repo": "Ai-Whisperers/yt-transcript-headless",
-      "hours": 24.72
+      "hours": 20.49
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
@@ -166,6 +162,10 @@
       "hours": 4.0
     },
     {
+      "repo": "Ai-Whisperers/Taller_Ocampos",
+      "hours": 3.91
+    },
+    {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
       "hours": 3.07
     },
@@ -176,10 +176,6 @@
     {
       "repo": "Ai-Whisperers/Information-Archive",
       "hours": 2.71
-    },
-    {
-      "repo": "Ai-Whisperers/Taller_Ocampos",
-      "hours": 2.68
     },
     {
       "repo": "Ai-Whisperers/team-tasks",
@@ -198,6 +194,10 @@
       "hours": 0.45
     },
     {
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "hours": 0.33
+    },
+    {
       "repo": "Ai-Whisperers/Magic_project",
       "hours": 0.25
     },
@@ -212,6 +212,10 @@
     {
       "repo": "Ai-Whisperers/outreach-automation",
       "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/Company-Information",
+      "hours": 0.18
     }
   ],
   "sessions": [
@@ -222,6 +226,14 @@
       "end": "2025-12-11T15:08:02+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Gestalt",
+      "repo": "Ai-Whisperers/Company-Information",
+      "start": "2025-12-16T20:41:01+00:00",
+      "end": "2025-12-16T20:51:58+00:00",
+      "hours": 0.18,
+      "commit_count": 2
     },
     {
       "author": "Gestalt",
@@ -275,8 +287,16 @@
       "author": "Gestalt",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-12-16T15:48:40+00:00",
-      "end": "2025-12-16T17:26:05+00:00",
-      "hours": 1.62,
+      "end": "2025-12-16T20:51:08+00:00",
+      "hours": 4.0,
+      "commit_count": 8
+    },
+    {
+      "author": "Gestalt",
+      "repo": "Ai-Whisperers/work-hours-automated-reports",
+      "start": "2025-12-16T20:31:08+00:00",
+      "end": "2025-12-16T20:50:46+00:00",
+      "hours": 0.33,
       "commit_count": 5
     },
     {
@@ -810,22 +830,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-16T00:13:33+00:00",
-      "end": "2025-11-16T00:27:13+00:00",
-      "hours": 0.23,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-16T12:43:53+00:00",
-      "end": "2025-11-16T21:25:56+00:00",
-      "hours": 4.0,
-      "commit_count": 11
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/yt-transcript-headless",
       "start": "2025-11-17T17:43:31+00:00",
       "end": "2025-11-18T04:58:57+00:00",
       "hours": 4.0,
@@ -931,9 +935,9 @@
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-12-16T16:42:49+00:00",
-      "end": "2025-12-16T18:11:23+00:00",
-      "hours": 1.48,
-      "commit_count": 8
+      "end": "2025-12-16T19:25:18+00:00",
+      "hours": 2.71,
+      "commit_count": 9
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
