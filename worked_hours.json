@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-12-17T18:12:30.372156Z",
+  "generated_at": "2025-12-18T00:29:53.265449Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 158.25,
-    "total_commits": 516,
-    "avg_hours_per_day": 5.46
+    "total_days": 28,
+    "total_hours": 152.23,
+    "total_commits": 473,
+    "avg_hours_per_day": 5.44
   },
   "daily_hours": [
     {
-      "date": "2025-11-17",
-      "hours": 11.81
-    },
-    {
       "date": "2025-11-18",
-      "hours": 8.0
+      "hours": 13.79
     },
     {
       "date": "2025-11-19",
@@ -127,7 +123,7 @@
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 41.58
+      "hours": 39.02
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
@@ -174,10 +170,6 @@
       "hours": 3.07
     },
     {
-      "repo": "Ai-Whisperers/Lawfirm-website",
-      "hours": 3.01
-    },
-    {
       "repo": "Ai-Whisperers/Information-Archive",
       "hours": 2.71
     },
@@ -192,10 +184,6 @@
     {
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "hours": 1.36
-    },
-    {
-      "repo": "Ai-Whisperers/cluster-template",
-      "hours": 0.45
     },
     {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
@@ -530,18 +518,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-17T01:18:52+00:00",
-      "end": "2025-11-17T01:24:42+00:00",
-      "hours": 0.1,
-      "commit_count": 6
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-17T19:13:51+00:00",
+      "start": "2025-11-18T01:03:31+00:00",
       "end": "2025-11-18T02:50:39+00:00",
-      "hours": 4.0,
-      "commit_count": 28
+      "hours": 1.79,
+      "commit_count": 9
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -622,22 +602,6 @@
       "end": "2025-11-25T22:38:13+00:00",
       "hours": 4.0,
       "commit_count": 9
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/cluster-template",
-      "start": "2025-11-17T21:18:24+00:00",
-      "end": "2025-11-17T21:45:34+00:00",
-      "hours": 0.45,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-17T00:50:45+00:00",
-      "end": "2025-11-17T01:05:45+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
@@ -842,10 +806,10 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-17T17:43:31+00:00",
+      "start": "2025-11-18T00:26:02+00:00",
       "end": "2025-11-18T04:58:57+00:00",
       "hours": 4.0,
-      "commit_count": 31
+      "commit_count": 19
     },
     {
       "author": "Jonathan Verdun",
@@ -934,14 +898,6 @@
       "end": "2025-12-09T19:21:43+00:00",
       "hours": 2.71,
       "commit_count": 8
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Lawfirm-website",
-      "start": "2025-11-17T18:12:08+00:00",
-      "end": "2025-11-17T21:12:27+00:00",
-      "hours": 3.01,
-      "commit_count": 3
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
