@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-19T18:12:18.459453Z",
+  "generated_at": "2025-12-20T00:31:39.865913Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 154.4,
-    "total_commits": 508,
-    "avg_hours_per_day": 5.32
+    "total_days": 28,
+    "total_hours": 158.5,
+    "total_commits": 510,
+    "avg_hours_per_day": 5.66
   },
   "daily_hours": [
-    {
-      "date": "2025-11-19",
-      "hours": 5.56
-    },
     {
       "date": "2025-11-20",
       "hours": 0.88
@@ -121,21 +117,17 @@
     },
     {
       "date": "2025-12-19",
-      "hours": 2.56
+      "hours": 12.22
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 39.15
+      "hours": 41.58
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
       "hours": 29.29
-    },
-    {
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "hours": 12.49
     },
     {
       "repo": "Ai-Whisperers/Courses-Content",
@@ -146,8 +138,16 @@
       "hours": 10.5
     },
     {
+      "repo": "Ai-Whisperers/Vete",
+      "hours": 8.25
+    },
+    {
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 8.16
+    },
+    {
+      "repo": "Ai-Whisperers/yt-transcript-headless",
+      "hours": 7.18
     },
     {
       "repo": "Ai-Whisperers/LangAi",
@@ -156,10 +156,6 @@
     {
       "repo": "Ai-Whisperers/marketing-strategy",
       "hours": 5.0
-    },
-    {
-      "repo": "Ai-Whisperers/Vete",
-      "hours": 4.64
     },
     {
       "repo": "Ai-Whisperers/ai-whisperers-portfolio-website",
@@ -172,6 +168,10 @@
     {
       "repo": "Ai-Whisperers/mcp-for-deploys",
       "hours": 4.0
+    },
+    {
+      "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
+      "hours": 3.62
     },
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
@@ -203,10 +203,6 @@
     },
     {
       "repo": "Ai-Whisperers/Magic_project",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
       "hours": 0.25
     },
     {
@@ -250,6 +246,14 @@
       "end": "2025-12-15T18:44:56+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Gestalt",
+      "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
+      "start": "2025-12-19T20:17:48+00:00",
+      "end": "2025-12-19T23:40:04+00:00",
+      "hours": 3.37,
+      "commit_count": 5
     },
     {
       "author": "Gestalt",
@@ -327,9 +331,9 @@
       "author": "Gestalt",
       "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-12-19T16:25:50+00:00",
-      "end": "2025-12-19T17:45:07+00:00",
-      "hours": 1.32,
-      "commit_count": 6
+      "end": "2025-12-19T22:07:26+00:00",
+      "hours": 4.0,
+      "commit_count": 16
     },
     {
       "author": "Gestalt",
@@ -575,17 +579,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Vete",
       "start": "2025-12-19T14:57:12+00:00",
-      "end": "2025-12-19T15:20:53+00:00",
-      "hours": 0.39,
-      "commit_count": 2
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-11-19T03:03:21+00:00",
-      "end": "2025-11-19T03:18:21+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-12-19T19:59:05+00:00",
+      "hours": 4.0,
+      "commit_count": 3
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -858,30 +854,6 @@
       "end": "2025-12-16T03:51:05+00:00",
       "hours": 0.5,
       "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-19T00:15:14+00:00",
-      "end": "2025-11-19T02:41:24+00:00",
-      "hours": 2.44,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-19T12:51:29+00:00",
-      "end": "2025-11-19T15:28:59+00:00",
-      "hours": 2.62,
-      "commit_count": 10
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/yt-transcript-headless",
-      "start": "2025-11-19T22:06:08+00:00",
-      "end": "2025-11-19T22:21:08+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Jonathan Verdun",
