@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-12-20T00:31:39.865913Z",
+  "generated_at": "2025-12-20T06:11:09.430516Z",
   "summary": {
     "total_days": 28,
-    "total_hours": 158.5,
-    "total_commits": 510,
-    "avg_hours_per_day": 5.66
+    "total_hours": 159.13,
+    "total_commits": 513,
+    "avg_hours_per_day": 5.68
   },
   "daily_hours": [
     {
@@ -117,7 +117,7 @@
     },
     {
       "date": "2025-12-19",
-      "hours": 12.22
+      "hours": 12.85
     }
   ],
   "repo_hours": [
@@ -162,16 +162,16 @@
       "hours": 4.51
     },
     {
+      "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
+      "hours": 4.25
+    },
+    {
       "repo": "Ai-Whisperers/deploy-automated-blueprint",
       "hours": 4.0
     },
     {
       "repo": "Ai-Whisperers/mcp-for-deploys",
       "hours": 4.0
-    },
-    {
-      "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
-      "hours": 3.62
     },
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
@@ -251,9 +251,9 @@
       "author": "Gestalt",
       "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
       "start": "2025-12-19T20:17:48+00:00",
-      "end": "2025-12-19T23:40:04+00:00",
-      "hours": 3.37,
-      "commit_count": 5
+      "end": "2025-12-20T05:20:25+00:00",
+      "hours": 4.0,
+      "commit_count": 8
     },
     {
       "author": "Gestalt",
