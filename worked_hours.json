@@ -1,19 +1,15 @@
 {
-  "generated_at": "2025-12-21T18:10:38.941125Z",
+  "generated_at": "2025-12-22T00:35:14.118097Z",
   "summary": {
-    "total_days": 29,
-    "total_hours": 163.37,
-    "total_commits": 519,
-    "avg_hours_per_day": 5.63
+    "total_days": 28,
+    "total_hours": 161.41,
+    "total_commits": 516,
+    "avg_hours_per_day": 5.76
   },
   "daily_hours": [
     {
-      "date": "2025-11-21",
-      "hours": 3.66
-    },
-    {
       "date": "2025-11-22",
-      "hours": 1.26
+      "hours": 1.51
     },
     {
       "date": "2025-11-23",
@@ -121,7 +117,7 @@
     },
     {
       "date": "2025-12-21",
-      "hours": 4.87
+      "hours": 6.32
     }
   ],
   "repo_hours": [
@@ -131,11 +127,7 @@
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
-      "hours": 29.29
-    },
-    {
-      "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 11.68
+      "hours": 29.21
     },
     {
       "repo": "Ai-Whisperers/Company-resarcher",
@@ -144,6 +136,10 @@
     {
       "repo": "Ai-Whisperers/Vete",
       "hours": 9.0
+    },
+    {
+      "repo": "Ai-Whisperers/Courses-Content",
+      "hours": 8.6
     },
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
@@ -190,8 +186,12 @@
       "hours": 2.56
     },
     {
+      "repo": "Ai-Whisperers/feedbackLens",
+      "hours": 2.2
+    },
+    {
       "repo": "Ai-Whisperers/Comment-Exctractor",
-      "hours": 2.34
+      "hours": 2.09
     },
     {
       "repo": "Ai-Whisperers/courses-website",
@@ -200,10 +200,6 @@
     {
       "repo": "Ai-Whisperers/feedbackScope-backend",
       "hours": 1.36
-    },
-    {
-      "repo": "Ai-Whisperers/feedbackLens",
-      "hours": 0.75
     },
     {
       "repo": "Ai-Whisperers/Summer-courses",
@@ -390,14 +386,6 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Comment-Exctractor",
-      "start": "2025-11-21T04:31:14+00:00",
-      "end": "2025-11-21T04:46:14+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Comment-Exctractor",
       "start": "2025-11-22T00:19:01+00:00",
       "end": "2025-11-22T01:04:33+00:00",
       "hours": 0.76,
@@ -494,10 +482,10 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
-      "start": "2025-11-21T23:41:21+00:00",
-      "end": "2025-11-22T03:00:57+00:00",
-      "hours": 3.33,
-      "commit_count": 2
+      "start": "2025-11-22T03:00:57+00:00",
+      "end": "2025-11-22T03:15:57+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -798,14 +786,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ternary-engine",
-      "start": "2025-11-21T16:57:38+00:00",
-      "end": "2025-11-21T17:02:13+00:00",
-      "hours": 0.08,
-      "commit_count": 2
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ternary-engine",
       "start": "2025-11-23T00:36:16+00:00",
       "end": "2025-11-23T10:12:18+00:00",
       "hours": 4.0,
@@ -1071,9 +1051,9 @@
       "author": "gesttaltt",
       "repo": "Ai-Whisperers/feedbackLens",
       "start": "2025-12-21T16:44:20+00:00",
-      "end": "2025-12-21T16:59:20+00:00",
-      "hours": 0.25,
-      "commit_count": 1
+      "end": "2025-12-21T18:26:24+00:00",
+      "hours": 1.7,
+      "commit_count": 2
     }
   ]
 }
