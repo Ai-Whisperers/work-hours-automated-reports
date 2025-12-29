@@ -1,15 +1,15 @@
 {
-  "generated_at": "2025-12-28T18:11:21.483004Z",
+  "generated_at": "2025-12-29T00:36:12.882603Z",
   "summary": {
     "total_days": 29,
-    "total_hours": 170.46,
-    "total_commits": 774,
-    "avg_hours_per_day": 5.88
+    "total_hours": 164.43,
+    "total_commits": 760,
+    "avg_hours_per_day": 5.67
   },
   "daily_hours": [
     {
-      "date": "2025-11-28",
-      "hours": 6.96
+      "date": "2025-11-29",
+      "hours": 0.25
     },
     {
       "date": "2025-12-01",
@@ -121,13 +121,13 @@
     },
     {
       "date": "2025-12-28",
-      "hours": 7.85
+      "hours": 8.53
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
-      "hours": 55.62
+      "hours": 56.3
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
@@ -154,12 +154,8 @@
       "hours": 5.72
     },
     {
-      "repo": "Ai-Whisperers/ternary-engine",
-      "hours": 5.1
-    },
-    {
       "repo": "Ai-Whisperers/Company-resarcher",
-      "hours": 4.44
+      "hours": 4.13
     },
     {
       "repo": "Ai-Whisperers/deploy-automated-blueprint",
@@ -168,10 +164,6 @@
     {
       "repo": "Ai-Whisperers/mcp-for-deploys",
       "hours": 4.0
-    },
-    {
-      "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 3.85
     },
     {
       "repo": "Ai-Whisperers/Information-Archive",
@@ -186,8 +178,16 @@
       "hours": 1.9
     },
     {
+      "repo": "Ai-Whisperers/ternary-engine",
+      "hours": 1.78
+    },
+    {
       "repo": "Ai-Whisperers/local-models-server",
       "hours": 1.18
+    },
+    {
+      "repo": "Ai-Whisperers/Courses-Content",
+      "hours": 1.02
     },
     {
       "repo": "Ai-Whisperers/Summer-courses",
@@ -215,10 +215,6 @@
     },
     {
       "repo": "Ai-Whisperers/Odontology",
-      "hours": 0.25
-    },
-    {
-      "repo": "Ai-Whisperers/outreach-automation",
       "hours": 0.25
     },
     {
@@ -370,14 +366,6 @@
       "end": "2025-12-25T21:51:20+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "start": "2025-11-28T18:03:55+00:00",
-      "end": "2025-11-28T18:22:19+00:00",
-      "hours": 0.31,
-      "commit_count": 9
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -607,9 +595,17 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
       "start": "2025-12-28T03:32:24+00:00",
-      "end": "2025-12-28T15:00:40+00:00",
+      "end": "2025-12-28T15:47:32+00:00",
       "hours": 4.0,
-      "commit_count": 24
+      "commit_count": 29
+    },
+    {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
+      "start": "2025-12-28T22:06:33+00:00",
+      "end": "2025-12-28T22:47:35+00:00",
+      "hours": 0.68,
+      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -754,22 +750,6 @@
       "end": "2025-12-16T16:16:01+00:00",
       "hours": 4.0,
       "commit_count": 13
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ternary-engine",
-      "start": "2025-11-28T05:20:58+00:00",
-      "end": "2025-11-28T06:40:46+00:00",
-      "hours": 1.33,
-      "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ternary-engine",
-      "start": "2025-11-28T21:48:56+00:00",
-      "end": "2025-11-28T23:48:08+00:00",
-      "hours": 1.99,
-      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -1014,10 +994,10 @@
     {
       "author": "Kyrian Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Courses-Content",
-      "start": "2025-11-28T23:15:30+00:00",
-      "end": "2025-11-29T02:20:27+00:00",
-      "hours": 3.08,
-      "commit_count": 7
+      "start": "2025-11-29T02:20:27+00:00",
+      "end": "2025-11-29T02:35:27+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
@@ -1096,14 +1076,6 @@
       "repo": "Ai-Whisperers/marketing-strategy",
       "start": "2025-12-04T22:22:25+00:00",
       "end": "2025-12-04T22:37:25+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/outreach-automation",
-      "start": "2025-11-28T17:50:39+00:00",
-      "end": "2025-11-28T18:05:39+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
