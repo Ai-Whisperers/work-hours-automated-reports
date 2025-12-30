@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-29T18:12:11.236157Z",
+  "generated_at": "2025-12-30T00:33:09.228782Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 173.93,
-    "total_commits": 828,
-    "avg_hours_per_day": 5.8
+    "total_days": 29,
+    "total_hours": 176.54,
+    "total_commits": 848,
+    "avg_hours_per_day": 6.09
   },
   "daily_hours": [
-    {
-      "date": "2025-11-29",
-      "hours": 0.25
-    },
     {
       "date": "2025-12-01",
       "hours": 0.5
@@ -125,13 +121,13 @@
     },
     {
       "date": "2025-12-29",
-      "hours": 0.75
+      "hours": 3.61
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
-      "hours": 63.62
+      "hours": 65.38
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
@@ -190,8 +186,12 @@
       "hours": 1.18
     },
     {
+      "repo": "Ai-Whisperers/codon-encoder-api",
+      "hours": 1.1
+    },
+    {
       "repo": "Ai-Whisperers/Courses-Content",
-      "hours": 1.02
+      "hours": 0.77
     },
     {
       "repo": "Ai-Whisperers/Summer-courses",
@@ -624,6 +624,14 @@
       "commit_count": 15
     },
     {
+      "author": "Ivan Weiss Van Der Pol",
+      "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
+      "start": "2025-12-29T22:35:36+00:00",
+      "end": "2025-12-30T00:21:11+00:00",
+      "hours": 1.76,
+      "commit_count": 8
+    },
+    {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-12-04T16:29:06+00:00",
@@ -654,6 +662,14 @@
       "end": "2025-12-21T03:27:49+00:00",
       "hours": 1.22,
       "commit_count": 3
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/codon-encoder-api",
+      "start": "2025-12-29T23:15:09+00:00",
+      "end": "2025-12-30T00:21:03+00:00",
+      "hours": 1.1,
+      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -1019,9 +1035,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
       "start": "2025-12-28T20:24:43+00:00",
-      "end": "2025-12-29T16:45:52+00:00",
+      "end": "2025-12-29T20:56:46+00:00",
       "hours": 4.0,
-      "commit_count": 49
+      "commit_count": 58
     },
     {
       "author": "Jonathan Verdun",
@@ -1038,14 +1054,6 @@
       "end": "2025-12-04T15:02:28+00:00",
       "hours": 3.06,
       "commit_count": 9
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Courses-Content",
-      "start": "2025-11-29T02:20:27+00:00",
-      "end": "2025-11-29T02:35:27+00:00",
-      "hours": 0.25,
-      "commit_count": 1
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
