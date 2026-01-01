@@ -1,16 +1,12 @@
 {
-  "generated_at": "2025-12-31T18:11:08.689820Z",
+  "generated_at": "2026-01-01T00:37:33.873032Z",
   "summary": {
-    "total_days": 31,
-    "total_hours": 188.12,
-    "total_commits": 879,
-    "avg_hours_per_day": 6.07
+    "total_days": 30,
+    "total_hours": 187.62,
+    "total_commits": 877,
+    "avg_hours_per_day": 6.25
   },
   "daily_hours": [
-    {
-      "date": "2025-12-01",
-      "hours": 0.5
-    },
     {
       "date": "2025-12-02",
       "hours": 1.02
@@ -166,16 +162,16 @@
       "hours": 5.72
     },
     {
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "hours": 4.13
-    },
-    {
       "repo": "Ai-Whisperers/deploy-automated-blueprint",
       "hours": 4.0
     },
     {
       "repo": "Ai-Whisperers/mcp-for-deploys",
       "hours": 4.0
+    },
+    {
+      "repo": "Ai-Whisperers/Company-resarcher",
+      "hours": 3.88
     },
     {
       "repo": "Ai-Whisperers/feedbackLens",
@@ -206,10 +202,6 @@
       "hours": 0.65
     },
     {
-      "repo": "Ai-Whisperers/marketing-strategy",
-      "hours": 0.5
-    },
-    {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
       "hours": 0.33
     },
@@ -231,6 +223,10 @@
     },
     {
       "repo": "Ai-Whisperers/Odontology",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/marketing-strategy",
       "hours": 0.25
     },
     {
@@ -388,14 +384,6 @@
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
       "start": "2025-12-29T07:25:28+00:00",
       "end": "2025-12-29T07:40:28+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Company-resarcher",
-      "start": "2025-12-01T15:58:12+00:00",
-      "end": "2025-12-01T16:13:12+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
@@ -1164,14 +1152,6 @@
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "start": "2025-12-19T14:10:11+00:00",
       "end": "2025-12-19T14:25:11+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/marketing-strategy",
-      "start": "2025-12-01T14:42:34+00:00",
-      "end": "2025-12-01T14:57:34+00:00",
       "hours": 0.25,
       "commit_count": 1
     },
