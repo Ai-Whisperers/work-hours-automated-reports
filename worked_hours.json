@@ -1,16 +1,12 @@
 {
-  "generated_at": "2026-01-08T18:11:25.983129Z",
+  "generated_at": "2026-01-09T00:33:45.269999Z",
   "summary": {
-    "total_days": 31,
-    "total_hours": 214.96,
-    "total_commits": 1002,
-    "avg_hours_per_day": 6.93
+    "total_days": 30,
+    "total_hours": 213.81,
+    "total_commits": 999,
+    "avg_hours_per_day": 7.13
   },
   "daily_hours": [
-    {
-      "date": "2025-12-09",
-      "hours": 7.11
-    },
     {
       "date": "2025-12-10",
       "hours": 9.72
@@ -129,7 +125,7 @@
     },
     {
       "date": "2026-01-08",
-      "hours": 5.66
+      "hours": 11.62
     }
   ],
   "repo_hours": [
@@ -139,11 +135,11 @@
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 41.83
+      "hours": 38.21
     },
     {
       "repo": "Ai-Whisperers/Vete",
-      "hours": 32.24
+      "hours": 34.86
     },
     {
       "repo": "Ai-Whisperers/tnas-ternary-toolkit",
@@ -151,11 +147,15 @@
     },
     {
       "repo": "Ai-Whisperers/ternary-engine",
-      "hours": 10.47
+      "hours": 10.44
     },
     {
       "repo": "Ai-Whisperers/Taller_Ocampos",
       "hours": 6.96
+    },
+    {
+      "repo": "Ai-Whisperers/feedbackLens",
+      "hours": 6.93
     },
     {
       "repo": "Ai-Whisperers/blueprint-code-once-deploy-everywhere",
@@ -170,20 +170,8 @@
       "hours": 4.0
     },
     {
-      "repo": "Ai-Whisperers/feedbackLens",
-      "hours": 3.59
-    },
-    {
-      "repo": "Ai-Whisperers/Information-Archive",
-      "hours": 2.71
-    },
-    {
       "repo": "Ai-Whisperers/courses-website",
       "hours": 1.9
-    },
-    {
-      "repo": "Ai-Whisperers/LangAi",
-      "hours": 1.42
     },
     {
       "repo": "Ai-Whisperers/codon-encoder-api",
@@ -192,6 +180,10 @@
     {
       "repo": "Ai-Whisperers/local-models-server",
       "hours": 1.18
+    },
+    {
+      "repo": "Ai-Whisperers/LangAi",
+      "hours": 0.67
     },
     {
       "repo": "Ai-Whisperers/Summer-courses",
@@ -386,22 +378,6 @@
     {
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/LangAi",
-      "start": "2025-12-09T04:31:21+00:00",
-      "end": "2025-12-09T05:01:21+00:00",
-      "hours": 0.5,
-      "commit_count": 5
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/LangAi",
-      "start": "2025-12-09T20:22:54+00:00",
-      "end": "2025-12-09T20:37:54+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/LangAi",
       "start": "2025-12-10T18:05:32+00:00",
       "end": "2025-12-10T18:11:55+00:00",
       "hours": 0.11,
@@ -571,9 +547,9 @@
       "author": "Ivan Weiss Van Der Pol",
       "repo": "Ai-Whisperers/Vete",
       "start": "2026-01-08T16:26:40+00:00",
-      "end": "2026-01-08T17:49:10+00:00",
-      "hours": 1.38,
-      "commit_count": 8
+      "end": "2026-01-08T23:51:25+00:00",
+      "hours": 4.0,
+      "commit_count": 21
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -598,14 +574,6 @@
       "end": "2025-12-25T21:58:21+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/ternary-engine",
-      "start": "2025-12-09T22:34:42+00:00",
-      "end": "2025-12-09T22:36:47+00:00",
-      "hours": 0.03,
-      "commit_count": 2
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -694,22 +662,6 @@
       "end": "2025-12-21T03:28:27+00:00",
       "hours": 1.04,
       "commit_count": 3
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-12-09T00:41:35+00:00",
-      "end": "2025-12-09T00:56:35+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-12-09T18:40:10+00:00",
-      "end": "2025-12-09T22:02:17+00:00",
-      "hours": 3.37,
-      "commit_count": 5
     },
     {
       "author": "Jonathan Verdun",
@@ -806,6 +758,14 @@
       "end": "2026-01-07T21:42:08+00:00",
       "hours": 0.25,
       "commit_count": 1
+    },
+    {
+      "author": "Jonathan Verdun",
+      "repo": "Ai-Whisperers/feedbackLens",
+      "start": "2026-01-08T20:50:53+00:00",
+      "end": "2026-01-09T00:11:14+00:00",
+      "hours": 3.34,
+      "commit_count": 2
     },
     {
       "author": "Jonathan Verdun",
@@ -1123,9 +1083,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
       "start": "2026-01-08T11:14:08+00:00",
-      "end": "2026-01-08T16:01:57+00:00",
+      "end": "2026-01-08T20:29:39+00:00",
       "hours": 4.0,
-      "commit_count": 4
+      "commit_count": 8
     },
     {
       "author": "Jonathan Verdun",
@@ -1182,14 +1142,6 @@
       "end": "2025-12-18T20:36:59+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Kyrian Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/Information-Archive",
-      "start": "2025-12-09T16:38:53+00:00",
-      "end": "2025-12-09T19:21:43+00:00",
-      "hours": 2.71,
-      "commit_count": 8
     },
     {
       "author": "Kyrian Weiss Van Der Pol",
