@@ -1,19 +1,15 @@
 {
-  "generated_at": "2026-01-12T18:12:33.357537Z",
+  "generated_at": "2026-01-13T00:30:23.038493Z",
   "summary": {
-    "total_days": 30,
-    "total_hours": 202.05,
-    "total_commits": 1137,
-    "avg_hours_per_day": 6.73
+    "total_days": 29,
+    "total_hours": 195.72,
+    "total_commits": 1108,
+    "avg_hours_per_day": 6.75
   },
   "daily_hours": [
     {
-      "date": "2025-12-13",
-      "hours": 7.1
-    },
-    {
       "date": "2025-12-14",
-      "hours": 4.25
+      "hours": 4.5
     },
     {
       "date": "2025-12-15",
@@ -125,13 +121,13 @@
     },
     {
       "date": "2026-01-12",
-      "hours": 3.73
+      "hours": 4.25
     }
   ],
   "repo_hours": [
     {
       "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
-      "hours": 79.5
+      "hours": 77.85
     },
     {
       "repo": "Ai-Whisperers/Vete",
@@ -139,11 +135,11 @@
     },
     {
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "hours": 30.83
+      "hours": 25.94
     },
     {
       "repo": "Ai-Whisperers/feedbackLens",
-      "hours": 11.7
+      "hours": 12.22
     },
     {
       "repo": "Ai-Whisperers/tnas-ternary-toolkit",
@@ -182,10 +178,6 @@
       "hours": 0.65
     },
     {
-      "repo": "Ai-Whisperers/LangAi",
-      "hours": 0.56
-    },
-    {
       "repo": "Ai-Whisperers/work-hours-automated-reports",
       "hours": 0.33
     },
@@ -195,6 +187,10 @@
     },
     {
       "repo": "Ai-Whisperers/AI-powered-marketing-campaign-generator",
+      "hours": 0.25
+    },
+    {
+      "repo": "Ai-Whisperers/LangAi",
       "hours": 0.25
     },
     {
@@ -258,18 +254,10 @@
     {
       "author": "Gestalt",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-12-13T00:12:02+00:00",
-      "end": "2025-12-13T01:05:31+00:00",
-      "hours": 0.89,
-      "commit_count": 5
-    },
-    {
-      "author": "Gestalt",
-      "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-12-13T19:06:12+00:00",
-      "end": "2025-12-14T00:05:55+00:00",
-      "hours": 4.0,
-      "commit_count": 8
+      "start": "2025-12-14T00:05:55+00:00",
+      "end": "2025-12-14T00:20:55+00:00",
+      "hours": 0.25,
+      "commit_count": 1
     },
     {
       "author": "Gestalt",
@@ -358,14 +346,6 @@
       "end": "2025-12-29T07:40:28+00:00",
       "hours": 0.25,
       "commit_count": 1
-    },
-    {
-      "author": "Ivan Weiss Van Der Pol",
-      "repo": "Ai-Whisperers/LangAi",
-      "start": "2025-12-13T01:45:57+00:00",
-      "end": "2025-12-13T02:04:50+00:00",
-      "hours": 0.31,
-      "commit_count": 11
     },
     {
       "author": "Ivan Weiss Van Der Pol",
@@ -642,14 +622,6 @@
     {
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/customer-feedback-app",
-      "start": "2025-12-13T19:16:02+00:00",
-      "end": "2025-12-13T19:31:02+00:00",
-      "hours": 0.25,
-      "commit_count": 1
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/customer-feedback-app",
       "start": "2025-12-21T02:58:56+00:00",
       "end": "2025-12-21T03:13:56+00:00",
       "hours": 0.25,
@@ -755,9 +727,9 @@
       "author": "Jonathan Verdun",
       "repo": "Ai-Whisperers/feedbackLens",
       "start": "2026-01-12T13:30:33+00:00",
-      "end": "2026-01-12T16:59:09+00:00",
-      "hours": 3.48,
-      "commit_count": 2
+      "end": "2026-01-12T22:32:18+00:00",
+      "hours": 4.0,
+      "commit_count": 4
     },
     {
       "author": "Jonathan Verdun",
@@ -838,22 +810,6 @@
       "end": "2026-01-02T22:12:50+00:00",
       "hours": 3.89,
       "commit_count": 4
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
-      "start": "2025-12-13T00:18:15+00:00",
-      "end": "2025-12-13T01:49:13+00:00",
-      "hours": 1.52,
-      "commit_count": 4
-    },
-    {
-      "author": "Jonathan Verdun",
-      "repo": "Ai-Whisperers/ternary-vaes-bioinformatics",
-      "start": "2025-12-13T18:49:36+00:00",
-      "end": "2025-12-13T18:57:37+00:00",
-      "hours": 0.13,
-      "commit_count": 3
     },
     {
       "author": "Jonathan Verdun",
