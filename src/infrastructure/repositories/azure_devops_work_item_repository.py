@@ -9,7 +9,6 @@ from ...domain.entities.work_item import WorkItemState, WorkItemType
 from ...domain.value_objects import WorkItemId
 from ..api_clients import AzureDevOpsClient
 
-
 logger = logging.getLogger(__name__)
 
 

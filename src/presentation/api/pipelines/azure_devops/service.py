@@ -8,7 +8,6 @@ from .....infrastructure.api_clients import AzureDevOpsClient
 from .....infrastructure.repositories import AzureDevOpsWorkItemRepository
 from .schemas import WorkItemResponse, WorkItemBatchResponse
 
-
 logger = logging.getLogger(__name__)
 
 

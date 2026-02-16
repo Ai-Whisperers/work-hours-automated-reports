@@ -10,7 +10,6 @@ from ...domain.entities import WorkItem
 from ...domain.value_objects import WorkItemId
 from ...infrastructure.config import get_settings
 
-
 logger = logging.getLogger(__name__)
 
 

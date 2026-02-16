@@ -9,7 +9,6 @@ from ...domain.entities import TimeEntry
 from ...domain.value_objects import DateRange
 from ...infrastructure.config import get_settings
 
-
 logger = logging.getLogger(__name__)
 
 

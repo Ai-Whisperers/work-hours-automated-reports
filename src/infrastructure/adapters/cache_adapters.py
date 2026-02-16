@@ -9,7 +9,6 @@ import logging
 
 from ...application.ports import CacheService
 
-
 logger = logging.getLogger(__name__)
 
 

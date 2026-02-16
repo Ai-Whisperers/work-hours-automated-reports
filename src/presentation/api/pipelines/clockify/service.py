@@ -10,7 +10,6 @@ from .....infrastructure.repositories import ClockifyTimeEntryRepository
 from .....domain.value_objects import DateRange
 from .schemas import TimeEntryResponse, TimeEntryBatchResponse
 
-
 logger = logging.getLogger(__name__)
 
 

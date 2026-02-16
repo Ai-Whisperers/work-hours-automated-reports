@@ -8,7 +8,6 @@ from ...domain.entities import TimeEntry
 from ...domain.value_objects import DateRange
 from ..api_clients import ClockifyClient
 
-
 logger = logging.getLogger(__name__)
 
 

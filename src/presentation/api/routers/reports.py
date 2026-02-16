@@ -25,7 +25,6 @@ from ....application.use_cases.generate_report_use_case import (
 )
 from ..middleware.websocket_manager import ws_manager
 
-
 router = APIRouter()
 
 

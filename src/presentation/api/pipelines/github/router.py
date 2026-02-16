@@ -12,7 +12,6 @@ from .schemas import (
 )
 from .service import GitHubService
 
-
 router = APIRouter()
 logger = logging.getLogger(__name__)
 

@@ -12,7 +12,6 @@ from jinja2 import Template
 
 from ...application.ports import ReportGenerator
 
-
 logger = logging.getLogger(__name__)
 
 

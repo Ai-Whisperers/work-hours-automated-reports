@@ -5,7 +5,6 @@ from fastapi import APIRouter, HTTPException, Depends
 from .schemas import WorkItemQueryRequest, WorkItemBatchResponse, ADOConnectionResponse
 from .service import AzureDevOpsService
 
-
 router = APIRouter()
 
 

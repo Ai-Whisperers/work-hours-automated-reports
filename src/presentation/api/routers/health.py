@@ -6,7 +6,6 @@ from pydantic import BaseModel
 from ....infrastructure.config import get_settings
 from ....infrastructure.api_clients import ClockifyClient, AzureDevOpsClient
 
-
 router = APIRouter()
 
 

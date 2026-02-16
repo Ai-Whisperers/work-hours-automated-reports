@@ -5,7 +5,6 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from ..middleware import WebSocketManager
 
-
 router = APIRouter()
 logger = logging.getLogger(__name__)
 
