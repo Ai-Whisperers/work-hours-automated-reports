@@ -76,7 +76,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. **Configure credentials**
+3. **Set up pre-commit hooks (CRITICAL)**
+Setting up pre-commit hooks is mandatory to ensure code quality and prevent CI failures.
+```bash
+# Install pre-commit
+pip install pre-commit
+
+# Install the hooks into your git configuration
+pre-commit install
+```
+
+4. **Configure credentials**
 ```bash
 # Copy example environment file
 cp .env.example .env
@@ -90,12 +100,12 @@ cp .env.example .env
 # - ADO_PAT
 ```
 
-4. **Validate configuration**
+5. **Validate configuration**
 ```bash
 python main.py validate
 ```
 
-5. **Generate your first report**
+6. **Generate your first report**
 ```bash
 # Last 7 days
 python main.py run
