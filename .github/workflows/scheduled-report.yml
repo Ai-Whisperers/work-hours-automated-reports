@@ -29,7 +29,7 @@ jobs:
           python-version: '3.11'
       
       - name: Cache pip packages
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-report-${{ hashFiles('requirements.txt') }}
@@ -100,7 +100,7 @@ jobs:
             --output report.$FORMAT
       
       - name: Upload report artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: weekly-report-${{ steps.dates.outputs.end_date }}
           path: report.*
